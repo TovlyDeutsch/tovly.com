@@ -33,39 +33,41 @@ const Homepage = styled(Button)`
 `
 
 const GitHub = styled(Button)`
-  ${tw`bg-grey-dark text-white sm:mx-4 my-4 sm:my-0`};
+  ${tw`bg-grey-dark text-white sm:ml-0 sm:mr-4 my-4 sm:my-0`};
 `
 
 const Twitter = styled(Button)`
   ${tw`bg-blue text-white`};
 `
 
+const Blog = styled(Button)`
+  ${tw`bg-dBlue text-white`};
+`
+
 const Header = () => (
   <Intro>
     <Title>
-      Hi
-      <span>.</span>
+      Tovly Deutsch
     </Title>
     <Description>
       <p>
-        I'm LekoArts and I create starters for Gatsby.js
-        <span>.</span> <br />
-        If you're a designer (and front-end developer) like me or a photographer you'll enjoy my Gatsby projects as
-        those two groups are the target audience
-        <span>.</span> You can bootstrap your personal project quick & easy with my minimalistic and fast starters
-        <span>.</span>
+        I'm Tovly, a software engineer, filmmaker, and
+         junior at Harvard studying CS and linguistics.
       </p>
     </Description>
     <Social>
-      <Homepage role="button" href="https://www.lekoarts.de">
-        Homepage
-      </Homepage>
-      <GitHub role="button" href="https://github.com/LeKoArts">
-        GitHub
+      <GitHub role="button" href="https://github.com/TovlyDeutsch">
+        Github
       </GitHub>
-      <Twitter role="button" href="https://twitter.com/lekoarts_de">
-        Twitter
-      </Twitter>
+      <GitHub role="button" href="/TovlyDeutschResume.pdf">
+        Resume
+      </GitHub>
+      {/* <Blog role="button" href="https://twitter.com/lekoarts_de">
+        Blog
+      </Blog> */}
+      {/* <Blog role="button" href="https://twitter.com/lekoarts_de">
+        Youtube
+      </Blog>  */}
     </Social>
   </Intro>
 )

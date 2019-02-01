@@ -1,62 +1,16 @@
-- title: 'Emma'
-  url: 'https://github.com/LekoArts/gatsby-starter-portfolio-emma'
-  name: 'portfolio-emma'
-  preview: 'https://emma.lekoarts.de'
-  description: 'Full-width grid with large images and a light theme'
-  cover: './emma.jpg'
-  features:
-    - CSS Grid
-    - Animations
-    - styled-components
-    - MDX
-- title: 'Emilia'
-  url: 'https://github.com/LekoArts/gatsby-starter-portfolio-emilia'
-  name: 'portfolio-emilia'
-  preview: 'https://emilia.lekoarts.de'
-  description: 'A dark themed, image-heavy layout'
-  cover: './emilia.jpg'
-  features:
-    - react-spring
-    - CSS Grid
-    - MDX
-    - Animations & Transitions
-- title: 'Cara'
-  url: 'https://github.com/LekoArts/gatsby-starter-portfolio-cara'
-  name: 'portfolio-cara'
-  preview: 'https://cara.lekoarts.de'
-  description: 'Playful & Colorful One-Page website with Parallax effect'
-  cover: './cara.jpg'
-  features:
-    - TailwindCSS
-    - react-spring
-    - styled-components
-- title: 'Minimal Blog'
-  url: 'https://github.com/LekoArts/gatsby-starter-minimal-blog'
-  name: 'minimal-blog'
-  preview: 'https://minimal-blog.lekoarts.de'
-  description: 'Typography driven, focus on the content & minimal style'
-  cover: './minimal.jpg'
-  features:
-    - styled-components
-    - MDX
-    - react-live
-- title: 'Prismic'
-  url: 'https://github.com/LekoArts/gatsby-starter-prismic'
-  name: 'prismic'
-  preview: 'https://prismic.lekoarts.de'
-  description: 'Typography-heavy & light-themed starter powered by Prismic'
-  cover: './prismic.jpg'
-  features:
-    - Prismic.io
-    - Emotion
-    - Gatsby-Image
-    - PrismJS
-- title: 'Bella'
-  url: 'https://github.com/LekoArts/gatsby-starter-portfolio-bella'
-  name: 'portfolio-bella'
-  preview: 'https://portfolio-bella.netlify.com/'
-  description: 'A bright single-page portfolio powered by Prismic'
-  cover: './bella.jpg'
-  features:
-    - Prismic.io
-    - Emotion
+- title: 'Attendance Sorter'
+  url: 'https://github.com/TovlyDeutsch/Attendance-Sorter'
+  description: 'Google Sheets Add-on for managing attendance'
+  cover: './attendance.png'
+- title: 'Bulk Sheet Manager'
+  url: 'https://github.com/TovlyDeutsch/Attendance-Sorter'
+  description: 'Google Sheets Add-on for acting on multiple sheets at once'
+  cover: './bsm.png'
+- title: 'RGB Loader Animation'
+  url: 'https://github.com/TovlyDeutsch/Attendance-Sorter'
+  description: 'Simply RGB color mixing themed loader'
+  cover: './rgb.PNG'
+- title: 'Google Drive Analyzer'
+  url: 'https://github.com/TovlyDeutsch/DriveAnalyzer'
+  description: 'Web app for analyzing storage usage in Google Drive. Created as a final project for CS50 at Harvard'
+  cover: './gda.png'
