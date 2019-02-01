@@ -9,7 +9,7 @@
 - title: 'RGB Loader Animation'
   url: 'https://github.com/TovlyDeutsch/Attendance-Sorter'
   description: 'Simply RGB color mixing themed loader'
-  cover: './rgb.PNG'
+  cover: './rgb.png'
 - title: 'Google Drive Analyzer'
   url: 'https://github.com/TovlyDeutsch/DriveAnalyzer'
   description: 'Web app for analyzing storage usage in Google Drive. Created as a final project for CS50 at Harvard'
