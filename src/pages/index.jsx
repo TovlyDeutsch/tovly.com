@@ -269,7 +269,7 @@ class Index extends Component {
                       </Bottom>
                       <BGImage>
                         <Gradient />
-                        <Img fluid={cover && cover.childImageSharp.fluid} />
+                        {cover && <Img fluid={cover.childImageSharp.fluid} />}
                       </BGImage>
                     </ItemContent>
                   
