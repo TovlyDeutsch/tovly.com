@@ -3,7 +3,7 @@
   description: 'Google Sheets Add-on for managing attendance'
   cover: './attendance.png'
 - title: 'Bulk Sheet Manager'
-  url: 'https://github.com/TovlyDeutsch/Attendance-Sorter'
+  url: 'https://github.com/TovlyDeutsch/Bulk-Sheet-Manager'
   description: 'Google Sheets Add-on for acting on multiple sheets at once'
   cover: './bsm.png'
 - title: 'RGB Loader Animation'
