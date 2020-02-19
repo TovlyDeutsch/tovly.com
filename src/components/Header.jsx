@@ -6,18 +6,18 @@ import Content from './Content'
 import Description from './Description'
 
 const Intro = styled(Content)`
-  ${tw`py-8 md:py-16`};
+  ${tw`md:py-8`};
 `
 
 const Title = styled.h1`
-  ${tw`text-3xl md:text-5xl`};
+  ${tw`text-3xl md:text-5xl my-8`};
   span {
     ${tw`text-orange`};
   }
 `
 
 const Social = styled.section`
-  ${tw`flex flex-wrap items-center justify-center sm:justify-start mt-8`};
+  ${tw`flex flex-wrap items-center justify-center sm:justify-start my-8`};
 `
 
 const Button = styled(OutboundLink)`
@@ -33,7 +33,7 @@ const Homepage = styled(Button)`
 `
 
 const GitHub = styled(Button)`
-  ${tw`bg-grey-dark text-white sm:ml-0 sm:mr-4 my-4 sm:my-0`};
+  ${tw`bg-blue text-white sm:ml-0 sm:mr-4`};
 `
 
 const Twitter = styled(Button)`
@@ -59,9 +59,9 @@ const Header = () => (
       <GitHub role="button" href="https://github.com/TovlyDeutsch">
         Github
       </GitHub>
-      <GitHub role="button" href="/TovlyDeutschResume.pdf">
+      <Twitter role="button" href="/TovlyDeutschResume.pdf">
         Resume
-      </GitHub>
+      </Twitter>
       {/* <Blog role="button" href="https://twitter.com/lekoarts_de">
         Blog
       </Blog> */}
