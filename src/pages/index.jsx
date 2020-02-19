@@ -7,7 +7,6 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import tw from 'tailwind.macro'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import 'typeface-montserrat'
 
 import Content from '../components/Content'
 import Description from '../components/Description'
@@ -27,7 +26,6 @@ const GlobalStyles = createGlobalStyle`
     background-color: #f6993f;
   }
   html {
-    background: #6574cd;
     border: 0;
     margin: 0;
     font-size: 18px;
@@ -36,6 +34,8 @@ const GlobalStyles = createGlobalStyle`
     border: 0;
     margin: 0;
     padding: 0;
+    background-color: #002034;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23909cbd' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
   }
   select {
     appearance: none;
@@ -66,12 +66,7 @@ const GlobalStyles = createGlobalStyle`
 `
 
 const Page = styled.div`
-  ${tw`text-white font-sans p-0 m-0 antialiased leading-normal relative`};
-  background-color: #002034;
-  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23909cbd' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-  @media (min-width: 576px) {
-    min-height: calc(100vh - 32px);
-  }
+  ${tw`text-white font-sans antialiased leading-normal relative`};
 `
 
 const SliderWrapper = styled.section`
@@ -176,7 +171,7 @@ const FeaturesWrapper = styled.div`
 `
 
 const Heading = styled.h2`
-  ${tw`text-2xl md:text-4xl font-normal`};
+  ${tw`text-2xl md:text-4xl m-0 font-semibold`};
 `
 
 const SelectWrapper = styled.div`
@@ -184,7 +179,7 @@ const SelectWrapper = styled.div`
 `
 
 const Grid = styled.div`
-  ${tw`py-12`};
+  ${tw`py-8`};
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 30px;
