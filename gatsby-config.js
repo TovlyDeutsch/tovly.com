@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteTitle: 'Gatsby Starter Portfolio Overview by LekoArts',
-    siteUrl: 'https://gatsby-starter-portfolio.netlify.com',
+    siteTitle: 'Tovly Deutsch – Software Engineer, Researcher, & Filmmaker',
+    siteUrl: 'https://tovly.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
