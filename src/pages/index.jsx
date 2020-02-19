@@ -280,8 +280,8 @@ class Index extends Component {
             </Grid>
           </SliderWrapper>
           <Footer>
-            Design by <OutboundLink href="https://www.tovly.com">Tovly</OutboundLink>. Forked from 
-            <OutboundLink href="https://github.com/LeKoArts/gatsby-starter-portfolio"> Lekoarts</OutboundLink>.
+          <OutboundLink href="https://github.com/LeKoArts/gatsby-starter-portfolio">Design</OutboundLink> by Tovly Deutsch.
+          Forked from <OutboundLink href="https://github.com/TovlyDeutsch/gatsby-starter-portfolio"> Lekoarts</OutboundLink>.
           </Footer>
         </Page>
         <GlobalStyles />

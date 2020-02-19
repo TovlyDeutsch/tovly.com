@@ -26,10 +26,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Gatsby Starter Portfolio Overview by LekoArts',
-        short_name: 'Gatsby Starter Portfolio',
+        name: 'Tovly Deutsch – Software Engineer, Researcher, & Filmmaker.',
+        short_name: 'Tovly Deutsch',
         description:
-          'Gatsby.js starters by LekoArts. Primarily aimed at Designers & Photographers. Minimalistic & fast websites!',
+          'Tovly Deutsch – Software Engineer, Researcher, & Filmmaker. Creator of Bulk Sheet Manager and Attendance Sorter Google Sheets Add-ons',
         start_url: '/',
         background_color: '#191e38',
         theme_color: '#6574cd',
