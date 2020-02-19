@@ -17,6 +17,12 @@ import rightArrow from '../right-arrow.svg'
 import github from '../github.svg'
 
 const GlobalStyles = createGlobalStyle`
+  .wf-loading body {
+    visibility: hidden;
+  }
+  .wf-active body, .wf-inactive body {
+    visibility: visible;
+  }
   *::before,
   *::after {
     box-sizing: border-box;
