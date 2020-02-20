@@ -4,9 +4,10 @@ import styled from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Content from './Content'
 import Description from './Description'
+import Img from 'gatsby-image'
 
 const Intro = styled(Content)`
-  ${tw`md:py-8`};
+  ${tw`pb-8 md:py-8`};
 `
 
 const Title = styled.h1`
@@ -44,17 +45,24 @@ const Blog = styled(Button)`
   ${tw`bg-dBlue text-white`};
 `
 
-const Header = () => (
+const Header = (props) => (
   <Intro>
     <Title>
       Tovly Deutsch
     </Title>
+    <div style={{display: "flex", flexFlow: "wrap-reverse", marginTop: -24}}>
+    <div style={{marginTop:24}}>
     <Description>
       <p>
-        I'm Tovly, a software engineer, filmmaker, and
-         junior at Harvard studying CS and linguistics.
+        I'm a senior studying CS and linguistics at Harvard. I'm interested in intersections of my interests like NLP and
+         computational photgraphy. I'm working on improving readability assesment systems for my senior thesis, advised by
+         {" "}<OutboundLink href="http://www.eecs.harvard.edu/shieber/">Stuart Shieber</OutboundLink> 
+         {" "}and <OutboundLink href="https://jasbi.github.io/">Masoud Jasbi</OutboundLink>.
+
+         In my spare time, I enjoy filmmaking and <OutboundLink href="https://medium.com/@tovly">blogging</OutboundLink>.
       </p>
     </Description>
+    {/* <Image src="static/face_small.jpg"/> */}
     <Social>
       <GitHub role="button" href="https://github.com/TovlyDeutsch">
         Github
@@ -62,13 +70,10 @@ const Header = () => (
       <Twitter role="button" href="/TovlyDeutschResume.pdf">
         Resume
       </Twitter>
-      {/* <Blog role="button" href="https://twitter.com/lekoarts_de">
-        Blog
-      </Blog> */}
-      {/* <Blog role="button" href="https://twitter.com/lekoarts_de">
-        Youtube
-      </Blog>  */}
     </Social>
+    </div>
+    <Img fixed={props.faceFile.fixed} style={{margin: "auto", marginTop:24}}/>
+    </div>
   </Intro>
 )
 

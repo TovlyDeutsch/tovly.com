@@ -209,6 +209,7 @@ class Index extends Component {
       data: {
         allSitesYaml: { edges },
         site: { siteMetadata },
+        file: { childImageSharp }
       },
     } = this.props
 
@@ -243,7 +244,7 @@ class Index extends Component {
           <meta name="twitter:image" content={favicon} />
         </Helmet>
         <Page>
-          <Header />
+          <Header faceFile={childImageSharp}/>
           <SliderWrapper>
             <Heading>Projects</Heading>
             <Grid>
@@ -306,6 +307,15 @@ Index.propTypes = {
 
 export const overviewQuery = graphql`
   query OverviewQuery {
+    file(relativePath: { eq: "face_small.jpg" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 200, height: 200) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     allSitesYaml {
       edges {
         node {

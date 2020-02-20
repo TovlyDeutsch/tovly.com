@@ -2,7 +2,7 @@ import tw from 'tailwind.macro'
 import styled from 'styled-components'
 
 const Description = styled.div`
-  ${tw`text-sm sm:text-base md:text-lg max-w-lg text-grey-lighter`};
+  ${tw`text-sm sm:text-base md:text-lg max-w-md text-grey-lighter`};
   span {
     ${tw`text-orange`};
   }
