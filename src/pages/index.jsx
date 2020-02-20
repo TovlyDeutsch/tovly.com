@@ -249,7 +249,7 @@ class Index extends Component {
             <Heading>Projects</Heading>
             <Grid>
               {edges.map(site => {
-                const { id, title, description, preview, cover, url } = site.node
+                const { id, title, description, preview, cover, url, siteName } = site.node
                 return (
                   <a href={url} style={{textDecoration : "none"}}>
 
@@ -261,7 +261,7 @@ class Index extends Component {
                           View on <img src={rightArrow} alt="Arrow" aria-hidden="true" />
                         </Preview>
                         <Repo href={url}>
-                          <img src={github} alt="Arrow" aria-hidden="true" /> GitHub
+                          {siteName.includes("GitHub") && <img src={github} alt="Arrow" aria-hidden="true" />} {siteName}
                         </Repo>
                         <Desc>{description}</Desc>
                       </Top>
@@ -323,6 +323,7 @@ export const overviewQuery = graphql`
           title
           url
           description
+          siteName
           cover {
             childImageSharp {
               fluid(maxWidth: 350) {
