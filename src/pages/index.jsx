@@ -271,7 +271,14 @@ class Index extends Component {
                       </Bottom>
                       <BGImage>
                         <Gradient />
-                        {cover && <Img fluid={cover.childImageSharp.fluid} />}
+                        {title == 'RGB Loader Animation' && <div class="demo-3">
+                                <link rel="stylesheet" type="text/css" href="/rgbSpinner.css"/>
+                                <ul class="bokeh">
+                                      <li></li>
+                                      <li></li>
+                                      <li></li>
+                                    </ul></div>}
+                        {cover && title != 'RGB Loader Animation' && <Img fluid={cover.childImageSharp.fluid} />}
                       </BGImage>
                     </ItemContent>
                   

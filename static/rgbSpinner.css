@@ -1,0 +1,90 @@
+/* adapted from  https://tympanus.net/codrops/2012/11/14/creative-css-loading-animations/
+*/
+:root {
+  --rotationEasing: linear;
+  --rotationTime: 4s;
+}
+
+.demo-3 .bokeh {
+  font-size: 100px;
+  width: 1em;
+  height: auto;
+  position: relative;
+  margin: 265px auto;
+  list-style: none;
+}
+
+.demo-3 .bokeh li {
+  position: absolute;
+  width: .3em;
+  height: .3em;
+  border-radius: 50%;
+  transform-origin: 0em 0em;
+  mix-blend-mode: screen;
+}
+
+.demo-3 .bokeh li:nth-child(1) {
+  background: #ff0000;
+  animation: rota1 var(--rotationTime) var(--rotationEasing) infinite;
+}
+
+.demo-3 .bokeh li:nth-child(2) {
+  background: #00ff00;
+  animation: rota2 var(--rotationTime) var(--rotationEasing) infinite;
+}
+
+.demo-3 .bokeh li:nth-child(3) {
+  background: #0000ff;
+  animation: rota3 var(--rotationTime) var(--rotationEasing) infinite;
+}
+
+@keyframes rota1 {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: 40% 40%;
+    /*     animation-timing-function: ease-in; */
+  }
+  50% {
+    transform: rotate(1080deg);
+    margin: 0.25em 0 0 0;
+    transform-origin: 0 -0.25em;
+  }
+  100% {
+    transform: rotate(2160deg);
+    transform-origin: 40% 40%;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes rota2 {
+  0% {
+    transform: rotate(120deg);
+    transform-origin: 40% 40%;
+  }
+  50% {
+    transform: rotate(1200deg);
+    margin: 0.25em 0 0 0;
+    transform-origin: 0 -0.25em;
+  }
+  100% {
+    transform: rotate(2280deg);
+    transform-origin: 40% 40%;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes rota3 {
+  0% {
+    transform: rotate(240deg);
+    transform-origin: 40% 40%;
+    /*     animation-timing-function: ease-in; */
+  }
+  50% {
+    transform: rotate(1320deg);
+    margin: 0.25em 0 0 0;
+    transform-origin: 0 -0.25em;
+  }
+  100% {
+    transform: rotate(2400deg);
+    transform-origin: 40% 40%;
+    animation-timing-function: ease-out;
+  }
+}
