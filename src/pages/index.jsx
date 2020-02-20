@@ -17,7 +17,7 @@ import rightArrow from '../right-arrow.svg'
 import github from '../github.svg'
 
 const GlobalStyles = createGlobalStyle`
-  .wf-loading body {
+  .wf-loading body, body {
     visibility: hidden;
   }
   .wf-active body, .wf-inactive body {
