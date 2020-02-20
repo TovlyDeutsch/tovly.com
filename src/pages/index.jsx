@@ -177,7 +177,7 @@ const FeaturesWrapper = styled.div`
 `
 
 const Heading = styled.h2`
-  ${tw`text-2xl md:text-4xl m-0 font-semibold`};
+  ${tw`text-center xl:text-left text-2xl md:text-4xl m-0 font-semibold`};
 `
 
 const SelectWrapper = styled.div`
@@ -307,11 +307,11 @@ Index.propTypes = {
 
 export const overviewQuery = graphql`
   query OverviewQuery {
-    file(relativePath: { eq: "face_small.jpg" }) {
+    file(relativePath: { eq: "face.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 200, height: 200) {
+        fixed(width: 200 height: 267) {
           ...GatsbyImageSharpFixed
         }
       }

@@ -7,7 +7,7 @@ import Description from './Description'
 import Img from 'gatsby-image'
 
 const Intro = styled(Content)`
-  ${tw`pb-8 md:py-8`};
+  ${tw`pb-8 md:py-8 text-center xl:text-left`};
 `
 
 const Title = styled.h1`
@@ -18,7 +18,7 @@ const Title = styled.h1`
 `
 
 const Social = styled.section`
-  ${tw`flex flex-wrap items-center justify-center sm:justify-start my-8`};
+  ${tw`flex flex-wrap items-center justify-center xl:justify-start my-8`};
 `
 
 const Button = styled(OutboundLink)`
@@ -50,7 +50,7 @@ const Header = (props) => (
     <Title>
       Tovly Deutsch
     </Title>
-    <div style={{display: "flex", flexFlow: "wrap-reverse", marginTop: -24}}>
+    <div style={{display: "flex", flexFlow: "wrap-reverse", justifyContent:"center", marginTop: -24}}>
     <div style={{marginTop:24}}>
     <Description>
       <p>
