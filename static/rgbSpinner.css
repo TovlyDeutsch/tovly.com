@@ -12,12 +12,14 @@
   position: relative;
   margin: 265px auto;
   list-style: none;
+  transform: translateZ(0);
 }
 
 .demo-3 .bokeh li {
+  transform: translateZ(0);
   position: absolute;
-  width: .3em;
-  height: .3em;
+  width: 0.3em;
+  height: 0.3em;
   border-radius: 50%;
   transform-origin: 0em 0em;
   mix-blend-mode: screen;
