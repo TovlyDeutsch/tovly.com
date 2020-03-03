@@ -153,7 +153,11 @@ const BGImage = styled.div`
   }
   img {
     ${tw`rounded-lg`};
-    opacity: 0.5 !important;
+    filter: brightness(0.5);
+    transition: filter 1s linear;
+  }
+  img:hover {
+    filter: brightness(0);
   }
 `
 
@@ -209,7 +213,7 @@ class Index extends Component {
       data: {
         allSitesYaml: { edges },
         site: { siteMetadata },
-        file: { childImageSharp }
+        file: { childImageSharp },
       },
     } = this.props
 
@@ -244,53 +248,57 @@ class Index extends Component {
           <meta name="twitter:image" content={favicon} />
         </Helmet>
         <Page>
-          <Header faceFile={childImageSharp}/>
+          <Header faceFile={childImageSharp} />
           <SliderWrapper>
             <Heading>Projects</Heading>
             <Grid>
               {edges.map(site => {
                 const { id, title, description, preview, cover, url, siteName } = site.node
                 return (
-                  <a href={url} style={{textDecoration : "none"}}>
-
-                  <Item key={id} >
-                  
-                    <ItemContent>
-                      <Top>
-                        <Preview href={preview}>
-                          View on <img src={rightArrow} alt="Arrow" aria-hidden="true" />
-                        </Preview>
-                        <Repo href={url}>
-                          {siteName.includes("GitHub") && <img src={github} alt="Arrow" aria-hidden="true" />} {siteName}
-                        </Repo>
-                        <Desc>{description}</Desc>
-                      </Top>
-                      <Bottom>
-                        <ItemTitle>{title}</ItemTitle>
-                        <Divider />
-                      </Bottom>
-                      <BGImage>
-                        <Gradient />
-                        {title == 'RGB Loader Animation' && <div class="demo-3">
-                                <link rel="stylesheet" type="text/css" href="/rgbSpinner.css"/>
-                                <ul class="bokeh">
-                                      <li></li>
-                                      <li></li>
-                                      <li></li>
-                                    </ul></div>}
-                        {cover && title != 'RGB Loader Animation' && <Img fluid={cover.childImageSharp.fluid} />}
-                      </BGImage>
-                    </ItemContent>
-                  
-                  </Item>
-                 </a>
+                  <a href={url} style={{ textDecoration: 'none' }}>
+                    <Item key={id}>
+                      <ItemContent>
+                        <Top>
+                          <Preview href={preview}>
+                            View on <img src={rightArrow} alt="Arrow" aria-hidden="true" />
+                          </Preview>
+                          <Repo href={url}>
+                            {siteName.includes('GitHub') && <img src={github} alt="Arrow" aria-hidden="true" />}{' '}
+                            {siteName}
+                          </Repo>
+                          <Desc>{description}</Desc>
+                        </Top>
+                        <Bottom>
+                          <ItemTitle>{title}</ItemTitle>
+                          <Divider />
+                        </Bottom>
+                        <BGImage>
+                          <Gradient />
+                          {title == 'RGB Loader Animation' && (
+                            <div class="demo-3">
+                              <link rel="stylesheet" type="text/css" href="/rgbSpinner.css" />
+                              <ul class="bokeh">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                              </ul>
+                            </div>
+                          )}
+                          {cover && title != 'RGB Loader Animation' && (
+                            <Img fluid={cover.childImageSharp.fluid} imgStyle={{ objectFit: 'cover' }} />
+                          )}
+                        </BGImage>
+                      </ItemContent>
+                    </Item>
+                  </a>
                 )
               })}
             </Grid>
           </SliderWrapper>
           <Footer>
-          <OutboundLink href="https://github.com/LeKoArts/gatsby-starter-portfolio">Design</OutboundLink> by Tovly Deutsch.
-          Forked from <OutboundLink href="https://github.com/TovlyDeutsch/gatsby-starter-portfolio"> Lekoarts</OutboundLink>.
+            <OutboundLink href="https://github.com/LeKoArts/gatsby-starter-portfolio">Design</OutboundLink> by Tovly
+            Deutsch. Forked from{' '}
+            <OutboundLink href="https://github.com/TovlyDeutsch/gatsby-starter-portfolio"> Lekoarts</OutboundLink>.
           </Footer>
         </Page>
         <GlobalStyles />
@@ -318,7 +326,7 @@ export const overviewQuery = graphql`
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
-        fixed(width: 200 height: 267) {
+        fixed(width: 200, height: 267) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -333,7 +341,7 @@ export const overviewQuery = graphql`
           siteName
           cover {
             childImageSharp {
-              fluid(maxWidth: 350) {
+              fluid(maxWidth: 350, quality: 100, cropFocus: ATTENTION) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
