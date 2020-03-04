@@ -18,3 +18,8 @@
   description: 'Google Sheets Add-on for managing attendance'
   cover: './attendance.png'
   siteName: 'GitHub'
+- title: 'Tax Graphs'
+  url: 'https://github.com/TovlyDeutsch/taxGraph'
+  description: 'Simple tax plan visualizer from 2016 election'
+  cover: './taxgraph.png'
+  siteName: 'GitHub'
