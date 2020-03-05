@@ -293,9 +293,9 @@ class Index extends Component {
             </Grid>
           </SliderWrapper>
           <Footer>
-            <OutboundLink href="https://github.com/LeKoArts/gatsby-starter-portfolio">Design</OutboundLink> by Tovly
-            Deutsch. Forked from <OutboundLink href="https://github.com/TovlyDeutsch/tovly.com"> Lekoarts</OutboundLink>
-            .
+            <OutboundLink href="https://github.com/TovlyDeutsch/tovly.com">Design</OutboundLink> by Tovly Deutsch.
+            Forked from{' '}
+            <OutboundLink href="https://github.com/LeKoArts/gatsby-starter-portfolio"> Lekoarts</OutboundLink>.
           </Footer>
         </Page>
         <GlobalStyles />
