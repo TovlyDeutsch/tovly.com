@@ -2,9 +2,10 @@ import tw from 'tailwind.macro'
 import React from 'react'
 import styled from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import PropTypes from 'prop-types'
+import Img from 'gatsby-image'
 import Content from './Content'
 import Description from './Description'
-import Img from 'gatsby-image'
 
 const Intro = styled(Content)`
   ${tw`pb-8 md:py-8 text-center xl:text-left`};
@@ -29,10 +30,6 @@ const Button = styled(OutboundLink)`
   }
 `
 
-const Homepage = styled(Button)`
-  ${tw`bg-indigo text-white`};
-`
-
 const GitHub = styled(Button)`
   ${tw`bg-blue text-white sm:ml-0 sm:mr-4`};
 `
@@ -41,40 +38,37 @@ const Twitter = styled(Button)`
   ${tw`bg-blue text-white`};
 `
 
-const Blog = styled(Button)`
-  ${tw`bg-dBlue text-white`};
-`
-
-const Header = (props) => (
+const Header = ({ faceFile }) => (
   <Intro>
-    <Title>
-      Tovly Deutsch
-    </Title>
-    <div style={{display: "flex", flexFlow: "wrap-reverse", justifyContent:"center", marginTop: -24}}>
-    <div style={{marginTop:24}}>
-    <Description>
-      <p>
-        I'm a senior studying CS and linguistics at Harvard. I'm interested in intersections of my interests like NLP and
-         computational photgraphy. I'm working on improving readability assesment systems for my senior thesis, advised by
-         {" "}<OutboundLink href="http://www.eecs.harvard.edu/shieber/">Stuart Shieber</OutboundLink> 
-         {" "}and <OutboundLink href="https://jasbi.github.io/">Masoud Jasbi</OutboundLink>.
-
-         In my spare time, I enjoy filmmaking and <OutboundLink href="https://medium.com/@tovly">blogging</OutboundLink>.
-      </p>
-    </Description>
-    {/* <Image src="static/face_small.jpg"/> */}
-    <Social>
-      <GitHub role="button" href="https://github.com/TovlyDeutsch">
-        Github
-      </GitHub>
-      <Twitter role="button" href="/TovlyDeutschResume.pdf">
-        Resume
-      </Twitter>
-    </Social>
-    </div>
-    <Img fixed={props.faceFile.fixed} style={{margin: "auto", marginTop:24}}/>
+    <Title>Tovly Deutsch</Title>
+    <div style={{ display: 'flex', flexFlow: 'wrap-reverse', justifyContent: 'center', marginTop: -24 }}>
+      <div style={{ marginTop: 24 }}>
+        <Description>
+          <p>
+            I'm a senior studying CS and linguistics at Harvard. I'm interested in intersections of my interests like
+            NLP and computational photgraphy. I'm working on improving readability assesment systems for my senior
+            thesis, advised by <OutboundLink href="http://www.eecs.harvard.edu/shieber/">Stuart Shieber</OutboundLink>{' '}
+            and <OutboundLink href="https://jasbi.github.io/">Masoud Jasbi</OutboundLink>. In my spare time, I enjoy
+            filmmaking and <OutboundLink href="https://medium.com/@tovly">blogging</OutboundLink>.
+          </p>
+        </Description>
+        {/* <Image src="static/face_small.jpg"/> */}
+        <Social>
+          <GitHub role="button" href="https://github.com/TovlyDeutsch">
+            Github
+          </GitHub>
+          <Twitter role="button" href="/TovlyDeutschResume.pdf">
+            Resume
+          </Twitter>
+        </Social>
+      </div>
+      <Img fixed={faceFile.fixed} style={{ margin: 'auto', marginTop: 24 }} />
     </div>
   </Intro>
 )
+
+Header.propTypes = {
+  faceFile: PropTypes.object.isRequired,
+}
 
 export default Header
