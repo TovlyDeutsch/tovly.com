@@ -1,5 +1,5 @@
 /* eslint no-shadow: 0 */
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { createGlobalStyle } from 'styled-components'
 import Helmet from 'react-helmet'
@@ -8,8 +8,6 @@ import Img from 'gatsby-image'
 import tw from 'tailwind.macro'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
-import Content from '../components/Content'
-import Description from '../components/Description'
 import Header from '../components/Header'
 
 import favicon from '../favicon.png'
@@ -175,17 +173,8 @@ const Divider = styled.div`
   height: 3px;
 `
 
-const FeaturesWrapper = styled.div`
-  ${tw`text-grey-lighter text-xs flex items-end`};
-  min-height: 50px;
-`
-
 const Heading = styled.h2`
   ${tw`text-center xl:text-left text-2xl md:text-4xl m-0 font-semibold`};
-`
-
-const SelectWrapper = styled.div`
-  ${tw`mb-12`};
 `
 
 const Grid = styled.div`
@@ -195,113 +184,90 @@ const Grid = styled.div`
   grid-gap: 30px;
 `
 
-class Index extends Component {
-  state = {
-    name: '[DIRECTORY_NAME]',
-    url: '[GITHUB_REPO_URL]',
-  }
+const Index = props => {
+  const {
+    data: {
+      allSitesYaml: { edges },
+      site: { siteMetadata },
+      file: { childImageSharp },
+    },
+  } = props
 
-  selectChange = event => {
-    this.setState({
-      name: event.target.selectedOptions[0].dataset.name,
-      url: event.target.selectedOptions[0].dataset.url,
-    })
-  }
-
-  render() {
-    const {
-      data: {
-        allSitesYaml: { edges },
-        site: { siteMetadata },
-        file: { childImageSharp },
-      },
-    } = this.props
-
-    const { name, url } = this.state
-
-    return (
-      <React.Fragment>
-        <Helmet>
-          <html lang="en" />
-          <title>{siteMetadata.siteTitle}</title>
-          <meta name="description" content="Portfolio for Tovly Deutsch, software engineer and Harvard student" />
-          <meta name="image" content={favicon} />
-          <meta property="og:locale" content="en_US" />
-          <meta property="og:site_name" content="tovly.com" />
-          <meta property="og:url" content="https://tovly.com" />
-          <meta property="og:title" content="Software Engineer & Harvard Student" />
-          <meta
-            property="og:description"
-            content="Portfolio for Tovly Deutsch, software engineer and Harvard student"
-          />
-          <meta property="og:image" content={favicon} />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:creator" content="@_tovly" />
-          <meta name="twitter:title" content="Software Engineer & Harvard Student" />
-          <meta
-            name="twitter:description"
-            content="Portfolio for Tovly Deutsch, software engineer and Harvard student"
-          />
-          <meta name="twitter:image" content={favicon} />
-        </Helmet>
-        <Page>
-          <Header faceFile={childImageSharp} />
-          <SliderWrapper>
-            <Heading>Projects</Heading>
-            <Grid>
-              {edges.map(site => {
-                const { id, title, description, preview, cover, url, siteName } = site.node
-                return (
-                  <a href={url} style={{ textDecoration: 'none' }}>
-                    <Item key={id}>
-                      <ItemContent>
-                        <Top>
-                          <Preview href={preview}>
-                            View on <img src={rightArrow} alt="Arrow" aria-hidden="true" />
-                          </Preview>
-                          <Repo href={url}>
-                            {siteName.includes('GitHub') && <img src={github} alt="Arrow" aria-hidden="true" />}{' '}
-                            {siteName}
-                          </Repo>
-                          <Desc>{description}</Desc>
-                        </Top>
-                        <Bottom>
-                          <ItemTitle>{title}</ItemTitle>
-                          <Divider />
-                        </Bottom>
-                        <BGImage>
-                          <Gradient />
-                          {title == 'RGB Loader Animation' && (
-                            <div class="demo-3">
-                              <link rel="stylesheet" type="text/css" href="/rgbSpinner.css" />
-                              <ul class="bokeh">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                              </ul>
-                            </div>
-                          )}
-                          {cover && title != 'RGB Loader Animation' && (
-                            <Img fluid={cover.childImageSharp.fluid} imgStyle={{ objectFit: 'cover' }} />
-                          )}
-                        </BGImage>
-                      </ItemContent>
-                    </Item>
-                  </a>
-                )
-              })}
-            </Grid>
-          </SliderWrapper>
-          <Footer>
-            <OutboundLink href="https://github.com/TovlyDeutsch/tovly.com">Design</OutboundLink> by Tovly Deutsch.
-            Forked from{' '}
-            <OutboundLink href="https://github.com/LeKoArts/gatsby-starter-portfolio"> Lekoarts</OutboundLink>.
-          </Footer>
-        </Page>
-        <GlobalStyles />
-      </React.Fragment>
-    )
-  }
+  return (
+    <React.Fragment>
+      <Helmet>
+        <html lang="en" />
+        <title>{siteMetadata.siteTitle}</title>
+        <meta name="description" content="Portfolio for Tovly Deutsch, software engineer and Harvard student" />
+        <meta name="image" content={favicon} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="tovly.com" />
+        <meta property="og:url" content="https://tovly.com" />
+        <meta property="og:title" content="Software Engineer & Harvard Student" />
+        <meta property="og:description" content="Portfolio for Tovly Deutsch, software engineer and Harvard student" />
+        <meta property="og:image" content={favicon} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@_tovly" />
+        <meta name="twitter:title" content="Software Engineer & Harvard Student" />
+        <meta name="twitter:description" content="Portfolio for Tovly Deutsch, software engineer and Harvard student" />
+        <meta name="twitter:image" content={favicon} />
+      </Helmet>
+      <Page>
+        <Header faceFile={childImageSharp} />
+        <SliderWrapper>
+          <Heading>Projects</Heading>
+          <Grid>
+            {edges.map(site => {
+              const { id, title, description, preview, cover, url, siteName } = site.node
+              return (
+                <a href={url} style={{ textDecoration: 'none' }}>
+                  <Item key={id}>
+                    <ItemContent>
+                      <Top>
+                        <Preview href={preview}>
+                          View on <img src={rightArrow} alt="Arrow" aria-hidden="true" />
+                        </Preview>
+                        <Repo href={url}>
+                          {siteName.includes('GitHub') && <img src={github} alt="Arrow" aria-hidden="true" />}{' '}
+                          {siteName}
+                        </Repo>
+                        <Desc>{description}</Desc>
+                      </Top>
+                      <Bottom>
+                        <ItemTitle>{title}</ItemTitle>
+                        <Divider />
+                      </Bottom>
+                      <BGImage>
+                        <Gradient />
+                        {title === 'RGB Loader Animation' && (
+                          <div className="demo-3">
+                            <link rel="stylesheet" type="text/css" href="/rgbSpinner.css" />
+                            <ul className="bokeh">
+                              <li />
+                              <li />
+                              <li />
+                            </ul>
+                          </div>
+                        )}
+                        {cover && title !== 'RGB Loader Animation' && (
+                          <Img fluid={cover.childImageSharp.fluid} imgStyle={{ objectFit: 'cover' }} />
+                        )}
+                      </BGImage>
+                    </ItemContent>
+                  </Item>
+                </a>
+              )
+            })}
+          </Grid>
+        </SliderWrapper>
+        <Footer>
+          <OutboundLink href="https://github.com/TovlyDeutsch/tovly.com">Design</OutboundLink> by Tovly Deutsch. Forked
+          from <OutboundLink href="https://github.com/LeKoArts/gatsby-starter-portfolio"> Lekoarts</OutboundLink>.
+        </Footer>
+      </Page>
+      <GlobalStyles />
+    </React.Fragment>
+  )
 }
 
 export default Index
