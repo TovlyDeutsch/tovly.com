@@ -228,7 +228,7 @@ class Index extends Component {
           <meta name="image" content={favicon} />
           <meta property="og:locale" content="en_US" />
           <meta property="og:site_name" content="tovly.com" />
-          <meta property="og:url" content="https://gatsby-starter-portfolio.netlify.com" />
+          <meta property="og:url" content="https://tovly.com" />
           <meta property="og:title" content="Software Engineer & Harvard Student" />
           <meta
             property="og:description"
@@ -294,8 +294,8 @@ class Index extends Component {
           </SliderWrapper>
           <Footer>
             <OutboundLink href="https://github.com/LeKoArts/gatsby-starter-portfolio">Design</OutboundLink> by Tovly
-            Deutsch. Forked from{' '}
-            <OutboundLink href="https://github.com/TovlyDeutsch/gatsby-starter-portfolio"> Lekoarts</OutboundLink>.
+            Deutsch. Forked from <OutboundLink href="https://github.com/TovlyDeutsch/tovly.com"> Lekoarts</OutboundLink>
+            .
           </Footer>
         </Page>
         <GlobalStyles />
