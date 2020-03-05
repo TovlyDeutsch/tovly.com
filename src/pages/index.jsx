@@ -224,26 +224,23 @@ class Index extends Component {
         <Helmet>
           <html lang="en" />
           <title>{siteMetadata.siteTitle}</title>
-          <meta
-            name="description"
-            content="Gatsby.js Starters by LekoArts. Primarily aimed at Designers & Photographers. Minimalistic & fast websites!"
-          />
+          <meta name="description" content="Portfolio for Tovly Deutsch, software engineer and Harvard student" />
           <meta name="image" content={favicon} />
           <meta property="og:locale" content="en_US" />
-          <meta property="og:site_name" content="lekoarts.de" />
+          <meta property="og:site_name" content="tovly.com" />
           <meta property="og:url" content="https://gatsby-starter-portfolio.netlify.com" />
-          <meta property="og:title" content="Gatsby Starter Portfolio Overview by LekoArts" />
+          <meta property="og:title" content="Software Engineer & Harvard Student" />
           <meta
             property="og:description"
-            content="Gatsby.js starters by LekoArts. Primarily aimed at Designers & Photographers. Minimalistic & fast websites!"
+            content="Portfolio for Tovly Deutsch, software engineer and Harvard student"
           />
           <meta property="og:image" content={favicon} />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:creator" content="@lekoarts.de" />
-          <meta name="twitter:title" content="Gatsby Starter Portfolio Overview by LekoArts" />
+          <meta name="twitter:creator" content="@_tovly" />
+          <meta name="twitter:title" content="Software Engineer & Harvard Student" />
           <meta
             name="twitter:description"
-            content="Gatsby.js starters by LekoArts. Primarily aimed at Designers & Photographers. Minimalistic & fast websites!"
+            content="Portfolio for Tovly Deutsch, software engineer and Harvard student"
           />
           <meta name="twitter:image" content={favicon} />
         </Helmet>
