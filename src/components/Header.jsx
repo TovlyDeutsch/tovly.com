@@ -46,7 +46,7 @@ const Header = ({ faceFile }) => (
         <Description>
           <p>
             I'm a senior studying CS and linguistics at Harvard. I'm interested in intersections of my interests like
-            NLP and computational photgraphy. I'm working on improving readability assesment systems for my senior
+            NLP and computational photography. I'm working on improving readability assessment systems for my senior
             thesis, advised by <OutboundLink href="http://www.eecs.harvard.edu/shieber/">Stuart Shieber</OutboundLink>{' '}
             and <OutboundLink href="https://jasbi.github.io/">Masoud Jasbi</OutboundLink>. In my spare time, I enjoy
             filmmaking and <OutboundLink href="https://medium.com/@tovly">blogging</OutboundLink>.
