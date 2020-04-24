@@ -57,8 +57,11 @@ const Header = ({ faceFile }) => (
           <GitHub role="button" href="https://github.com/TovlyDeutsch">
             Github
           </GitHub>
-          <Twitter role="button" href="/TovlyDeutschResume.pdf">
+          <GitHub role="button" href="/TovlyDeutschResume.pdf">
             Resume
+          </GitHub>
+          <Twitter role="button" href="https://medium.com/@tovly">
+            Blog
           </Twitter>
         </Social>
       </div>
