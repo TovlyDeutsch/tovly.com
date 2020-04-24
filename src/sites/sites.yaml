@@ -23,3 +23,8 @@
   description: 'Simple tax plan visualizer from 2016 election'
   cover: './taxgraph.png'
   siteName: 'GitHub'
+- title: 'GP Logo'
+  url: 'https://github.com/TovlyDeutsch/gp-logo'
+  description: 'Name animation via Gaussian Process Regression.'
+  cover: './gp_logo.png'
+  siteName: 'GitHub'
