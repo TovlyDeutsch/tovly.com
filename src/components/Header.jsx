@@ -12,10 +12,14 @@ const Intro = styled(Content)`
 `
 
 const Title = styled.h1`
-  ${tw`text-3xl md:text-5xl my-8`};
+  ${tw`text-3xl md:text-5xl my-0 sm:mt-8`};
   span {
     ${tw`text-orange`};
   }
+`
+
+const SubTitle = styled.h2`
+  ${tw`text-lg mb-8 mt-0 font-normal max-w-sm`};
 `
 
 const Social = styled.section`
@@ -41,6 +45,7 @@ const Twitter = styled(Button)`
 const Header = ({ faceFile }) => (
   <Intro>
     <Title>Tovly Deutsch</Title>
+    <SubTitle>Senior studying CS &amp; Linguistics at Harvard. Incoming SWE at Facebook</SubTitle>
     <div style={{ display: 'flex', flexFlow: 'wrap-reverse', justifyContent: 'center', marginTop: -24 }}>
       <div style={{ marginTop: 24 }}>
         <Description>
