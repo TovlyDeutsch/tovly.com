@@ -13,9 +13,9 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Montserrat:400,600,700&display=optional']
-        }
-      }
+          families: ['Montserrat:400,600,700&display=optional'],
+        },
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
@@ -27,7 +27,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-47519312-2',
+        trackingId: 'UA-167613160-1',
         anonymize: true,
       },
     },
