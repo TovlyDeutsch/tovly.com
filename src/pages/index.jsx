@@ -7,6 +7,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import tw from 'tailwind.macro'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import '../../static/rgbSpinner.css'
 
 import Header from '../components/Header'
 
@@ -104,7 +105,7 @@ const Bottom = styled.div`
   ${tw`z-30`};
 `
 
-const Preview = styled(OutboundLink)`
+const Preview = styled.div`
   ${tw`text-white inline-block text-xl relative mb-0 py-1 tracking-wide no-underline uppercase`};
   img {
     width: 18px;
@@ -213,13 +214,13 @@ const Index = props => {
           <Heading>Projects</Heading>
           <Grid>
             {edges.map(site => {
-              const { id, title, description, preview, cover, url, siteName } = site.node
+              const { id, title, description, cover, url, siteName } = site.node
               return (
                 <a href={url} style={{ textDecoration: 'none' }}>
                   <Item key={id}>
                     <ItemContent>
                       <Top>
-                        <Preview href={preview}>
+                        <Preview>
                           View on <img src={rightArrow} alt="Arrow" aria-hidden="true" />
                         </Preview>
                         <Repo href={url}>
@@ -235,7 +236,6 @@ const Index = props => {
                         <Gradient />
                         {title === 'RGB Loader Animation' && (
                           <div className="demo-3">
-                            <link rel="stylesheet" type="text/css" href="/rgbSpinner.css" />
                             <ul className="bokeh">
                               <li />
                               <li />
