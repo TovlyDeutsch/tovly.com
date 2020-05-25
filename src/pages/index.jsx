@@ -168,11 +168,6 @@ const Gradient = styled.div`
   background: linear-gradient(to top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.75) 100%);
 `
 
-const Divider = styled.div`
-  ${tw`bg-orange w-16 mb-4`};
-  height: 3px;
-`
-
 const Heading = styled.h2`
   ${tw`text-center xl:text-left text-2xl md:text-4xl m-0 font-semibold`};
 `
@@ -235,7 +230,6 @@ const Index = props => {
                       </Top>
                       <Bottom>
                         <ItemTitle>{title}</ItemTitle>
-                        <Divider />
                       </Bottom>
                       <BGImage>
                         <Gradient />
