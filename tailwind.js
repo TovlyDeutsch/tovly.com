@@ -206,6 +206,7 @@ module.exports = {
       'sans-serif',
     ],
     serif: [
+      'Gelasio',
       'Constantia',
       'Lucida Bright',
       'Lucidabright',
@@ -249,6 +250,9 @@ module.exports = {
     '3xl': '1.875rem', // 30px
     '4xl': '2.25rem', // 36px
     '5xl': '3rem', // 48px
+    '6xl': '4rem', // 64px
+    '7xl': '5rem', // 80px
+    '8xl': '6rem', // 102px
   },
 
   /*

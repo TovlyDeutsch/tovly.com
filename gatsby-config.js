@@ -1,7 +1,16 @@
 module.exports = {
   siteMetadata: {
     siteTitle: 'Tovly Deutsch – Software Engineer, Researcher, & Filmmaker',
+    blogTitle: "Tovly's Blog",
     siteUrl: 'https://tovly.com',
+    description: 'Tovly Deutsch – Software Engineer, Researcher, & Filmmaker',
+    author: {
+      name: 'Tovly Deutsch',
+      summary: 'test summary',
+    },
+    social: {
+      twitter: 'https://twitter.com/_tovly',
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -15,6 +24,16 @@ module.exports = {
         path: `${__dirname}/src/sites/`,
         name: 'sites',
       },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/`,
+        name: 'content',
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
     },
     {
       resolve: 'gatsby-plugin-google-analytics',
