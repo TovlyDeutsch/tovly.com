@@ -115,14 +115,14 @@ const Preview = styled.div`
     top: 1px;
     transition: transform 0.3s ease-in-out;
   }
-  &:hover {
+  .project-box:hover & {
     img {
       transform: translateX(10px);
     }
   }
 `
 
-const Repo = styled(OutboundLink)`
+const Repo = styled.div`
   ${tw`text-white text-sm inline-block mb-4 py-1 tracking-wide no-underline opacity-75`};
   transition: all 0.4s ease-in-out;
   img {
@@ -133,7 +133,7 @@ const Repo = styled(OutboundLink)`
     top: 2px;
     transition: transform 0.3s ease-in-out;
   }
-  &:hover {
+  .project-box:hover & {
     ${tw`opacity-100`};
   }
 `
@@ -216,14 +216,14 @@ const Index = props => {
             {edges.map(site => {
               const { id, title, description, cover, url, siteName } = site.node
               return (
-                <a href={url} style={{ textDecoration: 'none' }}>
-                  <Item key={id}>
+                <a href={url} style={{ textDecoration: 'none' }} className="project-box" key={id}>
+                  <Item>
                     <ItemContent>
                       <Top>
                         <Preview>
                           View on <img src={rightArrow} alt="Arrow" aria-hidden="true" />
                         </Preview>
-                        <Repo href={url}>
+                        <Repo>
                           {siteName.includes('GitHub') && <img src={github} alt="Arrow" aria-hidden="true" />}{' '}
                           {siteName}
                         </Repo>
