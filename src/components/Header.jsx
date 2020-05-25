@@ -31,11 +31,11 @@ const Button = styled(OutboundLink)`
 `
 
 const GitHub = styled(Button)`
-  ${tw`bg-blue text-white sm:ml-0 sm:mr-4`};
+  ${tw`bg-blue-dark text-white sm:ml-0 sm:mr-4`};
 `
 
 const Twitter = styled(Button)`
-  ${tw`bg-blue text-white`};
+  ${tw`bg-blue-dark text-white`};
 `
 
 const Header = ({ faceFile }) => (
