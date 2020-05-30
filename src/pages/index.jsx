@@ -184,6 +184,10 @@ const PubLink = styled(Link)`
   ${tw`no-underline text-orange hover:text-orange-light`};
 `
 
+const PubList = styled.ul`
+  padding-inline-start: 1.3em;
+`
+
 const Index = props => {
   const {
     data: {
@@ -216,7 +220,7 @@ const Index = props => {
         <Header faceFile={childImageSharp} />
         <SliderWrapper>
           <Heading>Publications</Heading>
-          <ul>
+          <PubList>
             <li>
               <b>T. Deutsch</b>
               <br />
@@ -254,7 +258,7 @@ const Index = props => {
               {/* <a href="https://arxiv.org/pdf/1904.03513.pdf">[PDF]</a>{' '}
               <a href="https://github.com/AbdulSaleh/QCRI-MIT-SemEval2019-Task4">[Code]</a> */}
             </li>
-          </ul>
+          </PubList>
           <Heading>Projects</Heading>
           <Grid>
             {edges.map(site => {
