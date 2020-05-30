@@ -228,7 +228,7 @@ const Index = props => {
               <li>
                 <b>T. Deutsch</b>
                 <br />
-                <b>Linguistic Features for Readability Assesment</b>
+                <b>Linguistic Features for Readability Assessment</b>
                 <br /> <i>Senior Thesis</i>
                 <br />
                 <PubLink to="/thesis_bibtex.txt">[BibTeX]</PubLink>
@@ -240,7 +240,7 @@ const Index = props => {
               <li>
                 <b>T. Deutsch</b>
                 <br />
-                <b>Linguistic Features for Readability Assesment</b>
+                <b>Linguistic Features for Readability Assessment</b>
                 <br />{' '}
                 <i>
                   [To appear in] Proceedings of the Fifteenth Workshop on Innovative Use of NLP for Building Educational
