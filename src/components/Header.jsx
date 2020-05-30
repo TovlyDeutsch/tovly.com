@@ -31,7 +31,7 @@ const Button = styled(OutboundLink)`
 `
 
 const GitHub = styled(Button)`
-  ${tw`bg-blue-dark text-white sm:ml-0 sm:mr-4`};
+  ${tw`bg-blue-dark text-white sm:ml-0 sm:mr-4 my-1`};
 `
 
 const Twitter = styled(Button)`
@@ -54,6 +54,12 @@ const Header = ({ faceFile }) => (
         </Description>
         {/* <Image src="static/face_small.jpg"/> */}
         <Social>
+          <GitHub role="button" href="/#publications">
+            Publications
+          </GitHub>
+          <GitHub role="button" href="/#projects">
+            Projects
+          </GitHub>
           <GitHub role="button" href="https://github.com/TovlyDeutsch">
             Github
           </GitHub>
