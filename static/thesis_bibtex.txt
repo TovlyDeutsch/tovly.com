@@ -1,0 +1,7 @@
+@misc{deutsch2020LingFeatures,
+  title={Linguistic Features for Readability Assesment},
+  author={Deutsch, Tovly},
+  institution = {Harvard University},
+  year={2020},
+  url = {hhttp://tovly.com/Senior_Thesis_Final_Tovly_Deutsch.pdf}
+}

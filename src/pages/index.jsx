@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { createGlobalStyle } from 'styled-components'
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import tw from 'tailwind.macro'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
@@ -180,6 +180,10 @@ const Grid = styled.div`
   grid-gap: 30px;
 `
 
+const PubLink = styled(Link)`
+  ${tw`no-underline text-orange hover:text-orange-light`};
+`
+
 const Index = props => {
   const {
     data: {
@@ -211,6 +215,46 @@ const Index = props => {
       <Page>
         <Header faceFile={childImageSharp} />
         <SliderWrapper>
+          <Heading>Publications</Heading>
+          <ul>
+            <li>
+              <b>T. Deutsch</b>
+              <br />
+              <b>Linguistic Features for Readability Assesment</b>
+              <br /> <i>Senior Thesis</i>
+              <br />
+              <PubLink to="/thesis_bibtex.txt">[BibTeX]</PubLink>
+              <PubLink to="/Senior_Thesis_Final_Tovly_Deutsch.pdf">[PDF]</PubLink>
+              <PubLink to="https://github.com/TovlyDeutsch/Linguistic-Features-for-Readability">[Code]</PubLink>
+            </li>
+            <li>
+              <b>T. Deutsch</b>
+              <br />
+              <b>Linguistic Features for Readability Assesment</b>
+              <br />{' '}
+              <i>
+                [To appear in] Proceedings of the Fifteenth Workshop on Innovative Use of NLP for Building Educational
+                Applications
+              </i>
+              <br /> <i>Links coming soon (once published)!</i>
+              {/* TODO add links once published */}
+              {/* <br /> <a href="https://abdulsaleh.github.io/_pages/bibtex/saleh2019team.html">[BibTeX]</a>{' '} */}
+              {/* <a href="https://arxiv.org/pdf/1904.03513.pdf">[PDF]</a>{' '}
+              <a href="https://github.com/AbdulSaleh/QCRI-MIT-SemEval2019-Task4">[Code]</a> */}
+            </li>
+            <li>
+              A. Saleh, <b>T. Deutsch</b>
+              <sup>*</sup>, S. Casper<sup>*</sup>, Y. Belinkov, S. Shieber
+              <br />
+              <b>Probing Neural Dialog Models for Conversational Understanding</b>
+              <br /> <i>[To appear in] Proceedings of the Second Workshop on NLP for Conversational AI</i>
+              <br /> <i>Links coming soon (once published)!</i>
+              {/* TODO add links once published */}
+              {/* <br /> <a href="https://abdulsaleh.github.io/_pages/bibtex/saleh2019team.html">[BibTeX]</a>{' '} */}
+              {/* <a href="https://arxiv.org/pdf/1904.03513.pdf">[PDF]</a>{' '}
+              <a href="https://github.com/AbdulSaleh/QCRI-MIT-SemEval2019-Task4">[Code]</a> */}
+            </li>
+          </ul>
           <Heading>Projects</Heading>
           <Grid>
             {edges.map(site => {
