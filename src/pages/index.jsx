@@ -238,7 +238,7 @@ const Index = props => {
                 </OutboundLink>
               </li>
               <li>
-                <b>T. Deutsch</b>, Masoud Jasbi, Stuart Shieber
+                <b>T. Deutsch</b>, M. Jasbi, S. Shieber
                 <br />
                 <b>Linguistic Features for Readability Assessment</b>
                 <br />{' '}
