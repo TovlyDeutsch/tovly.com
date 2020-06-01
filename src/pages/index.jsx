@@ -234,8 +234,8 @@ const Index = props => {
                 <b>Linguistic Features for Readability Assessment</b>
                 <br /> <i>Senior Thesis</i>
                 <br />
-                <PubLink to="/thesis_bibtex.txt">[BibTeX]</PubLink>
-                <PubLink to="/Senior_Thesis_Final_Tovly_Deutsch.pdf">[PDF]</PubLink>
+                <PubLink href="/thesis_bibtex.txt">[BibTeX]</PubLink>
+                <PubLink href="/Senior_Thesis_Final_Tovly_Deutsch.pdf">[PDF]</PubLink>
                 <OutboundLink href="https://github.com/TovlyDeutsch/Linguistic-Features-for-Readability">
                   [Code]
                 </OutboundLink>
