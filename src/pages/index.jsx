@@ -227,92 +227,92 @@ const Index = props => {
         <SliderWrapper>
           <a name="publications">
             <Heading>Publications</Heading>
-            <PubList>
-              <li>
-                <b>T. Deutsch</b>
-                <br />
-                <b>Linguistic Features for Readability Assessment</b>
-                <br /> <i>Senior Thesis</i>
-                <br />
-                <PubLink href="/thesis_bibtex.txt">[BibTeX]</PubLink>
-                <PubLink href="/Senior_Thesis_Final_Tovly_Deutsch.pdf">[PDF]</PubLink>
-                <OutboundLink href="https://github.com/TovlyDeutsch/Linguistic-Features-for-Readability">
-                  [Code]
-                </OutboundLink>
-              </li>
-              <li>
-                <b>T. Deutsch</b>, M. Jasbi, S. Shieber
-                <br />
-                <b>Linguistic Features for Readability Assessment</b>
-                <br />{' '}
-                <i>
-                  [To appear in] Proceedings of the Fifteenth Workshop on Innovative Use of NLP for Building Educational
-                  Applications
-                </i>
-                <br /> <i>Links coming soon (once published)!</i>
-                {/* TODO add links once published */}
-                {/* <br /> <a href="https://abdulsaleh.github.io/_pages/bibtex/saleh2019team.html">[BibTeX]</a>{' '} */}
-                {/* <a href="https://arxiv.org/pdf/1904.03513.pdf">[PDF]</a>{' '}
-              <a href="https://github.com/AbdulSaleh/QCRI-MIT-SemEval2019-Task4">[Code]</a> */}
-              </li>
-              <li>
-                A. Saleh, <b>T. Deutsch</b>
-                <sup>*</sup>, S. Casper<sup>*</sup>, Y. Belinkov, S. Shieber
-                <br />
-                <b>Probing Neural Dialog Models for Conversational Understanding</b>
-                <br /> <i>[To appear in] Proceedings of the Second Workshop on NLP for Conversational AI</i>
-                <br /> <i>Links coming soon (once published)!</i>
-                {/* TODO add links once published */}
-                {/* <br /> <a href="https://abdulsaleh.github.io/_pages/bibtex/saleh2019team.html">[BibTeX]</a>{' '} */}
-                {/* <a href="https://arxiv.org/pdf/1904.03513.pdf">[PDF]</a>{' '}
-              <a href="https://github.com/AbdulSaleh/QCRI-MIT-SemEval2019-Task4">[Code]</a> */}
-              </li>
-            </PubList>
           </a>
+          <PubList>
+            <li>
+              <b>T. Deutsch</b>
+              <br />
+              <b>Linguistic Features for Readability Assessment</b>
+              <br /> <i>Senior Thesis</i>
+              <br />
+              <PubLink href="/thesis_bibtex.txt">[BibTeX]</PubLink>
+              <PubLink href="/Senior_Thesis_Final_Tovly_Deutsch.pdf">[PDF]</PubLink>
+              <OutboundLink href="https://github.com/TovlyDeutsch/Linguistic-Features-for-Readability">
+                [Code]
+              </OutboundLink>
+            </li>
+            <li>
+              <b>T. Deutsch</b>, M. Jasbi, S. Shieber
+              <br />
+              <b>Linguistic Features for Readability Assessment</b>
+              <br />{' '}
+              <i>
+                [To appear in] Proceedings of the Fifteenth Workshop on Innovative Use of NLP for Building Educational
+                Applications
+              </i>
+              <br /> <i>Links coming soon (once published)!</i>
+              {/* TODO add links once published */}
+              {/* <br /> <a href="https://abdulsaleh.github.io/_pages/bibtex/saleh2019team.html">[BibTeX]</a>{' '} */}
+              {/* <a href="https://arxiv.org/pdf/1904.03513.pdf">[PDF]</a>{' '}
+              <a href="https://github.com/AbdulSaleh/QCRI-MIT-SemEval2019-Task4">[Code]</a> */}
+            </li>
+            <li>
+              A. Saleh, <b>T. Deutsch</b>
+              <sup>*</sup>, S. Casper<sup>*</sup>, Y. Belinkov, S. Shieber
+              <br />
+              <b>Probing Neural Dialog Models for Conversational Understanding</b>
+              <br /> <i>[To appear in] Proceedings of the Second Workshop on NLP for Conversational AI</i>
+              <br /> <i>Links coming soon (once published)!</i>
+              {/* TODO add links once published */}
+              {/* <br /> <a href="https://abdulsaleh.github.io/_pages/bibtex/saleh2019team.html">[BibTeX]</a>{' '} */}
+              {/* <a href="https://arxiv.org/pdf/1904.03513.pdf">[PDF]</a>{' '}
+              <a href="https://github.com/AbdulSaleh/QCRI-MIT-SemEval2019-Task4">[Code]</a> */}
+            </li>
+          </PubList>
           <a name="projects">
             <Heading>Projects</Heading>
-            <Grid>
-              {edges.map(site => {
-                const { id, title, description, cover, url, siteName } = site.node
-                return (
-                  <a href={url} style={{ textDecoration: 'none' }} className="project-box" key={id}>
-                    <Item>
-                      <ItemContent>
-                        <Top>
-                          <Preview>
-                            View on <img src={rightArrow} alt="Arrow" aria-hidden="true" />
-                          </Preview>
-                          <Repo>
-                            {siteName.includes('GitHub') && <img src={github} alt="Arrow" aria-hidden="true" />}{' '}
-                            {siteName}
-                          </Repo>
-                          <Desc>{description}</Desc>
-                        </Top>
-                        <Bottom>
-                          <ItemTitle>{title}</ItemTitle>
-                        </Bottom>
-                        <BGImage>
-                          <Gradient />
-                          {title === 'RGB Loader Animation' && (
-                            <div className="demo-3">
-                              <ul className="bokeh">
-                                <li />
-                                <li />
-                                <li />
-                              </ul>
-                            </div>
-                          )}
-                          {cover && title !== 'RGB Loader Animation' && (
-                            <Img fluid={cover.childImageSharp.fluid} imgStyle={{ objectFit: 'cover' }} />
-                          )}
-                        </BGImage>
-                      </ItemContent>
-                    </Item>
-                  </a>
-                )
-              })}
-            </Grid>
           </a>
+          <Grid>
+            {edges.map(site => {
+              const { id, title, description, cover, url, siteName } = site.node
+              return (
+                <a href={url} style={{ textDecoration: 'none' }} className="project-box" key={id}>
+                  <Item>
+                    <ItemContent>
+                      <Top>
+                        <Preview>
+                          View on <img src={rightArrow} alt="Arrow" aria-hidden="true" />
+                        </Preview>
+                        <Repo>
+                          {siteName.includes('GitHub') && <img src={github} alt="Arrow" aria-hidden="true" />}{' '}
+                          {siteName}
+                        </Repo>
+                        <Desc>{description}</Desc>
+                      </Top>
+                      <Bottom>
+                        <ItemTitle>{title}</ItemTitle>
+                      </Bottom>
+                      <BGImage>
+                        <Gradient />
+                        {title === 'RGB Loader Animation' && (
+                          <div className="demo-3">
+                            <ul className="bokeh">
+                              <li />
+                              <li />
+                              <li />
+                            </ul>
+                          </div>
+                        )}
+                        {cover && title !== 'RGB Loader Animation' && (
+                          <Img fluid={cover.childImageSharp.fluid} imgStyle={{ objectFit: 'cover' }} />
+                        )}
+                      </BGImage>
+                    </ItemContent>
+                  </Item>
+                </a>
+              )
+            })}
+          </Grid>
         </SliderWrapper>
         <Footer>
           <OutboundLink href="https://github.com/TovlyDeutsch/tovly.com">Design</OutboundLink> by Tovly Deutsch. Forked
