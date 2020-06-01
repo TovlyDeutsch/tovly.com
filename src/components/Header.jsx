@@ -6,12 +6,8 @@ import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import Description from './Description'
 
-const Content = styled.section`
-  ${tw`sm:px-8 px-4 md:px-24`};
-`
-
-const Intro = styled(Content)`
-  ${tw`pb-8 md:py-8 text-center xl:text-left`};
+const Intro = styled.section`
+  ${tw`sm:px-8 px-4 md:px-24 pb-8 md:py-8 text-center xl:text-left`};
 `
 
 const Title = styled.h1`
