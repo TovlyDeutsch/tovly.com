@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import { Link } from 'gatsby'
 import Content from './Content'
 import Description from './Description'
 
