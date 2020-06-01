@@ -10,7 +10,8 @@
     }
   },
   "globals": {
-    "tw": true
+    "tw": true,
+    "__PATH_PREFIX__": true
   },
   "env": {
     "browser": true,
