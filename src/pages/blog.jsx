@@ -39,7 +39,7 @@ const PostTitle = styled(Link)`
 `
 
 const BlogIndex = ({ data, location }) => {
-  const blogTitle = data.site.siteMetadata.blogTitle
+  const { blogTitle } = data.site.siteMetadata
   const posts = data.allMarkdownRemark.edges
 
   return (
