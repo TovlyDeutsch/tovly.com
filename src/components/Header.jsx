@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
+import { Link } from 'gatsby'
 import Content from './Content'
 import Description from './Description'
 
@@ -45,13 +46,13 @@ const Header = ({ faceFile }) => (
       <div style={{ marginTop: 24 }}>
         <Description>
           <p>
-            I'm a senior studying CS and linguistics at Harvard. I'm interested in intersections of my interests like
-            NLP and computational photography. I'm working on improving readability assessment systems for my senior
-            thesis, advised by <OutboundLink href="http://www.eecs.harvard.edu/shieber/">Stuart Shieber</OutboundLink>{' '}
-            and <OutboundLink href="https://jasbi.github.io/">Masoud Jasbi</OutboundLink>. In my spare time, I enjoy
-            <OutboundLink href="https://www.youtube.com/channel/UCoYCQPyiv_y4QAHinPOFGHA">
-              filmmaking
-            </OutboundLink> and <OutboundLink href="https://medium.com/@tovly">blogging</OutboundLink>.
+            I'm a senior studying CS and linguistics at Harvard, interested in NLP and ML. I completed a
+            <Link to="/Senior_Thesis_Final_Tovly_Deutsch.pdf"> senior thesis </Link>
+            focused on improving readability assessment systems, advised by
+            <OutboundLink href="http://www.eecs.harvard.edu/shieber/"> Stuart Shieber</OutboundLink> and
+            <OutboundLink href="https://jasbi.github.io/"> Masoud Jasbi</OutboundLink>. In my spare time, I enjoy
+            <OutboundLink href="https://www.youtube.com/channel/UCoYCQPyiv_y4QAHinPOFGHA"> filmmaking</OutboundLink> and
+            <OutboundLink href="https://medium.com/@tovly"> blogging</OutboundLink>.
           </p>
         </Description>
         <Social>
