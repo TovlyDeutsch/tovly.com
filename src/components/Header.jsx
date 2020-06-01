@@ -49,10 +49,11 @@ const Header = ({ faceFile }) => (
             NLP and computational photography. I'm working on improving readability assessment systems for my senior
             thesis, advised by <OutboundLink href="http://www.eecs.harvard.edu/shieber/">Stuart Shieber</OutboundLink>{' '}
             and <OutboundLink href="https://jasbi.github.io/">Masoud Jasbi</OutboundLink>. In my spare time, I enjoy
-            filmmaking and <OutboundLink href="https://medium.com/@tovly">blogging</OutboundLink>.
+            <OutboundLink href="https://www.youtube.com/channel/UCoYCQPyiv_y4QAHinPOFGHA">
+              filmmaking
+            </OutboundLink> and <OutboundLink href="https://medium.com/@tovly">blogging</OutboundLink>.
           </p>
         </Description>
-        {/* <Image src="static/face_small.jpg"/> */}
         <Social>
           <GitHub role="button" href="/#publications">
             Publications
