@@ -4,8 +4,11 @@ import styled from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import Content from './Content'
 import Description from './Description'
+
+const Content = styled.section`
+  ${tw`sm:px-8 px-4 md:px-24`};
+`
 
 const Intro = styled(Content)`
   ${tw`pb-8 md:py-8 text-center xl:text-left`};
