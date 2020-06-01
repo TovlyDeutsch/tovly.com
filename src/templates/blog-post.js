@@ -4,16 +4,22 @@ import tw from 'tailwind.macro'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
-import SEO from '../components/seo'
+import Meta from '../components/meta'
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  const { blogTitle } = data.site.siteMetadata
+  const { blogTitle, blogSiteName, blogUrl } = data.site.siteMetadata
   const { previous, next } = pageContext
 
   return (
     <Layout location={location} title={blogTitle}>
-      <SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
+      <Meta
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+        siteName={blogSiteName}
+        siteUrl={blogUrl}
+        // TODO add cover image to each blogpost for page image here
+      />
       <article>
         <header style={tw`font-sans`}>
           <h1 style={tw`text-4xl mb-0 font-sans`}>{post.frontmatter.title}</h1>
@@ -69,6 +75,8 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         blogTitle
+        blogSiteName
+        blogUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

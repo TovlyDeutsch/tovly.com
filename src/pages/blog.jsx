@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
-import SEO from '../components/seo'
+import Meta from '../components/meta'
 
 // type Data = {
 //   site: {
@@ -39,12 +39,18 @@ const PostTitle = styled(Link)`
 `
 
 const BlogIndex = ({ data, location }) => {
-  const { blogTitle } = data.site.siteMetadata
+  const { blogTitle, blogSiteName, blogUrl, metaFaceImg } = data.site.siteMetadata
   const posts = data.allMarkdownRemark.edges
 
   return (
     <Layout location={location} title={blogTitle}>
-      <SEO title="All posts" />
+      <Meta
+        title={blogTitle}
+        description={`All posts on ${blogTitle}`}
+        siteName={blogSiteName}
+        siteUrl={blogUrl}
+        pageImage={metaFaceImg}
+      />
       <div style={{ width: 'fit-content', margin: 'auto' }}>
         <Bio />
       </div>
@@ -79,6 +85,9 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         blogTitle
+        blogSiteName
+        blogUrl
+        metaFaceImg
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

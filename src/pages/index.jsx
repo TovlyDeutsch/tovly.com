@@ -2,7 +2,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { createGlobalStyle } from 'styled-components'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Img, { GatsbyImageProps } from 'gatsby-image'
 import tw from 'tailwind.macro'
@@ -10,8 +9,8 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import '../../static/rgbSpinner.css'
 
 import Header from '../components/Header'
+import Meta from '../components/meta'
 
-import favicon from '../favicon.png'
 import rightArrow from '../right-arrow.svg'
 import github from '../github.svg'
 
@@ -196,23 +195,13 @@ const Index = props => {
 
   return (
     <React.Fragment>
-      <Helmet>
-        <html lang="en" />
-        <title>{siteMetadata.siteTitle}</title>
-        <meta name="description" content="Portfolio for Tovly Deutsch, software engineer and Harvard student" />
-        <meta name="image" content={favicon} />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:site_name" content="tovly.com" />
-        <meta property="og:url" content="https://tovly.com" />
-        <meta property="og:title" content="Software Engineer & Harvard Student" />
-        <meta property="og:description" content="Portfolio for Tovly Deutsch, software engineer and Harvard student" />
-        <meta property="og:image" content={favicon} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content="@_tovly" />
-        <meta name="twitter:title" content="Software Engineer & Harvard Student" />
-        <meta name="twitter:description" content="Portfolio for Tovly Deutsch, software engineer and Harvard student" />
-        <meta name="twitter:image" content={favicon} />
-      </Helmet>
+      <Meta
+        title={siteMetadata.siteTitle}
+        description={siteMetadata.description}
+        siteName={siteMetadata.siteName}
+        siteUrl={siteMetadata.siteUrl}
+        pageImage={siteMetadata.metaFaceImg}
+      />
       <Page>
         <Header faceFile={childImageSharp} />
         <SliderWrapper>
@@ -360,6 +349,10 @@ export const overviewQuery = graphql`
     site {
       siteMetadata {
         siteTitle
+        metaFaceImg
+        description
+        siteUrl
+        siteName
       }
     }
   }

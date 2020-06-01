@@ -1,18 +1,21 @@
 module.exports = {
   siteMetadata: {
+    siteName: 'tovly.com',
+    blogSiteName: 'tovly.com/blog',
     siteTitle: 'Tovly Deutsch – Software Engineer, Researcher, & Filmmaker',
     blogTitle: "Tovly's Blog",
     siteUrl: 'https://tovly.com',
     blogUrl: 'https://tovly.com/blog',
-    description: 'Tovly Deutsch – Software Engineer, Researcher, & Filmmaker',
-    blogDescription: 'Blog of Tovly Deutsch – Software Engineer, Researcher, & Filmmaker',
+    description: 'Portfolio for Tovly Deutsch, software engineer, researcher, & filmmaker',
+    blogDescription: 'Blog of Tovly Deutsch – software engineer, researcher, & filmmaker',
     author: {
       name: 'Tovly Deutsch',
       summary: 'test summary',
     },
     social: {
-      twitter: 'https://twitter.com/_tovly',
+      twitter: { url: 'https://twitter.com/_tovly', handle: '@_tovly' },
     },
+    metaFaceImg: 'https://tovly.com/face_small.jpg',
     rssIcon: 'https://tovly.com/favicon.png',
   },
   plugins: [
@@ -76,17 +79,16 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.edges.map(edge =>
+                Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
-              })
-            },
+              ),
             query: `
               {
                 allMarkdownRemark(
