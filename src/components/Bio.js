@@ -51,7 +51,7 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <p>
+      <p style={tw`font-sans`}>
         Written by <strong>{author.name}</strong>
         {/* {author.summary} */}
         {` `}
