@@ -68,6 +68,9 @@ const GlobalStyles = createGlobalStyle`
     background: #6574cd;
     font-size: 1rem;
   }
+  a {
+    cursor: pointer;
+  }
 `
 
 const Page = styled.div`
@@ -180,7 +183,7 @@ const Grid = styled.div`
   grid-gap: 30px;
 `
 
-const PubLink = styled(Link)`
+const PubLink = styled.a`
   ${tw`no-underline text-orange hover:text-orange-light`};
 `
 
