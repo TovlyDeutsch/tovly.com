@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styled, { createGlobalStyle } from 'styled-components'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
+import Img, { GatsbyImageProps } from 'gatsby-image'
 import tw from 'tailwind.macro'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import '../../static/rgbSpinner.css'
@@ -331,6 +331,7 @@ Index.propTypes = {
     site: PropTypes.shape({
       siteMetadata: PropTypes.object.isRequired,
     }),
+    file: GatsbyImageProps,
   }).isRequired,
 }
 
