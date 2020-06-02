@@ -53,7 +53,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
         description: `All posts on ${blogTitle}`,
         siteName: blogSiteName,
         siteUrl: blogUrl,
-        pageImage: metaFaceImg,
+        img: metaFaceImg,
       }}
     >
       <BlogLayout location={location} title={blogTitle}>
