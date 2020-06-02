@@ -19,7 +19,6 @@
     "jquery": true
   },
   "rules": {
-    "react/prop-types": "off",
     "no-unused-vars": [
       1,
       {
