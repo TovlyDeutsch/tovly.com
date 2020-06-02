@@ -15,7 +15,7 @@ export type MetaData = {
   description: string
   siteName: string
   siteUrl: string
-  metaFaceImg?: string
+  img?: string
 }
 
 // TODO validate these tags with some real-world usage e.g. Facebook and Twitter
