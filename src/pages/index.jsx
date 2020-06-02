@@ -359,7 +359,7 @@ export const overviewQuery = graphql`
           cover {
             childImageSharp {
               fluid(maxWidth: 350, cropFocus: ATTENTION) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid
               }
             }
           }
