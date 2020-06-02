@@ -34,7 +34,7 @@ type Data = {
   }
 }
 
-const PostTitle = styled(Link)`
+export const HoverLink = styled(Link)`
   ${tw`no-underline transition duration-500 ease-in-out text-blue hover:text-orange`};
   & {
     transition: 0.2s;
@@ -63,7 +63,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
           <article key={node.fields.slug} style={tw`font-sans`}>
             <header>
               <h3 style={tw`mb-1 text-3xl`}>
-                <PostTitle to={node.fields.slug}>{title}</PostTitle>
+                <HoverLink to={node.fields.slug}>{title}</HoverLink>
               </h3>
               <small>{node.frontmatter.date}</small>
             </header>

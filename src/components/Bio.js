@@ -10,6 +10,8 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 import tw from 'tailwind.macro'
 
+import HoverLink from '../pages/blog'
+
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -53,10 +55,8 @@ const Bio = () => {
       />
       <p style={tw`font-sans`}>
         Written by <strong>{author.name}</strong>
-        {/* {author.summary} */}
         {` `}
-        {/* <a href={`https://twitter.com/${social.twitter}`}>You should follow him on Twitter</a> */}
-        <a href="https://tovly.com">Check out his CS portfolio</a>
+        <HoverLink to="/">Check out his CS portfolio</HoverLink>
       </p>
     </div>
   )
