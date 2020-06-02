@@ -8,28 +8,31 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import Meta from '../components/meta'
 
-// type Data = {
-//   site: {
-//     siteMetadata: {
-//       siteTitle: string
-//     }
-//   }
-//   allMarkdownRemark: {
-//     edges: {
-//       node: {
-//         excerpt: string
-//         frontmatter: {
-//           title: string
-//           date: string
-//           description: string
-//         }
-//         fields: {
-//           slug: string
-//         }
-//       }
-//     }[]
-//   }
-// }
+type Data = {
+  site: {
+    siteMetadata: {
+      blogTitle: string
+      blogSiteName: string
+      blogUrl: string
+      metaFaceImg: string
+    }
+  }
+  allMarkdownRemark: {
+    edges: {
+      node: {
+        excerpt: string
+        frontmatter: {
+          title: string
+          date: string
+          description: string
+        }
+        fields: {
+          slug: string
+        }
+      }
+    }[]
+  }
+}
 
 const PostTitle = styled(Link)`
   ${tw`no-underline transition duration-500 ease-in-out text-blue hover:text-orange`};
@@ -38,7 +41,7 @@ const PostTitle = styled(Link)`
   }
 `
 
-const BlogIndex = ({ data, location }) => {
+const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const { blogTitle, blogSiteName, blogUrl, metaFaceImg } = data.site.siteMetadata
   const posts = data.allMarkdownRemark.edges
 
