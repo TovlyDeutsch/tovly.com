@@ -1,10 +1,11 @@
 import React from 'react'
-import { Link, graphql, PageProps } from 'gatsby'
+import { graphql, PageProps } from 'gatsby'
 import tw from 'tailwind.macro'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import Meta from '../components/meta'
+import { BlueHoverLink } from '../pages/blog'
 
 type Data = {
   markdownRemark: {
@@ -57,16 +58,10 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageC
       <article>
         <header>
           <h1 style={tw`text-4xl`}>{post.frontmatter.title}</h1>
-          <p
-            style={{
-              display: `block`,
-            }}
-          >
-            {post.frontmatter.date}
-          </p>
+          <p style={tw`mb-4`}>{post.frontmatter.date}</p>
         </header>
         <section style={tw`font-serif`} dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr style={{ borderStyle: 'solid', borderWidth: 0.5 }} />
+        <hr style={{ ...tw`border-solid my-4`, borderWidth: 0.5 }} />
         <footer>
           <Bio justify="left" />
         </footer>
@@ -84,16 +79,16 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageC
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <BlueHoverLink to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
-              </Link>
+              </BlueHoverLink>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <BlueHoverLink to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
-              </Link>
+              </BlueHoverLink>
             )}
           </li>
         </ul>

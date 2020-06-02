@@ -11,7 +11,10 @@ const Header = styled.h1`
 `
 
 const PostHeader = styled.h1`
-  ${tw`mb-6 text-3xl`};
+  ${tw`mb-6 text-3xl no-underline transition duration-500 ease-in-out text-black hover:text-orange`};
+  & {
+    transition: 0.2s;
+  }
 `
 
 type Data<LocationState = WindowLocation['state']> = {
@@ -29,9 +32,7 @@ const Layout = ({ location, title, children }: Data) => {
   } else {
     header = (
       <PostHeader>
-        <Link style={tw`no-underline text-black`} to="/blog">
-          {title}
-        </Link>
+        <Link to="/blog">{title}</Link>
       </PostHeader>
     )
   }
