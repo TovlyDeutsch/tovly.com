@@ -54,15 +54,13 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
         siteUrl={blogUrl}
         pageImage={metaFaceImg}
       />
-      <div style={{ width: 'fit-content', margin: 'auto' }}>
-        <Bio />
-      </div>
+      <Bio />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article key={node.fields.slug} style={tw`font-sans`}>
+          <article key={node.fields.slug} style={tw`mb-2`}>
             <header>
-              <h3 style={tw`mb-1 text-3xl`}>
+              <h3 style={tw`text-3xl`}>
                 <HoverLink to={node.fields.slug}>{title}</HoverLink>
               </h3>
               <small>{node.frontmatter.date}</small>

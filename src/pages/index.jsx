@@ -15,56 +15,14 @@ import rightArrow from '../right-arrow.svg'
 import github from '../github.svg'
 
 const GlobalStyles = createGlobalStyle`
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-  ::selection {
-    color: white;
-    background-color: #f6993f;
-  }
-  html {
-    border: 0;
-    margin: 0;
-    font-size: 18px;
-  }
   body {
-    border: 0;
-    margin: 0;
-    padding: 0;
     background-color: #002034;
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23909cbd' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-  }
-  select {
-    appearance: none;
-    border:none;
-    font-size: 1rem;
-    width: 100%;
-    color: white;
-    padding: .75rem 1rem;
-    border-radius: .25rem;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='white'%3E%3Cpolygon points='0,0 100,0 50,50'/%3E%3C/svg%3E") #7886d7 no-repeat 98% 77%;
-    background-size: 25px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,.12), 0 2px 4px 0 rgba(0,0,0,.08);
-    &:focus {
-      outline: 0px;
-      box-shadow: 0 0 0 3px rgba(101,116,205,.5);
-    }
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  select::-ms-expand {
-    display:none;
-  }
-  select option {
-    background: #6574cd;
-    font-size: 1rem;
   }
 `
 
 const Page = styled.div`
-  ${tw`text-white font-sans antialiased leading-normal relative`};
+  ${tw`text-white  antialiased leading-normal relative`};
 `
 
 const SliderWrapper = styled.section`

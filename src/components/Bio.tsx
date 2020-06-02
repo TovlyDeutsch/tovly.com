@@ -12,7 +12,7 @@ import tw from 'tailwind.macro'
 
 import { HoverLink } from '../pages/blog'
 
-const Bio = () => {
+const Bio = ({ justify = 'center' }) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/face.jpg/" }) {
@@ -35,11 +35,7 @@ const Bio = () => {
 
   const { author } = data.site.siteMetadata
   return (
-    <div
-      style={{
-        display: `flex`,
-      }}
-    >
+    <div style={{ ...tw`flex my-4 items-center`, justifyContent: justify }}>
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author.name}
@@ -53,7 +49,7 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <p style={tw`font-sans`}>
+      <p>
         Written by <strong>{author.name}</strong>
         {` `}
         <HoverLink to="/">Check out his CS portfolio</HoverLink>

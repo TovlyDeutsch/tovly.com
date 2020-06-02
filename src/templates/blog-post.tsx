@@ -55,8 +55,8 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageC
         // TODO add cover image to each blogpost for page image here
       />
       <article>
-        <header style={tw`font-sans`}>
-          <h1 style={tw`text-4xl mb-0 font-sans`}>{post.frontmatter.title}</h1>
+        <header>
+          <h1 style={tw`text-4xl`}>{post.frontmatter.title}</h1>
           <p
             style={{
               display: `block`,
@@ -68,7 +68,7 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageC
         <section style={tw`font-serif`} dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr style={{ borderStyle: 'solid', borderWidth: 0.5 }} />
         <footer>
-          <Bio />
+          <Bio justify="left" />
         </footer>
       </article>
 
