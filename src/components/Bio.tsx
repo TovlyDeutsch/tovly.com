@@ -51,7 +51,7 @@ const Bio = ({ justify = 'center' }) => {
       />
       <p>
         Written by <strong>{author.name}</strong> |{` `}
-        <BlueHoverLink to="/">Check out his CS portfolio</BlueHoverLink>
+        <BlueHoverLink to="/">Check out his other work</BlueHoverLink>
       </p>
     </div>
   )
