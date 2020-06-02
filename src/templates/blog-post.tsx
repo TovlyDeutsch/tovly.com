@@ -55,9 +55,9 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageC
         siteName: blogSiteName,
         siteUrl: blogUrl,
         // TODO add cover image to each blogpost for page image here
-      }}>
+      }}
+    >
       <BlogLayout location={location} title={blogTitle}>
-
         <article>
           <header>
             <h1 style={tw`text-4xl`}>{post.frontmatter.title}</h1>
