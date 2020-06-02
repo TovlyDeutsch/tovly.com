@@ -1,12 +1,46 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { Link, graphql, PageProps } from 'gatsby'
 import tw from 'tailwind.macro'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import Meta from '../components/meta'
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+type Data = {
+  markdownRemark: {
+    id: string
+    excerpt: string
+    html: string
+    frontmatter: {
+      title: string
+      date: string
+      description: string
+    }
+  }
+  site: {
+    siteMetadata: {
+      blogTitle: string
+      blogSiteName: string
+      blogUrl: string
+    }
+  }
+}
+
+type adjacentPage = {
+  fields: {
+    slug: string
+  }
+  frontmatter: {
+    title: string
+  }
+}
+
+type pageContext = {
+  previous: adjacentPage
+  next: adjacentPage
+}
+
+const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageContext>) => {
   const post = data.markdownRemark
   const { blogTitle, blogSiteName, blogUrl } = data.site.siteMetadata
   const { previous, next } = pageContext

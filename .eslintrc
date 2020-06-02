@@ -81,5 +81,12 @@
       }
     ]
   },
-  "plugins": ["prettier"]
+  "plugins": ["prettier"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
 }
