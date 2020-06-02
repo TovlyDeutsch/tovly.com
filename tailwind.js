@@ -206,7 +206,6 @@ module.exports = {
       'sans-serif',
     ],
     serif: [
-      'Gelasio',
       'Constantia',
       'Lucida Bright',
       'Lucidabright',
