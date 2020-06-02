@@ -148,7 +148,7 @@ const Index = props => {
         description: siteMetadata.description,
         siteName: siteMetadata.siteName,
         siteUrl: siteMetadata.siteUrl,
-        pageImage: siteMetadata.metaFaceImg,
+        img: siteMetadata.metaFaceImg,
       }}
     >
       <div>
