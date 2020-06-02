@@ -10,7 +10,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Image from 'gatsby-image'
 import tw from 'tailwind.macro'
 
-import HoverLink from '../pages/blog'
+import { HoverLink } from '../pages/blog'
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
