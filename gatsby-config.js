@@ -6,7 +6,7 @@ module.exports = {
     blogTitle: "Tovly's Blog",
     siteUrl: 'https://tovly.com',
     blogUrl: 'https://tovly.com/blog',
-    description: 'Portfolio for Tovly Deutsch, software engineer, researcher, & filmmaker',
+    description: 'Portfolio for Tovly Deutsch, software engineer and researcher working on NLP and ML',
     blogDescription: 'Blog of Tovly Deutsch – software engineer, researcher, & filmmaker',
     author: {
       name: 'Tovly Deutsch',
