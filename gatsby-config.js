@@ -10,14 +10,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Montserrat:400,600,700&display=optional'],
-        },
-      },
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/sites/`,
