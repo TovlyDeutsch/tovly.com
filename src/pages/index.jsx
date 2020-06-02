@@ -1,7 +1,7 @@
 /* eslint no-shadow: 0 */
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import Img, { GatsbyImageProps } from 'gatsby-image'
 import tw from 'tailwind.macro'
@@ -9,21 +9,10 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import '../../static/rgbSpinner.css'
 
 import Header from '../components/Header'
-import Meta from '../components/meta'
+import MetaAndStyles from '../components/MetaAndStyles'
 
 import rightArrow from '../right-arrow.svg'
 import github from '../github.svg'
-
-const GlobalStyles = createGlobalStyle`
-  body {
-    background-color: #002034;
-    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23909cbd' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-  }
-`
-
-const Page = styled.div`
-  ${tw`text-white  antialiased leading-normal relative`};
-`
 
 const SliderWrapper = styled.section`
   ${tw`sm:px-8 px-4 md:px-24`};
@@ -152,15 +141,17 @@ const Index = props => {
   } = props
 
   return (
-    <React.Fragment>
-      <Meta
-        title={siteMetadata.siteTitle}
-        description={siteMetadata.description}
-        siteName={siteMetadata.siteName}
-        siteUrl={siteMetadata.siteUrl}
-        pageImage={siteMetadata.metaFaceImg}
-      />
-      <Page>
+    <MetaAndStyles
+      background="striped"
+      meta={{
+        siteTitle: siteMetadata.siteTitle,
+        description: siteMetadata.description,
+        siteName: siteMetadata.siteName,
+        siteUrl: siteMetadata.siteUrl,
+        pageImage: siteMetadata.metaFaceImg,
+      }}
+    >
+      <div>
         <Header faceFile={childImageSharp} />
         <SliderWrapper>
           <a name="publications">
@@ -255,9 +246,8 @@ const Index = props => {
           <OutboundLink href="https://github.com/TovlyDeutsch/tovly.com">Design</OutboundLink> by Tovly Deutsch. Forked
           from <OutboundLink href="https://github.com/LeKoArts/gatsby-starter-portfolio"> Lekoarts</OutboundLink>.
         </Footer>
-      </Page>
-      <GlobalStyles />
-    </React.Fragment>
+      </div>
+    </MetaAndStyles>
   )
 }
 

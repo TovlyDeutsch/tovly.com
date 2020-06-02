@@ -5,8 +5,9 @@ import tw from 'tailwind.macro'
 import styled from 'styled-components'
 
 import Bio from '../components/Bio'
-import Layout from '../components/Layout'
-import Meta from '../components/meta'
+import BlogLayout from '../components/BlogLayout'
+import Meta from '../components/Meta'
+import MetaAndStyles from '../components/MetaAndStyles'
 
 type Data = {
   site: {
@@ -46,36 +47,39 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={location} title={blogTitle}>
-      <Meta
-        title={blogTitle}
-        description={`All posts on ${blogTitle}`}
-        siteName={blogSiteName}
-        siteUrl={blogUrl}
-        pageImage={metaFaceImg}
-      />
-      <Bio />
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <article key={node.fields.slug} style={tw`mb-2`}>
-            <header>
-              <h3 style={tw`text-3xl`}>
-                <BlueHoverLink to={node.fields.slug}>{title}</BlueHoverLink>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-          </article>
-        )
-      })}
-    </Layout>
+    <MetaAndStyles
+      meta={{
+        siteTitle: blogTitle,
+        description: `All posts on ${blogTitle}`,
+        siteName: blogSiteName,
+        siteUrl: blogUrl,
+        pageImage: metaFaceImg,
+      }}
+    >
+      <BlogLayout location={location} title={blogTitle}>
+        <Bio />
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          return (
+            <article key={node.fields.slug} style={tw`mb-2`}>
+              <header>
+                <h3 style={tw`text-3xl`}>
+                  <BlueHoverLink to={node.fields.slug}>{title}</BlueHoverLink>
+                </h3>
+                <small>{node.frontmatter.date}</small>
+              </header>
+              <section>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                />
+              </section>
+            </article>
+          )
+        })}
+      </BlogLayout>
+    </MetaAndStyles>
   )
 }
 

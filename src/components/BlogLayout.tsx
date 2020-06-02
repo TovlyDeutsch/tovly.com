@@ -23,7 +23,7 @@ type Data<LocationState = WindowLocation['state']> = {
   children: React.ReactNode
 }
 
-const Layout = ({ location, title, children }: Data) => {
+const BlogLayout = ({ location, title, children }: Data) => {
   const rootPath = `${__PATH_PREFIX__}/blog`
   let header
 
@@ -45,4 +45,4 @@ const Layout = ({ location, title, children }: Data) => {
   )
 }
 
-export default Layout
+export default BlogLayout

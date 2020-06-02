@@ -10,6 +10,14 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
+export type MetaData = {
+  siteTitle: string
+  description: string
+  siteName: string
+  siteUrl: string
+  metaFaceImg?: string
+}
+
 // TODO validate these tags with some real-world usage e.g. Facebook and Twitter
 const Meta = ({ title, description, siteName, siteUrl, pageImage }) => {
   const { site } = useStaticQuery(

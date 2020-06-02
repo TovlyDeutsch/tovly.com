@@ -3,9 +3,10 @@ import { graphql, PageProps } from 'gatsby'
 import tw from 'tailwind.macro'
 
 import Bio from '../components/Bio'
-import Layout from '../components/Layout'
-import Meta from '../components/meta'
+import BlogLayout from '../components/BlogLayout'
+import Meta from '../components/Meta'
 import { BlueHoverLink } from '../pages/blog'
+import MetaAndStyles from '../components/MetaAndStyles'
 
 type Data = {
   markdownRemark: {
@@ -47,53 +48,56 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageC
   const { previous, next } = pageContext
 
   return (
-    <Layout location={location} title={blogTitle}>
-      <Meta
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-        siteName={blogSiteName}
-        siteUrl={blogUrl}
+    <MetaAndStyles
+      meta={{
+        siteTitle: post.frontmatter.title,
+        description: post.frontmatter.description || post.excerpt,
+        siteName: blogSiteName,
+        siteUrl: blogUrl,
         // TODO add cover image to each blogpost for page image here
-      />
-      <article>
-        <header>
-          <h1 style={tw`text-4xl`}>{post.frontmatter.title}</h1>
-          <p style={tw`mb-4`}>{post.frontmatter.date}</p>
-        </header>
-        <section style={tw`font-serif`} dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr style={{ ...tw`border-solid my-4`, borderWidth: 0.5 }} />
-        <footer>
-          <Bio justify="left" />
-        </footer>
-      </article>
+      }}>
+      <BlogLayout location={location} title={blogTitle}>
 
-      <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <BlueHoverLink to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </BlueHoverLink>
-            )}
-          </li>
-          <li>
-            {next && (
-              <BlueHoverLink to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </BlueHoverLink>
-            )}
-          </li>
-        </ul>
-      </nav>
-    </Layout>
+        <article>
+          <header>
+            <h1 style={tw`text-4xl`}>{post.frontmatter.title}</h1>
+            <p style={tw`mb-4`}>{post.frontmatter.date}</p>
+          </header>
+          <section style={tw`font-serif`} dangerouslySetInnerHTML={{ __html: post.html }} />
+          <hr style={{ ...tw`border-solid my-4`, borderWidth: 0.5 }} />
+          <footer>
+            <Bio justify="left" />
+          </footer>
+        </article>
+
+        <nav>
+          <ul
+            style={{
+              display: `flex`,
+              flexWrap: `wrap`,
+              justifyContent: `space-between`,
+              listStyle: `none`,
+              padding: 0,
+            }}
+          >
+            <li>
+              {previous && (
+                <BlueHoverLink to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </BlueHoverLink>
+              )}
+            </li>
+            <li>
+              {next && (
+                <BlueHoverLink to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </BlueHoverLink>
+              )}
+            </li>
+          </ul>
+        </nav>
+      </BlogLayout>
+    </MetaAndStyles>
   )
 }
 
