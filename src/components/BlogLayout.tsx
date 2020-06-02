@@ -40,7 +40,6 @@ const BlogLayout = ({ location, title, children }: Data) => {
     <div style={tw`mx-auto max-w-lg py-6 px-6`}>
       <header style={tw`text-center`}>{header}</header>
       <main>{children}</main>
-      <footer>{/* © {new Date().getFullYear()} */}</footer>
     </div>
   )
 }
