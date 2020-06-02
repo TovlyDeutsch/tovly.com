@@ -187,7 +187,7 @@ const PubList = styled.ul`
 const Index = props => {
   const {
     data: {
-      allSitesYaml: { edges },
+      allProjectsYaml: { edges },
       site: { siteMetadata },
       file: { childImageSharp },
     },
@@ -307,7 +307,7 @@ export default Index
 
 Index.propTypes = {
   data: PropTypes.shape({
-    allSitesYaml: PropTypes.shape({
+    allProjectsYaml: PropTypes.shape({
       edges: PropTypes.array.isRequired,
     }),
     site: PropTypes.shape({
@@ -319,7 +319,7 @@ Index.propTypes = {
 
 export const overviewQuery = graphql`
   query OverviewQuery {
-    file(relativePath: { eq: "face.jpg" }) {
+    file(relativePath: { eq: "profile-photos/face.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
@@ -328,7 +328,7 @@ export const overviewQuery = graphql`
         }
       }
     }
-    allSitesYaml {
+    allProjectsYaml {
       edges {
         node {
           id
