@@ -236,7 +236,7 @@ const Index = props => {
               <br /> <i>Senior Thesis</i>
               <br />
               <PubLink href="/thesis_bibtex.txt">[BibTeX]</PubLink>
-              <PubLink href="/Senior_Thesis_Final_Tovly_Deutsch.pdf">[PDF]</PubLink>
+              <PubLink href="/Senior_Thesis_Final_Tovly_Deutsch.pdf"> [PDF] </PubLink>
               <OutboundLink href="https://github.com/TovlyDeutsch/Linguistic-Features-for-Readability">
                 [Code]
               </OutboundLink>
@@ -250,11 +250,10 @@ const Index = props => {
                 [To appear in] Proceedings of the Fifteenth Workshop on Innovative Use of NLP for Building Educational
                 Applications
               </i>
-              <br /> <i>Links coming soon (once published)!</i>
-              {/* TODO add links once published */}
-              {/* <br /> <a href="https://abdulsaleh.github.io/_pages/bibtex/saleh2019team.html">[BibTeX]</a>{' '} */}
-              {/* <a href="https://arxiv.org/pdf/1904.03513.pdf">[PDF]</a>{' '}
-              <a href="https://github.com/AbdulSaleh/QCRI-MIT-SemEval2019-Task4">[Code]</a> */}
+              <br />
+              <PubLink href="/ling_bea_bibtex.txt">[BibTeX]</PubLink>
+              <a href="https://arxiv.org/abs/2006.00377"> [Paper] </a>
+              <a href="https://github.com/TovlyDeutsch/Linguistic-Features-for-Readability">[Code]</a>
             </li>
             <li>
               A. Saleh, <b>T. Deutsch</b>
