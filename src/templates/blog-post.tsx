@@ -52,6 +52,12 @@ const PostBody = styled.section`
   figure {
     margin-bottom: 1.5em;
   }
+  blockquote {
+    box-shadow: rgba(0, 0, 0, 0.84) 3px 0px 0px 0px inset;
+    padding-left: 20px;
+    margin-left: -20px;
+    font-style: italic;
+  }
 `
 
 const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageContext>) => {
