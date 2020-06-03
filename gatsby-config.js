@@ -34,6 +34,17 @@ module.exports = {
     },
     {
       resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              showCaptions: true,
+              markdownCaptions: true,
+            },
+          },
+        ],
+      },
     },
     {
       resolve: 'gatsby-plugin-google-analytics',
