@@ -1,6 +1,7 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
 import Meta, { MetaData } from './Meta'
+import tw from 'tailwind.macro'
 
 const stripedBodyStyle = `body {
     background-color: #002034;
@@ -33,6 +34,14 @@ const GlobalStyle = createGlobalStyle`
     list-style-type: disc;
     margin-block-start: 1em;
     margin-block-end: 1em;
+  }
+
+  a {
+    ${tw`no-underline text-orange hover:text-orange-light`};
+  }
+
+  a[name], a[name]:hover, a[role]:hover {
+    color: inherit
   }
 `
 

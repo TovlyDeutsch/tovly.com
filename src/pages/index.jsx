@@ -20,9 +20,6 @@ const SliderWrapper = styled.section`
 
 const Footer = styled.footer`
   ${tw`text-center pb-6 pt-12 text-xs text-grey-light tracking-wide z-50 uppercase`};
-  a {
-    ${tw`text-orange hover:text-orange-light no-underline`};
-  }
 `
 
 const Item = styled.div`
@@ -120,15 +117,8 @@ const Grid = styled.div`
   grid-gap: 30px;
 `
 
-const PubLink = styled.a`
-  ${tw`no-underline text-orange hover:text-orange-light`};
-`
-
 const PubList = styled.ul`
   padding-inline-start: 1.3em;
-  a {
-    ${tw`text-orange hover:text-orange-light no-underline`};
-  }
 `
 
 const Index = props => {
@@ -164,8 +154,8 @@ const Index = props => {
               <b>Linguistic Features for Readability Assessment</b>
               <br /> <i>Senior Thesis</i>
               <br />
-              <PubLink href="/thesis_bibtex.txt">[BibTeX]</PubLink>
-              <PubLink href="/Senior_Thesis_Final_Tovly_Deutsch.pdf"> [PDF] </PubLink>
+              <a href="/thesis_bibtex.txt">[BibTeX]</a>
+              <a href="/Senior_Thesis_Final_Tovly_Deutsch.pdf"> [PDF] </a>
               <OutboundLink href="https://github.com/TovlyDeutsch/Linguistic-Features-for-Readability">
                 [Code]
               </OutboundLink>
@@ -180,7 +170,7 @@ const Index = props => {
                 Applications
               </i>
               <br />
-              <PubLink href="/ling_bea_bibtex.txt">[BibTeX]</PubLink>
+              <a href="/ling_bea_bibtex.txt">[BibTeX]</a>
               <a href="https://arxiv.org/abs/2006.00377"> [Paper] </a>
               <a href="https://github.com/TovlyDeutsch/Linguistic-Features-for-Readability">[Code]</a>
             </li>

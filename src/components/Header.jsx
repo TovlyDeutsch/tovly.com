@@ -12,9 +12,6 @@ const Intro = styled.section`
 
 const Title = styled.h1`
   ${tw`text-3xl md:text-5xl my-8`};
-  span {
-    ${tw`text-orange`};
-  }
 `
 
 const Social = styled.section`
