@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, PageProps } from 'gatsby'
+import styled from 'styled-components'
 import tw from 'tailwind.macro'
 
 import Bio from '../components/Bio'
@@ -42,6 +43,17 @@ type pageContext = {
   next: adjacentPage
 }
 
+const PostBody = styled.section`
+  ${tw`font-serif text-lg`};
+  p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  figure {
+    margin-bottom: 1.5em;
+  }
+`
+
 const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageContext>) => {
   const post = data.markdownRemark
   const { blogTitle, blogSiteName, blogUrl } = data.site.siteMetadata
@@ -63,7 +75,7 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageC
             <h1 style={tw`text-4xl`}>{post.frontmatter.title}</h1>
             <p style={tw`mb-4`}>{post.frontmatter.date}</p>
           </header>
-          <section style={tw`font-serif`} dangerouslySetInnerHTML={{ __html: post.html }} />
+          <PostBody dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr style={{ ...tw`border-solid my-4`, borderWidth: 0.5 }} />
           <footer>
             <Bio justify="left" />

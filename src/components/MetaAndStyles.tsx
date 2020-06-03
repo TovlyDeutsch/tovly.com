@@ -43,6 +43,13 @@ const GlobalStyle = createGlobalStyle`
   a[name], a[name]:hover, a[role]:hover {
     color: inherit
   }
+
+  figcaption {
+    ${tw`text-xs text-grey-darker italic`};
+    max-width: 70%;
+    margin: 0.5rem auto 0.5rem auto;
+    text-align: center;
+  }
 `
 
 type Data = {
