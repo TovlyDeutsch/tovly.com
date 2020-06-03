@@ -11,8 +11,8 @@ import '../../static/rgbSpinner.css'
 import Header from '../components/Header'
 import MetaAndStyles from '../components/MetaAndStyles'
 
-import rightArrow from '../right-arrow.svg'
-import github from '../github.svg'
+import rightArrow from '../icons/right-arrow.svg'
+import github from '../icons/github.svg'
 
 const SliderWrapper = styled.section`
   ${tw`sm:px-8 px-4 md:px-24`};
