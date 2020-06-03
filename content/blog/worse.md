@@ -10,7 +10,6 @@ slug: /@tovly/it-could-always-be-worse-456000d1376
 No one wants to hear it
 
 ![This doesn’t exactly match the fable but, thanks to the ridiculous length of copyright laws, illustrations from 1881 will have to do.](crowd.jpg)
-This doesn’t exactly match the fable but, thanks to the ridiculous length of copyright laws, illustrations from 1881 will have to do.
 
 Whenever I’m listening to someone complain about their life (thankfully not often) I’m always tempted to throw out one of my favorite idioms: “it could always be worse.” I love to illustrate the power of this expression by recounting a Yiddish fable¹ about a farmer and his crowded house. The poor desperate farmer goes to his rabbi complaining about how his one-room hut is too crowded given his six children and that the noise is driving him crazy. To the farmer’s surprise, the rabbi recommends he bring a few animals into his house, which unsurprisingly, does not improve the farmer’s mood. He returns to the rabbi who recommends taking in even more animals. This cycle of animal buildup continues until the rabbi recommends taking all of the animals out of his house. Finally, in a physical state no different from the one he started in, the farmer remarks that his house is “‘so quiet, so roomy, so peaceful’.”
 

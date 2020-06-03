@@ -10,7 +10,6 @@ slug: /@tovly/the-myth-of-the-introvert-c5b0869353e0
 Labels are an appealing method of rationalization.
 
 ![Photo by [Joshua Eckstein](https://unsplash.com/@dcemr_e?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](turtle.jpg)
-Photo by [Joshua Eckstein](https://unsplash.com/@dcemr_e?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 I’ve often been presented with a [narrative](https://www.theatlantic.com/magazine/archive/2003/03/caring-for-your-introvert/302696/) that I like to call the “the myth of the introvert.” The explanation goes something like this:
 
