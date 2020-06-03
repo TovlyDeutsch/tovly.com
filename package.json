@@ -32,7 +32,8 @@
     "react-id-swiper": "^1.6.9",
     "styled-components": "^4.4.1",
     "tailwind.macro": "^0.5.10",
-    "tailwindcss": "^0.7.3"
+    "tailwindcss": "^0.7.3",
+    "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

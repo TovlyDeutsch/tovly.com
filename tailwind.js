@@ -191,8 +191,10 @@ module.exports = {
 
   fonts: {
     sans: [
+      'montserrat',
       'system-ui',
       'BlinkMacSystemFont',
+      '-apple-system',
       'Segoe UI',
       'Roboto',
       'Oxygen',
