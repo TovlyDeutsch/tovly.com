@@ -62,9 +62,6 @@ const GlobalStyles = createGlobalStyle`
     background: #6574cd;
     font-size: 1rem;
   }
-  a {
-    cursor: pointer;
-  }
 `
 
 const Page = styled.div`
