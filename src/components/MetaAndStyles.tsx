@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 18px;
+    ${tw`font-sans`}
   }
   
   ::selection {
