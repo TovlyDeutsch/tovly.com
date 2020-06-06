@@ -2,12 +2,13 @@
 import React from 'react'
 import { PageProps, Link, graphql } from 'gatsby'
 import tw from 'tailwind.macro'
-import styled from 'styled-components'
+import styled, { AnyStyledComponent } from 'styled-components'
 
 import Bio from '../components/Bio'
 import BlogLayout from '../components/BlogLayout'
 import Meta from '../components/Meta'
 import MetaAndStyles from '../components/MetaAndStyles'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 type Data = {
   site: {
@@ -35,12 +36,16 @@ type Data = {
   }
 }
 
-export const BlueHoverLink = styled(Link)`
-  ${tw`no-underline transition duration-500 ease-in-out text-blue hover:text-orange`};
-  & {
-    transition: 0.2s;
-  }
-`
+const blueOrangeHoverStyle = <P extends object>(component: React.ComponentType<P>) =>
+  styled(component)`
+    ${tw`no-underline transition duration-500 ease-in-out text-blue hover:text-orange`};
+    & {
+      transition: 0.2s;
+    }
+  `
+
+export const BlueHoverLink = blueOrangeHoverStyle(Link)
+export const BlueHoverOutboundLink = blueOrangeHoverStyle(OutboundLink)
 
 const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const { blogTitle, blogSiteName, blogUrl, metaFaceImg } = data.site.siteMetadata
