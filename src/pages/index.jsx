@@ -16,7 +16,7 @@ import github from '../icons/github.svg'
 
 const HomePage = styled.div`
   a {
-    ${tw`text-orange hover:text-orange-light`}
+    ${tw`text-orange hover:text-orange-lighter`}
   }
   a[name],
   a[role],
