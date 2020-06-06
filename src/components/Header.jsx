@@ -5,7 +5,6 @@ import { Link } from 'gatsby'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import Description from './Description'
 
 const Intro = styled.section`
   ${tw`sm:px-8 px-4 md:px-24 pb-8 md:py-8 text-center xl:text-left`};
@@ -13,6 +12,11 @@ const Intro = styled.section`
 
 const Title = styled.h1`
   ${tw`text-3xl md:text-5xl my-8`};
+`
+
+const Description = styled.div`
+  ${tw`text-sm sm:text-base md:text-lg max-w-md text-grey-lighter`};
+  ${props => props.long && 'max-width: 60rem'};
 `
 
 const Social = styled.section`
