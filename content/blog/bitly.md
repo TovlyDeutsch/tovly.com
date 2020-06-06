@@ -4,7 +4,8 @@ description: How geopolitics affects internet domains
 date: '2020-05-17T22:49:06.674Z'
 categories: []
 keywords: []
-slug: /@tovly/the-precariousness-of-bitly-81642cd50093
+slug: the-precariousness-of-bitly
+mediumLink: https://medium.com/@tovly/the-precariousness-of-bitly-81642cd50093?source=friends_link&sk=cf672dde3921393832b7e054ebda1a5d
 ---
 
 ![White-spotted puffer (a pufferfish is the mascot of Bitly). This image is by [Bricktop](https://commons.wikimedia.org/wiki/User:Bricktop "User:Bricktop") and [Togabi](https://commons.wikimedia.org/w/index.php?title=User:Togabi&action=edit&redlink=1 "User:Togabi (page does not exist)") and licensed under the [Creative Commons](https://en.wikipedia.org/wiki/en:Creative_Commons "w:en:Creative Commons") [Attribution 2.0 Generic](https://creativecommons.org/licenses/by/2.0/deed.en) license.](pufferfish.jpg)

@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, PageProps } from 'gatsby'
 import styled from 'styled-components'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import tw from 'tailwind.macro'
 
 import Bio from '../components/Bio'
@@ -18,6 +19,7 @@ type Data = {
       title: string
       date: string
       description: string
+      mediumLink: string | null
     }
   }
   site: {
@@ -85,6 +87,13 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageC
           <hr style={{ ...tw`border-solid my-4`, borderWidth: 0.5 }} />
           <footer>
             <Bio justify="left" />
+            {post.frontmatter.mediumLink && (
+              <p>
+                Looking to comment? Visit the
+                <OutboundLink href={post.frontmatter.mediumLink}> medium post </OutboundLink>(comments may come here
+                eventually).
+              </p>
+            )}
           </footer>
         </article>
 
@@ -138,6 +147,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        mediumLink
       }
     }
   }
