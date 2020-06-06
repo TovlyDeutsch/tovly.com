@@ -8,9 +8,25 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
+import styled, { css } from 'styled-components'
 import tw from 'tailwind.macro'
 
-const Bio = ({ justify = 'center' }) => {
+type BioProps = {
+  justify?: string
+}
+
+const BioWrapper = styled.div<BioProps>`
+  ${tw`flex my-4 items-center`};
+  ${props =>
+    props.justify === 'center' &&
+    css`
+      justify-content: ${props.justify};
+      max-width: 70%;
+      margin: 0 auto 0 auto;
+    `};
+`
+
+const Bio = ({ justify = 'center' }: BioProps) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/face.jpg/" }) {
@@ -33,7 +49,7 @@ const Bio = ({ justify = 'center' }) => {
 
   const { author } = data.site.siteMetadata
   return (
-    <div style={{ ...tw`flex my-4 items-center`, justifyContent: justify }}>
+    <BioWrapper justify={justify}>
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author.name}
@@ -48,10 +64,10 @@ const Bio = ({ justify = 'center' }) => {
         }}
       />
       <p>
-        Written by <strong>{author.name}</strong> |{` `}
-        <Link to="/">Check out his other work</Link>
+        Written by <strong>{author.name}</strong>, researcher, software engineer, and filmmaker |{` `}
+        <Link to="/">Check out my other work</Link>
       </p>
-    </div>
+    </BioWrapper>
   )
 }
 

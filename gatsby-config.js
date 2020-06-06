@@ -2,13 +2,13 @@ module.exports = {
   siteMetadata: {
     siteName: 'tovly.com',
     blogSiteName: 'tovly.com/blog',
-    siteTitle: 'Tovly Deutsch – Software Engineer, Researcher, & Filmmaker', // Header, bolded, < 88 characters for FB
+    siteTitle: 'Tovly Deutsch – Researcher, Software Engineer, & Filmmaker', // Header, bolded, < 88 characters for FB
     blogTitle: "Tovly's Blog",
     siteUrl: 'https://tovly.com',
     blogUrl: 'https://tovly.com/blog',
     // description appears below title, < 100 characters for FB
-    description: 'Portfolio for Tovly Deutsch, software engineer and researcher working on NLP and ML',
-    blogDescription: 'Blog of Tovly Deutsch – software engineer, researcher, & filmmaker',
+    description: 'Portfolio for Tovly Deutsch, researcher and software engineer working on NLP and ML',
+    blogDescription: 'Blog of Tovly Deutsch – researcher, software engineer, & filmmaker',
     author: {
       name: 'Tovly Deutsch',
       summary: 'test summary',
