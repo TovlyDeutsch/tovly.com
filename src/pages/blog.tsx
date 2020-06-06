@@ -36,13 +36,15 @@ type Data = {
   }
 }
 
+export const blueOrangeHoverStyleString = `
+  ${tw`no-underline transition duration-500 ease-in-out text-blue hover:text-orange`};
+  & {
+    transition: 0.2s;
+  }
+`
+
 const blueOrangeHoverStyle = <P extends object>(component: React.ComponentType<P>) =>
-  styled(component)`
-    ${tw`no-underline transition duration-500 ease-in-out text-blue hover:text-orange`};
-    & {
-      transition: 0.2s;
-    }
-  `
+  styled(component)[blueOrangeHoverStyleString]
 
 export const BlueHoverLink = blueOrangeHoverStyle(Link)
 export const BlueHoverOutboundLink = blueOrangeHoverStyle(OutboundLink)

@@ -6,7 +6,7 @@ import tw from 'tailwind.macro'
 
 import Bio from '../components/Bio'
 import BlogLayout from '../components/BlogLayout'
-import { BlueHoverLink, BlueHoverOutboundLink } from '../pages/blog'
+import { BlueHoverLink, BlueHoverOutboundLink, blueOrangeHoverStyleString } from '../pages/blog'
 import MetaAndStyles from '../components/MetaAndStyles'
 
 type Data = {
@@ -59,11 +59,7 @@ const PostBody = styled.section`
     margin-left: -20px;
     font-style: italic;
   }
-  // TODO dedup this with the css in Bio.tsx
-  a {
-    ${tw`no-underline transition duration-500 ease-in-out text-blue hover:text-orange`};
-    transition: 0.2s;
-  }
+  ${blueOrangeHoverStyleString}
 `
 
 const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageContext>) => {
