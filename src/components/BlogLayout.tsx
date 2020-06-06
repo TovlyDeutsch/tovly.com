@@ -25,6 +25,7 @@ const BlogContent = styled.div`
   }
 `
 const BlogMain = styled.main`
+  ${tw`font-serif`};
   a {
     ${tw`text-blue`};
   }
