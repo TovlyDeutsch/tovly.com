@@ -38,11 +38,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    ${tw`no-underline text-orange hover:text-orange-light`};
-  }
-
-  a[name], a[name]:hover, a[role]:hover {
-    color: inherit
+    ${tw`no-underline`};
+    transition: color 0.1s ease-out;
   }
 
   figcaption {

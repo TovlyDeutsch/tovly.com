@@ -6,11 +6,9 @@
  */
 
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
 import tw from 'tailwind.macro'
-
-import { BlueHoverLink } from '../pages/blog'
 
 const Bio = ({ justify = 'center' }) => {
   const data = useStaticQuery(graphql`
@@ -51,7 +49,7 @@ const Bio = ({ justify = 'center' }) => {
       />
       <p>
         Written by <strong>{author.name}</strong> |{` `}
-        <BlueHoverLink to="/">Check out his other work</BlueHoverLink>
+        <Link to="/">Check out his other work</Link>
       </p>
     </div>
   )

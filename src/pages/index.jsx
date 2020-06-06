@@ -14,6 +14,18 @@ import MetaAndStyles from '../components/MetaAndStyles'
 import rightArrow from '../icons/right-arrow.svg'
 import github from '../icons/github.svg'
 
+const HomePage = styled.div`
+  a {
+    ${tw`text-orange hover:text-orange-light`}
+  }
+  a[name],
+  a[role],
+  a[name]:hover,
+  a[role]:hover {
+    color: inherit;
+  }
+`
+
 const SliderWrapper = styled.section`
   ${tw`sm:px-8 px-4 md:px-24`};
 `
@@ -141,7 +153,7 @@ const Index = props => {
         img: siteMetadata.metaFaceImg,
       }}
     >
-      <div>
+      <HomePage>
         <Header faceFile={childImageSharp} />
         <SliderWrapper>
           <a name="publications">
@@ -236,7 +248,7 @@ const Index = props => {
           <OutboundLink href="https://github.com/TovlyDeutsch/tovly.com">Design</OutboundLink> by Tovly Deutsch. Forked
           from <OutboundLink href="https://github.com/LeKoArts/gatsby-starter-portfolio"> Lekoarts</OutboundLink>.
         </Footer>
-      </div>
+      </HomePage>
     </MetaAndStyles>
   )
 }

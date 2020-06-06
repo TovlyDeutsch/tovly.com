@@ -36,19 +36,6 @@ type Data = {
   }
 }
 
-export const blueOrangeHoverStyleString = `
-  ${tw`no-underline transition duration-500 ease-in-out text-blue hover:text-orange`};
-  & {
-    transition: 0.2s;
-  }
-`
-
-const blueOrangeHoverStyle = <P extends object>(component: React.ComponentType<P>) =>
-  styled(component)[blueOrangeHoverStyleString]
-
-export const BlueHoverLink = blueOrangeHoverStyle(Link)
-export const BlueHoverOutboundLink = blueOrangeHoverStyle(OutboundLink)
-
 const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const { blogTitle, blogSiteName, blogUrl, metaFaceImg } = data.site.siteMetadata
   const posts = data.allMarkdownRemark.edges
@@ -71,7 +58,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
             <article key={node.fields.slug} style={tw`mb-2`}>
               <header>
                 <h3 style={tw`text-3xl`}>
-                  <BlueHoverLink to={node.fields.slug}>{title}</BlueHoverLink>
+                  <Link to={node.fields.slug}>{title}</Link>
                 </h3>
                 <small>{node.frontmatter.date}</small>
               </header>

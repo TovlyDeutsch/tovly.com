@@ -15,9 +15,15 @@ const PostHeader = styled.h1`
 `
 
 const PostHeaderLink = styled(Link)`
-  ${tw`no-underline transition duration-500 ease-in-out text-black hover:text-orange`};
-  & {
-    transition: 0.2s;
+  ${tw`text-black hover:text-orange`};
+`
+
+const BlogContent = styled.div`
+  ${tw`mx-auto max-w-lg py-6 px-6`};
+`
+const BlogMain = styled.main`
+  a {
+    ${tw`text-blue hover:text-orange`};
   }
 `
 
@@ -41,10 +47,10 @@ const BlogLayout = ({ location, title, children }: Data) => {
     )
   }
   return (
-    <div style={tw`mx-auto max-w-lg py-6 px-6`}>
+    <BlogContent>
       <header style={tw`text-center`}>{header}</header>
-      <main>{children}</main>
-    </div>
+      <BlogMain>{children}</BlogMain>
+    </BlogContent>
   )
 }
 

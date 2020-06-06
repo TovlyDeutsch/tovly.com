@@ -1,12 +1,11 @@
 import React from 'react'
-import { graphql, PageProps } from 'gatsby'
+import { graphql, PageProps, Link } from 'gatsby'
 import styled from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import tw from 'tailwind.macro'
 
 import Bio from '../components/Bio'
 import BlogLayout from '../components/BlogLayout'
-import { BlueHoverLink, BlueHoverOutboundLink, blueOrangeHoverStyleString } from '../pages/blog'
 import MetaAndStyles from '../components/MetaAndStyles'
 
 type Data = {
@@ -59,7 +58,6 @@ const PostBody = styled.section`
     margin-left: -20px;
     font-style: italic;
   }
-  ${blueOrangeHoverStyleString}
 `
 
 const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageContext>) => {
@@ -90,8 +88,8 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageC
             {post.frontmatter.mediumLink && (
               <p>
                 Looking to comment? Visit the
-                <BlueHoverOutboundLink href={post.frontmatter.mediumLink}> medium post </BlueHoverOutboundLink>(comments
-                may come here eventually).
+                <OutboundLink href={post.frontmatter.mediumLink}> medium post </OutboundLink>(comments may come here
+                eventually).
               </p>
             )}
           </footer>
@@ -109,16 +107,16 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageC
           >
             <li>
               {previous && (
-                <BlueHoverLink to={previous.fields.slug} rel="prev">
+                <Link to={previous.fields.slug} rel="prev">
                   ← {previous.frontmatter.title}
-                </BlueHoverLink>
+                </Link>
               )}
             </li>
             <li>
               {next && (
-                <BlueHoverLink to={next.fields.slug} rel="next">
+                <Link to={next.fields.slug} rel="next">
                   {next.frontmatter.title} →
-                </BlueHoverLink>
+                </Link>
               )}
             </li>
           </ul>
