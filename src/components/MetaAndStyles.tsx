@@ -39,7 +39,14 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     ${tw`no-underline`};
-    transition: color 0.1s ease-out;
+  }
+
+  a:not(:hover) {
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    transition: color 0.1s;
   }
 
   figcaption {
