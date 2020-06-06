@@ -15,7 +15,7 @@ const PostHeader = styled.h1`
 `
 
 const PostHeaderLink = styled(Link)`
-  ${tw`text-black hover:text-orange`};
+  ${tw`text-black`};
 `
 
 const BlogContent = styled.div`
