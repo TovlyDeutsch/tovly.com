@@ -24,7 +24,8 @@ const Social = styled.section`
 `
 
 const genButton = component => styled(component)`
-  ${tw`cursor-pointer text-sm md:text-base mx-2 sm:mx-0 py-2 px-4 md:px-8 rounded-full no-underline shadow-md focus:outline-none focus:shadow-outline`};
+  ${tw`text-sm md:text-base mx-2 sm:mx-0 py-2 px-4 md:px-8 rounded-full shadow-md focus:outline-none focus:shadow-outline`};
+  ${tw`bg-blue-dark text-white sm:ml-0 sm:mr-4 my-1`};
   transition: all 0.3s ease-in-out;
   &:hover {
     transform: translateY(-1px);
@@ -32,15 +33,6 @@ const genButton = component => styled(component)`
 `
 const OutboundButton = genButton(OutboundLink)
 const Button = genButton(Link)
-
-// TODO see if I can merge these into one button with flexbox
-const GitHub = styled(OutboundButton)`
-  ${tw`bg-blue-dark text-white sm:ml-0 sm:mr-4 my-1`};
-`
-
-const LastButton = styled(Button)`
-  ${tw`bg-blue-dark text-white`};
-`
 
 const Header = ({ faceFile }) => (
   <Intro>
@@ -59,21 +51,21 @@ const Header = ({ faceFile }) => (
           </p>
         </Description>
         <Social>
-          <GitHub role="button" href="/#publications">
+          <OutboundButton role="button" href="/#publications">
             Publications
-          </GitHub>
-          <GitHub role="button" href="/#projects">
+          </OutboundButton>
+          <OutboundButton role="button" href="/#projects">
             Projects
-          </GitHub>
-          <GitHub role="button" href="https://github.com/TovlyDeutsch">
+          </OutboundButton>
+          <OutboundButton role="button" href="https://github.com/TovlyDeutsch">
             Github
-          </GitHub>
-          <GitHub role="button" href="/TovlyDeutschResume.pdf">
+          </OutboundButton>
+          <OutboundButton role="button" href="/TovlyDeutschResume.pdf">
             Resume
-          </GitHub>
-          <LastButton role="button" to="/blog">
+          </OutboundButton>
+          <Button role="button" to="/blog">
             Blog
-          </LastButton>
+          </Button>
         </Social>
       </div>
       <Img fixed={faceFile.fixed} style={{ margin: 'auto', marginTop: 24 }} />
