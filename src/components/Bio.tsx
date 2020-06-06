@@ -17,13 +17,7 @@ type BioProps = {
 
 const BioWrapper = styled.div<BioProps>`
   ${tw`flex my-4 items-center`};
-  ${props =>
-    props.justify === 'center' &&
-    css`
-      justify-content: ${props.justify};
-      max-width: 70%;
-      margin: 0 auto 0 auto;
-    `};
+  ${props => props.justify === 'center' && tw`justify-center max-w-smd mx-auto`};
 `
 
 const Bio = ({ justify = 'center' }: BioProps) => {

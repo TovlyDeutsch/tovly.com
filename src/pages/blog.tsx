@@ -52,26 +52,28 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
     >
       <BlogLayout location={location} title={blogTitle}>
         <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article key={node.fields.slug} style={tw`mb-2`}>
-              <header>
-                <h3 style={tw`text-3xl`}>
-                  <Link to={node.fields.slug}>{title}</Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
-          )
-        })}
+        <div style={tw`mt-8`}>
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            return (
+              <article key={node.fields.slug} style={tw`mb-4`}>
+                <header>
+                  <h3 style={tw`text-3xl leading-tight`}>
+                    <Link to={node.fields.slug}>{title}</Link>
+                  </h3>
+                  <small>{node.frontmatter.date}</small>
+                </header>
+                <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
+                    }}
+                  />
+                </section>
+              </article>
+            )
+          })}
+        </div>
       </BlogLayout>
     </MetaAndStyles>
   )

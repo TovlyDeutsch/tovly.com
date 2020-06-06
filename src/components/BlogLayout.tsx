@@ -7,11 +7,11 @@ import { WindowLocation } from '@reach/router'
 declare let __PATH_PREFIX__: string
 
 const Header = styled.h1`
-  ${tw`mb-6 sm:text-7xl text-5xl`};
+  ${tw`sm:text-7xl text-5xl`};
 `
 
 const PostHeader = styled.h1`
-  ${tw`mb-6 text-3xl `};
+  ${tw`text-3xl `};
 `
 
 const PostHeaderLink = styled(Link)`
