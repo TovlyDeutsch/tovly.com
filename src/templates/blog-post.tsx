@@ -78,7 +78,7 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageProps<Data, pageC
       <BlogLayout location={location} title={blogTitle}>
         <article>
           <header>
-            <h1 style={tw`text-4xl`}>{post.frontmatter.title}</h1>
+            <h1 style={tw`text-4xl leading-none`}>{post.frontmatter.title}</h1>
             <p style={tw`mb-4`}>{post.frontmatter.date}</p>
           </header>
           <PostBody dangerouslySetInnerHTML={{ __html: post.html }} />

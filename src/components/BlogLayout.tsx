@@ -11,7 +11,7 @@ const Header = styled.h1`
 `
 
 const PostHeader = styled.h1`
-  ${tw`text-3xl `};
+  ${tw`text-3xl mb-8`};
 `
 
 const PostHeaderLink = styled(Link)`
