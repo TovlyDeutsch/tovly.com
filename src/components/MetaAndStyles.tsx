@@ -43,6 +43,10 @@ const GlobalStyle = createGlobalStyle`
     margin-block-end: 1em;
   }
 
+  sup {
+    font-size: 90%;
+  }
+
   a {
     ${tw`no-underline`};
   }
