@@ -63,7 +63,7 @@ const GlobalStyle = createGlobalStyle`
 
   figcaption {
     ${tw`text-xs text-grey-darker italic`};
-    max-width: 70%;
+    max-width: 600px;
     margin: 0.5rem auto 0.5rem auto;
     text-align: center;
   }
