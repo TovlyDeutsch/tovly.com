@@ -37,6 +37,12 @@ const GlobalStyle = createGlobalStyle`
     margin-block-end: 1em;
   }
 
+  ol {
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+  }
+
   a {
     ${tw`no-underline`};
   }

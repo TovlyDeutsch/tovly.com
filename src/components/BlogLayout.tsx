@@ -18,7 +18,7 @@ const PostHeaderLink = styled(Link)`
   ${tw`text-black`};
 `
 
-const BlogContent = styled.div`
+const BlogPage = styled.div`
   ${tw`mx-auto max-w-lg py-6 px-6`};
   a {
     ${tw`hover:text-orange`};
@@ -28,6 +28,12 @@ const BlogMain = styled.main`
   ${tw`font-serif`};
   a {
     ${tw`text-blue`};
+  }
+  .footnotes p {
+    display: inline;
+  }
+  .footnotes li {
+    ${tw`my-2`};
   }
 `
 
@@ -51,10 +57,10 @@ const BlogLayout = ({ location, title, children }: Data) => {
     )
   }
   return (
-    <BlogContent>
+    <BlogPage>
       <header style={tw`text-center`}>{header}</header>
       <BlogMain>{children}</BlogMain>
-    </BlogContent>
+    </BlogPage>
   )
 }
 
