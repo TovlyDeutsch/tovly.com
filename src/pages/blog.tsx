@@ -27,6 +27,7 @@ type Data = {
           title: string
           date: string
           description: string
+          status?: string
         }
         fields: {
           slug: string
@@ -38,8 +39,10 @@ type Data = {
 
 const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const { blogTitle, blogSiteName, blogUrl, metaFaceImg } = data.site.siteMetadata
-  const posts = data.allMarkdownRemark.edges
-
+  let posts = data.allMarkdownRemark.edges
+  if (process.env.NODE_ENV === 'production') {
+    posts = posts.filter(post => post.node.frontmatter.status !== 'draft')
+  }
   return (
     <MetaAndStyles
       meta={{
@@ -102,6 +105,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            status
           }
         }
       }
