@@ -41,6 +41,7 @@ const GlobalStyle = createGlobalStyle`
     list-style-type: decimal;
     margin-block-start: 1em;
     margin-block-end: 1em;
+    padding-inline-start: 1em;
   }
 
   sup {
@@ -49,6 +50,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     ${tw`no-underline`};
+    word-break: break-word;
   }
 
   a:not(:hover) {
