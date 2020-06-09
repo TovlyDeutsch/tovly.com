@@ -12,4 +12,4 @@ I suspect that this entrenched elitism has given books their veneer of superiori
 
 Essentially, power to those who love books, but just because you do does not mean books themselves are automatically a superior medium. I don't think these book lovers are the one's creating this societal pressure though. Instead, I suspect it comes with books' age and history far outstripping other media. With this age and association with the elite, books have been elevated above other media, particularly with regard to intellectual achievement and stimulation. I hope we can step back and pursue a more holistic outlook on the media landscape without entrenched notions of superiority.
 
-[^1]: The word I'm looking for here is closer to "novel" but that implies fiction. I want to include prose works of book-length, but exclude things like textboooks. Is there a word for this? Perhaps "literature" but I feel this also implies fiction.
+[^1]: The word I'm looking for here is closer to "novel" but that implies fiction. I want to include prose works of book-length, but exclude things like textbooks. Is there a word for this? Perhaps "literature" but I feel this also implies fiction.
