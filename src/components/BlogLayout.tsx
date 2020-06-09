@@ -19,7 +19,7 @@ const PostHeaderLink = styled(Link)`
 `
 
 const BlogPage = styled.div`
-  ${tw`mx-auto max-w-lg py-6 px-6`};
+  ${tw`mx-auto max-w-lg py-6 px-6 font-serif`};
   a {
     ${tw`hover:text-orange`};
   }
