@@ -2,7 +2,6 @@
 title: The Precariousness of Bitly
 description: How geopolitics affects internet domains
 date: '2020-05-17T22:49:06.674Z'
-slug: the-precariousness-of-bitly
 mediumLink: https://medium.com/@tovly/the-precariousness-of-bitly-81642cd50093?source=friends_link&sk=cf672dde3921393832b7e054ebda1a5d
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Data is Singular
 date: '2020-06-09'
-slug: /data-is-singular
 status: draft
 ---
 

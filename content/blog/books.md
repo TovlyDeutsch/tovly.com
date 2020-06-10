@@ -1,7 +1,6 @@
 ---
 title: Books are Overrated
 date: '2020-06-03'
-slug: /books-overrated
 status: draft
 ---
 

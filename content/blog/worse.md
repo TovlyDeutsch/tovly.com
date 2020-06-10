@@ -2,9 +2,6 @@
 title: It Could Always be Worse
 description: No one wants to hear it
 date: '2019-10-31T14:42:51.340Z'
-categories: []
-keywords: []
-slug: /@tovly/it-could-always-be-worse-456000d1376
 mediumLink: https://medium.com/@tovly/it-could-always-be-worse-456000d1376?source=friends_link&sk=9bdc486431a6a68be53605ef0dc603c9
 ---
 
