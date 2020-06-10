@@ -46,8 +46,8 @@ type Data<LocationState = WindowLocation['state']> = {
 const BlogLayout = ({ location, title, children }: Data) => {
   const rootPath = `${__PATH_PREFIX__}/blog`
   let header
-
-  if (location.pathname === rootPath) {
+  console.log(location.pathname)
+  if (location.pathname === rootPath || location.pathname === rootPath + '/') {
     header = <Header>{title}</Header>
   } else {
     header = (
