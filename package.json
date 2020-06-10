@@ -12,6 +12,7 @@
     "format": "prettier --write src/sites/sites.yaml"
   },
   "dependencies": {
+    "@types/react-helmet": "^6.0.0",
     "@types/styled-components": "^5.1.0",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.22.17",
