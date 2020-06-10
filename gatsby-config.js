@@ -84,8 +84,9 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) =>
-              allMarkdownRemark.edges.map(edge =>
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              const filteredPosts = allMarkdownRemark.edges.filter(edge => edge.frontmatter.status !== 'draft')
+              const mappedEdges = filteredPosts.map(edge =>
                 Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
@@ -93,7 +94,9 @@ module.exports = {
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
-              ),
+              )
+              return mappedEdges
+            },
             query: `
               {
                 allMarkdownRemark(
