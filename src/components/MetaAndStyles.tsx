@@ -3,14 +3,16 @@ import { createGlobalStyle } from 'styled-components'
 import Meta, { MetaData } from './Meta'
 import tw from 'tailwind.macro'
 
-const stripedBodyStyle = `body {
+const stripedStyles = `
+  body {
     background-color: #002034;
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23909cbd' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
     color: white;
-  }`
+  }
+`
 
 const GlobalStyle = createGlobalStyle`
-  ${(props: { striped: boolean }) => (props.striped ? stripedBodyStyle : '')}
+  ${(props: { striped: boolean }) => (props.striped ? stripedStyles : '')}
 
   html {
     font-size: 18px;
@@ -49,8 +51,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    ${tw`no-underline`};
+    ${tw`no-underline text-orange hover:text-orange-lighter`};
     word-break: break-word;
+  }
+  
+  a[name],
+  a[role],
+  a[name]:hover,
+  a[role]:hover {
+    color: inherit;
   }
 
   a:not(:hover) {
