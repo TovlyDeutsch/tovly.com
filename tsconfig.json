@@ -1,0 +1,4 @@
+{
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+  "typeRoots": ["**/.tsx"]
+}
