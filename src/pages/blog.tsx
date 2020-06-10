@@ -40,7 +40,7 @@ type Data = {
 const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const { blogTitle, blogSiteName, blogUrl, metaFaceImg } = data.site.siteMetadata
   let posts = data.allMarkdownRemark.edges
-  if (process.env.NODE_ENV === 'production') {
+  if (process?.env?.NODE_ENV != 'development') {
     posts = posts.filter(post => post.node.frontmatter.status !== 'draft')
   }
   return (
