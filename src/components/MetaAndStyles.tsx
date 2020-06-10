@@ -55,9 +55,7 @@ const GlobalStyle = createGlobalStyle`
     word-break: break-word;
   }
   
-  a[name],
   a[role],
-  a[name]:hover,
   a[role]:hover {
     color: inherit;
   }

@@ -143,9 +143,7 @@ const Index = props => {
     >
       <Header faceFile={childImageSharp} />
       <SliderWrapper>
-        <a name="publications">
-          <Heading>Publications</Heading>
-        </a>
+        <Heading id="publications">Publications</Heading>
         <PubList>
           <li>
             <b>T. Deutsch</b>
@@ -186,9 +184,7 @@ const Index = props => {
               <a href="https://github.com/AbdulSaleh/QCRI-MIT-SemEval2019-Task4">[Code]</a> */}
           </li>
         </PubList>
-        <a name="projects">
-          <Heading>Projects</Heading>
-        </a>
+        <Heading id="projects">Projects</Heading>
         <Grid>
           {edges.map(site => {
             const { id, title, description, cover, url, siteName } = site.node

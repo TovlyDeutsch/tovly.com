@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
+import Img, { FixedObject } from 'gatsby-image'
 
 const Intro = styled.section`
   ${tw`sm:px-8 px-4 md:px-24 pb-8 md:py-8 text-center xl:text-left`};
@@ -74,7 +74,9 @@ const Header = ({ faceFile }) => (
 )
 
 Header.propTypes = {
-  faceFile: PropTypes.object.isRequired,
+  faceFile: PropTypes.shape({
+    fixed: FixedObject,
+  }).isRequired,
 }
 
 export default Header
