@@ -85,7 +85,9 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              const filteredPosts = allMarkdownRemark.edges.filter(edge => edge.frontmatter.status !== 'draft')
+              const filteredPosts = allMarkdownRemark.edges.filter(
+                edge => edge.frontmatter && edge.frontmatter.status !== 'draft'
+              )
               const mappedEdges = filteredPosts.map(edge =>
                 Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
