@@ -16,6 +16,12 @@
     "browser": true,
     "node": true
   },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@typescript-eslint/recommended", "prettier/@typescript-eslint"]
+    }
+  ],
   "rules": {
     "import/extensions": "off",
     "linebreak-style": "off",
@@ -40,18 +46,5 @@
       }
     ]
   },
-  "plugins": ["prettier", "@typescript-eslint"],
-  // "settings": {
-  //   "import/resolver": {
-  //     "node": {
-  //       "extensions": [".js", ".jsx", ".ts", ".tsx"]
-  //     }
-  //   }
-  // },
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@typescript-eslint/recommended", "prettier/@typescript-eslint"]
-    }
-  ]
+  "plugins": ["prettier", "@typescript-eslint"]
 }
