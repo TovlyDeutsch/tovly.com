@@ -19,7 +19,7 @@ export type MetaData = {
 }
 
 // TODO validate these tags with some real-world usage e.g. Facebook and Twitter
-const Meta = ({ title, description, siteName, siteUrl, pageImage }) => {
+const Meta: React.FC<MetaData> = ({ title, description, siteName, siteUrl, pageImage }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -64,6 +64,7 @@ Meta.defaultProps = {
   pageImage: null,
 }
 
+// TODO unify this with the Meta type above
 Meta.propTypes = {
   description: PropTypes.string.isRequired,
   siteName: PropTypes.string.isRequired,

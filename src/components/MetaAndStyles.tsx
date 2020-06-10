@@ -82,7 +82,7 @@ type Data = {
   children: React.ReactNode
 }
 
-const MetaAndStyles = ({ meta, background = null, children }: Data) => {
+const MetaAndStyles: React.FC<Data> = ({ meta, background = null, children }: Data) => {
   const { siteTitle, description, siteName, siteUrl, img } = meta
   return (
     <React.Fragment>

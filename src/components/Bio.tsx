@@ -8,7 +8,7 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import tw from 'tailwind.macro'
 
 type BioProps = {
@@ -20,7 +20,7 @@ const BioWrapper = styled.div<BioProps>`
   ${props => props.justify === 'center' && tw`justify-center max-w-smd mx-auto`};
 `
 
-const Bio = ({ justify = 'center' }: BioProps) => {
+const Bio: React.FC<BioProps> = ({ justify = 'center' }: BioProps) => {
   const data = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/face.jpg/" }) {

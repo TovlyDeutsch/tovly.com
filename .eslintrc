@@ -1,12 +1,11 @@
 {
-  "extends": ["airbnb", "prettier", "prettier/react"],
-  "parser": "babel-eslint",
+  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier", "prettier/react"],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2017,
+    "ecmaVersion": 2020,
+    "sourceType": "module",
     "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "impliedStrict": true,
-      "classes": true
+      "impliedStrict": true
     }
   },
   "globals": {
@@ -15,13 +14,13 @@
   },
   "env": {
     "browser": true,
-    "node": true,
-    "jquery": true
+    "node": true
   },
   "rules": {
     "import/extensions": "off",
     "linebreak-style": "off",
     "react/no-unescaped-entities": "off",
+    "no-warning-comments": "warn",
     "quotes": [
       2,
       "single",
@@ -41,12 +40,18 @@
       }
     ]
   },
-  "plugins": ["prettier"],
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
+  "plugins": ["prettier", "@typescript-eslint"],
+  // "settings": {
+  //   "import/resolver": {
+  //     "node": {
+  //       "extensions": [".js", ".jsx", ".ts", ".tsx"]
+  //     }
+  //   }
+  // },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@typescript-eslint/recommended", "prettier/@typescript-eslint"]
     }
-  }
+  ]
 }

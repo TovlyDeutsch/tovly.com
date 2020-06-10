@@ -2,13 +2,10 @@
 import React from 'react'
 import { PageProps, Link, graphql } from 'gatsby'
 import tw from 'tailwind.macro'
-import styled, { AnyStyledComponent } from 'styled-components'
 
 import Bio from '../components/Bio'
 import BlogLayout from '../components/BlogLayout'
-import Meta from '../components/Meta'
 import MetaAndStyles from '../components/MetaAndStyles'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 type Data = {
   site: {
@@ -37,7 +34,7 @@ type Data = {
   }
 }
 
-const BlogIndex = ({ data, location }: PageProps<Data>) => {
+const BlogIndex: React.FC<Data> = ({ data, location }: PageProps<Data>) => {
   const { blogTitle, blogSiteName, blogUrl, metaFaceImg } = data.site.siteMetadata
   let posts = data.allMarkdownRemark.edges
   if (process?.env?.NODE_ENV != 'development') {
