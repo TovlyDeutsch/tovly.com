@@ -86,7 +86,7 @@ const MetaAndStyles: React.FC<Data> = ({ meta, background = null, children }: Da
   const { siteTitle, description, siteName, siteUrl, img } = meta
   return (
     <React.Fragment>
-      <Meta title={siteTitle} description={description} siteName={siteName} siteUrl={siteUrl} pageImage={img} />
+      <Meta siteTitle={siteTitle} description={description} siteName={siteName} siteUrl={siteUrl} img={img} />
       {children}
       <GlobalStyle striped={background === 'striped'} />
     </React.Fragment>
