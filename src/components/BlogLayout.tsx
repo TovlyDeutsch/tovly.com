@@ -20,13 +20,12 @@ const PostHeaderLink = styled(Link)`
 `
 
 const BlogPage = styled.div`
-  ${tw`mx-auto max-w-lg py-6 px-6 font-serif`};
+  ${tw`mx-auto max-w-3xl py-6 px-6 font-serif`};
   a {
     ${tw`hover:text-orange`};
   }
 `
 const BlogMain = styled.main`
-  ${tw`font-serif`};
   a {
     ${tw`text-blue`};
   }

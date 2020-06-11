@@ -12,7 +12,7 @@ type BioProps = {
 
 const BioWrapper = styled.div<BioProps>`
   ${tw`flex my-4 items-center`};
-  ${props => props.justify === 'center' && tw`justify-center max-w-smd mx-auto`};
+  ${props => props.justify === 'center' && tw`justify-center max-w-lg mx-auto`};
 `
 
 const Bio: React.FC<BioProps> = ({ justify = 'center' }: BioProps) => {

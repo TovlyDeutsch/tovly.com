@@ -44,7 +44,7 @@ type pageContext = {
 }
 
 const PostBody = styled.section`
-  ${tw`font-serif text-lg`};
+  ${tw`text-lg`};
   p {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -84,7 +84,7 @@ const BlogPostTemplate: React.FC<PageProps<Data, pageContext>> = ({
           <header>
             <h1 style={tw`text-4xl leading-none`}>{post.frontmatter.title}</h1>
             {post.frontmatter.description && (
-              <h2 style={tw`text-xl leading-none my-2 text-grey-darkest`}>{post.frontmatter.description}</h2>
+              <h2 style={tw`text-xl leading-none my-2 text-gray-darkest`}>{post.frontmatter.description}</h2>
             )}
             <p style={tw`mb-4`}>{post.frontmatter.date}</p>
           </header>

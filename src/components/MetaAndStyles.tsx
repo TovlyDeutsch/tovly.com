@@ -71,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   figcaption {
-    ${tw`text-xs text-grey-darker italic`};
+    ${tw`text-xs text-gray-darker italic`};
     max-width: 600px;
     margin: 0.5rem auto 0.5rem auto;
     text-align: center;

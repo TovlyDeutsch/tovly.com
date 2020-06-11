@@ -18,7 +18,7 @@ interface LengthProps {
 }
 
 const Description = styled.div<LengthProps>`
-  ${tw`text-sm sm:text-base md:text-lg max-w-md text-grey-lighter`};
+  ${tw`text-sm sm:text-base md:text-lg max-w-2xl text-gray-lighter`};
   ${props => props.long && 'max-width: 60rem'};
 `
 

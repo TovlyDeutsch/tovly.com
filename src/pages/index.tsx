@@ -17,7 +17,7 @@ const SliderWrapper = styled.section`
 `
 
 const Footer = styled.footer`
-  ${tw`text-center pb-6 pt-12 text-xs text-grey-light tracking-wide z-50 uppercase`};
+  ${tw`text-center pb-6 pt-12 text-xs text-gray-light tracking-wider z-50 uppercase`};
 `
 
 const Item = styled.div`
@@ -41,7 +41,7 @@ const Bottom = styled.div`
 `
 
 const Preview = styled.div`
-  ${tw`text-white inline-block text-xl relative mb-0 py-1 tracking-wide no-underline uppercase`};
+  ${tw`text-white inline-block text-xl relative mb-0 py-1 tracking-wider no-underline uppercase`};
   img {
     width: 18px;
     height: 18px;
@@ -58,7 +58,7 @@ const Preview = styled.div`
 `
 
 const Repo = styled.div`
-  ${tw`text-white text-sm inline-block mb-4 py-1 tracking-wide no-underline opacity-75`};
+  ${tw`text-white text-sm inline-block mb-4 py-1 tracking-wider no-underline opacity-75`};
   transition: all 0.4s ease-in-out;
   img {
     width: 16px;
