@@ -5,12 +5,12 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
-import '../../static/rgbSpinner.css'
+import 'css/rgbSpinner.css'
 
-import Header from '../components/Header'
-import MetaAndStyles from '../components/MetaAndStyles'
-import github from '../icons/github.svg'
-import rightArrow from '../icons/right-arrow.svg'
+import Header from 'components/Header'
+import MetaAndStyles from 'components/MetaAndStyles'
+import github from 'icons/github.svg'
+import rightArrow from 'icons/right-arrow.svg'
 
 const SliderWrapper = styled.section`
   ${tw`sm:px-8 px-4 md:px-24`};

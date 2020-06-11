@@ -2,10 +2,10 @@ import { PageProps, Link, graphql } from 'gatsby'
 import React from 'react'
 import tw from 'tailwind.macro'
 
-import Bio from '../components/Bio'
-import BlogLayout from '../components/BlogLayout'
-import MetaAndStyles from '../components/MetaAndStyles'
-import { BlogPageQueryQuery } from '../types/graphqlTypes'
+import Bio from 'components/Bio'
+import BlogLayout from 'components/BlogLayout'
+import MetaAndStyles from 'components/MetaAndStyles'
+import { BlogPageQueryQuery } from 'types/graphqlTypes'
 
 const BlogIndex: React.FC<BlogPageQueryQuery> = ({ data, location }: PageProps<BlogPageQueryQuery>) => {
   const { blogTitle, blogSiteName, blogUrl, metaFaceImg } = data.site.siteMetadata

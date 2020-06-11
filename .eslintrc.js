@@ -43,6 +43,13 @@ module.exports = {
           caseInsensitive: true /* ignore case. Options: [true, false] */,
         },
         'newlines-between': 'always',
+        pathGroups: [
+          {
+            pattern: '*(!(@))/**',
+            group: 'internal',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['builtin'],
       },
     ],
     quotes: [

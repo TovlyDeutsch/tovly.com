@@ -3,8 +3,8 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
 
-import MetaAndStyles from '../components/MetaAndStyles'
-import { MissingPageQueryQuery } from '../types/graphqlTypes'
+import MetaAndStyles from 'components/MetaAndStyles'
+import { MissingPageQueryQuery } from 'types/graphqlTypes'
 
 const MissingHeader = styled.h1`
   ${tw`text-4xl text-center mt-8`}

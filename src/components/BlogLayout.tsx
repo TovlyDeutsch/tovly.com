@@ -1,8 +1,9 @@
-import { WindowLocation } from '@reach/router'
 import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
+
+import { WindowLocation } from '@reach/router'
 
 declare let __PATH_PREFIX__: string
 

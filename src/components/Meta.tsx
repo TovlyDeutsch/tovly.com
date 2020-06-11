@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
+
 import { MetaData } from 'types/data-types'
 import { MetaQuery } from 'types/graphqlTypes'
 

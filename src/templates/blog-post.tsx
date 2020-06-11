@@ -4,9 +4,9 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
 
-import Bio from '../components/Bio'
-import BlogLayout from '../components/BlogLayout'
-import MetaAndStyles from '../components/MetaAndStyles'
+import Bio from 'components/Bio'
+import BlogLayout from 'components/BlogLayout'
+import MetaAndStyles from 'components/MetaAndStyles'
 
 type Data = {
   markdownRemark: {
