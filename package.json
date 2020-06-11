@@ -9,9 +9,11 @@
     "serve": "gatsby serve",
     "lint": "eslint . --ext .js,.jsx --ignore-path .gitignore",
     "lint:fix": "eslint . --ext .js,.jsx --fix --ignore-path .gitignore",
-    "format": "prettier --write src/sites/sites.yaml"
+    "format": "prettier --write src/sites/sites.yaml",
+    "gen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
+    "@types/react": "^16.9.36",
     "@types/react-helmet": "^6.0.0",
     "@types/styled-components": "^5.1.0",
     "@typescript-eslint/eslint-plugin": "^3.2.0",
@@ -32,6 +34,7 @@
     "gatsby-transformer-remark": "^2.8.13",
     "gatsby-transformer-sharp": "^2.3.17",
     "gatsby-transformer-yaml": "^2.2.26",
+    "graphql": "^15.1.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
@@ -43,6 +46,9 @@
     "typeface-montserrat": "git+https://github.com/TovlyDeutsch/personal-typefaces-montserrat.git"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^1.15.2",
+    "@graphql-codegen/typescript": "^1.15.2",
+    "@graphql-codegen/typescript-operations": "^1.15.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^17.1.0",

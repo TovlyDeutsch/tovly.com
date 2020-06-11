@@ -87,7 +87,7 @@ const BlogPostTemplate: React.FC<Data> = ({ data, pageContext, location }: PageP
             <p style={tw`mb-4`}>{post.frontmatter.date}</p>
           </header>
           <PostBody dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr style={{ ...tw`border-solid my-4`, borderWidth: 0.5 }} />
+          <hr style={tw`border-solid my-4 border-0.5`} />
           <footer>
             <Bio justify="left" />
             {post.frontmatter.mediumLink && (

@@ -236,6 +236,7 @@ const Index = props => {
 
 export default Index
 
+// TODO conver this file to tsx and change these for ts types
 Index.propTypes = {
   data: PropTypes.shape({
     allProjectsYaml: PropTypes.shape({

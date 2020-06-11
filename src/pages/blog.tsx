@@ -1,4 +1,3 @@
-// Gatsby supports TypeScript natively!
 import React from 'react'
 import { PageProps, Link, graphql } from 'gatsby'
 import tw from 'tailwind.macro'
@@ -6,35 +5,9 @@ import tw from 'tailwind.macro'
 import Bio from '../components/Bio'
 import BlogLayout from '../components/BlogLayout'
 import MetaAndStyles from '../components/MetaAndStyles'
+import { BlogPageQueryQuery } from '../types/graphqlTypes'
 
-type Data = {
-  site: {
-    siteMetadata: {
-      blogTitle: string
-      blogSiteName: string
-      blogUrl: string
-      metaFaceImg: string
-    }
-  }
-  allMarkdownRemark: {
-    edges: {
-      node: {
-        excerpt: string
-        frontmatter: {
-          title: string
-          date: string
-          description: string
-          status?: string
-        }
-        fields: {
-          slug: string
-        }
-      }
-    }[]
-  }
-}
-
-const BlogIndex: React.FC<Data> = ({ data, location }: PageProps<Data>) => {
+const BlogIndex: React.FC<BlogPageQueryQuery> = ({ data, location }: PageProps<BlogPageQueryQuery>) => {
   const { blogTitle, blogSiteName, blogUrl, metaFaceImg } = data.site.siteMetadata
   let posts = data.allMarkdownRemark.edges
   if (process?.env?.NODE_ENV != 'development') {
@@ -82,7 +55,7 @@ const BlogIndex: React.FC<Data> = ({ data, location }: PageProps<Data>) => {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query {
+  query blogPageQuery {
     site {
       siteMetadata {
         blogTitle

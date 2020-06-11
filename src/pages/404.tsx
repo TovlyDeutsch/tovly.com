@@ -1,28 +1,18 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql, Link, PageProps } from 'gatsby'
 import MetaAndStyles from '../components/MetaAndStyles'
-import { MetaData } from '../components/Meta'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
+import { MissingPageQueryQuery } from '../types/graphqlTypes'
 
 const MissingHeader = styled.h1`
   ${tw`text-4xl text-center mt-8`}
 `
 
-type MissingPageProps = {
-  data: {
-    site: {
-      siteMetada: MetaData
-    }
-  }
-}
-
-const MissingPage: React.FC<MissingPageProps> = (props: MissingPageProps) => {
+const MissingPage: React.FC<missingPageQuery> = ({ data }: PageProps<MissingPageQueryQuery>) => {
   const {
-    data: {
-      site: { siteMetadata },
-    },
-  } = props
+    site: { siteMetadata },
+  } = data
 
   return (
     <MetaAndStyles
@@ -45,8 +35,8 @@ const MissingPage: React.FC<MissingPageProps> = (props: MissingPageProps) => {
 
 export default MissingPage
 
-export const missingPageQuery = graphql`
-  query MissingPageQuery {
+export const pageQuery = graphql`
+  query missingPageQuery {
     site {
       siteMetadata {
         siteTitle

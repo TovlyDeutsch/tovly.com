@@ -10,6 +10,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
+import { BioQueryQuery } from '../types/graphqlTypes'
 
 type BioProps = {
   justify?: string
@@ -21,7 +22,7 @@ const BioWrapper = styled.div<BioProps>`
 `
 
 const Bio: React.FC<BioProps> = ({ justify = 'center' }: BioProps) => {
-  const data = useStaticQuery(graphql`
+  const data: BioQueryQuery = useStaticQuery(graphql`
     query BioQuery {
       avatar: file(absolutePath: { regex: "/face.jpg/" }) {
         childImageSharp {
@@ -47,6 +48,8 @@ const Bio: React.FC<BioProps> = ({ justify = 'center' }: BioProps) => {
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author.name}
+        // TODO see if I can fix this by migrating
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         style={{
           ...tw`mr-2`,
           marginBottom: 0,

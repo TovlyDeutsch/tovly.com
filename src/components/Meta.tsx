@@ -8,6 +8,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+import { MetaQuery } from '../types/graphqlTypes'
 
 export type MetaData = {
   siteTitle: string
@@ -19,9 +20,9 @@ export type MetaData = {
 
 // TODO validate these tags with some real-world usage e.g. Facebook and Twitter
 const Meta: React.FC<MetaData> = ({ siteTitle, description, siteName, siteUrl, img = null }: MetaData) => {
-  const { site } = useStaticQuery(
+  const { site }: MetaQuery = useStaticQuery(
     graphql`
-      query {
+      query meta {
         site {
           siteMetadata {
             social {

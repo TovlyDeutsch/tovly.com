@@ -6,6 +6,7 @@ module.exports = {
     sourceType: 'module',
     ecmaFeatures: {
       impliedStrict: true,
+      jsx: true,
     },
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
@@ -18,6 +19,7 @@ module.exports = {
     browser: true,
     node: true,
   },
+  ignorePatterns: ['graphqlTypes.ts'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
@@ -29,7 +31,6 @@ module.exports = {
       // TODO consider disabling some of these rules once I have graphql type generation going
       rules: {
         '@typescript-eslint/no-unsafe-assignment': 'off',
-        '@typescript-eslint/no-unsafe-member-access': 'off',
       },
     },
   ],
@@ -57,5 +58,10 @@ module.exports = {
       },
     ],
   },
-  plugins: ['prettier', '@typescript-eslint'],
+  plugins: ['prettier', '@typescript-eslint', 'react'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
 }
