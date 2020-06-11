@@ -75,7 +75,7 @@ const BlogPostTemplate: React.FC<Data> = ({ data, pageContext, location }: PageP
         // TODO add cover image to each blogpost for page image here
       }}
     >
-      <BlogLayout location={location} title={blogTitle}>
+      <BlogLayout location={location} title={blogSiteName}>
         <article>
           <header>
             <h1 style={tw`text-4xl leading-none`}>{post.frontmatter.title}</h1>

@@ -23,7 +23,7 @@ const BlogIndex: React.FC<BlogPageQueryQuery> = ({ data, location }: PageProps<B
         img: metaFaceImg,
       }}
     >
-      <BlogLayout location={location} title={blogTitle}>
+      <BlogLayout location={location} title={blogSiteName}>
         <Bio />
         <div style={tw`mt-8`}>
           {posts.map(({ node }) => {
