@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import tw from 'tailwind.macro'
-import styled from 'styled-components'
 import { WindowLocation } from '@reach/router'
+import { Link } from 'gatsby'
+import React from 'react'
+import styled from 'styled-components'
+import tw from 'tailwind.macro'
 
 declare let __PATH_PREFIX__: string
 

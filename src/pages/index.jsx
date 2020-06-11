@@ -1,18 +1,16 @@
-/* eslint no-shadow: 0 */
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import Img, { GatsbyImageProps } from 'gatsby-image'
-import tw from 'tailwind.macro'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from 'styled-components'
+import tw from 'tailwind.macro'
 import '../../static/rgbSpinner.css'
 
 import Header from '../components/Header'
 import MetaAndStyles from '../components/MetaAndStyles'
-
-import rightArrow from '../icons/right-arrow.svg'
 import github from '../icons/github.svg'
+import rightArrow from '../icons/right-arrow.svg'
 
 const SliderWrapper = styled.section`
   ${tw`sm:px-8 px-4 md:px-24`};

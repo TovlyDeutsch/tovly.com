@@ -1,5 +1,5 @@
-import React from 'react'
 import { PageProps, Link, graphql } from 'gatsby'
+import React from 'react'
 import tw from 'tailwind.macro'
 
 import Bio from '../components/Bio'

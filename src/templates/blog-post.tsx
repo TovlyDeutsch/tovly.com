@@ -1,7 +1,7 @@
-import React from 'react'
 import { graphql, PageProps, Link } from 'gatsby'
-import styled from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import React from 'react'
+import styled from 'styled-components'
 import tw from 'tailwind.macro'
 
 import Bio from '../components/Bio'

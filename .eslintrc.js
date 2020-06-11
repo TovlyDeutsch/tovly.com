@@ -35,6 +35,16 @@ module.exports = {
     'linebreak-style': 'off',
     'react/no-unescaped-entities': 'off',
     'no-warning-comments': 'warn',
+    'import/order': [
+      'warn',
+      {
+        alphabetize: {
+          order: 'asc' /* sort in ascending order. Options: ['ignore', 'asc', 'desc'] */,
+          caseInsensitive: true /* ignore case. Options: [true, false] */,
+        },
+        'newlines-between': 'always',
+      },
+    ],
     quotes: [
       2,
       'single',
@@ -54,7 +64,7 @@ module.exports = {
       },
     ],
   },
-  plugins: ['prettier', '@typescript-eslint', 'react'],
+  plugins: ['prettier', '@typescript-eslint', 'react', 'import'],
   settings: {
     react: {
       version: 'detect',

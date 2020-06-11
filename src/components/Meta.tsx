@@ -5,11 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
+import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
-import { MetaQuery } from '../types/graphqlTypes'
-import { MetaData } from '../types/data-types'
+import { MetaData } from 'types/data-types'
+import { MetaQuery } from 'types/graphqlTypes'
 
 // TODO validate these tags with some real-world usage e.g. Facebook and Twitter
 const Meta: React.FC<MetaData> = ({ siteTitle, description, siteName, siteUrl, img = null }: MetaData) => {

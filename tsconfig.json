@@ -1,4 +1,11 @@
 {
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
-  "typeRoots": ["module-types.ts"]
+  "typeRoots": ["module-types.ts"],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "*": ["*"]
+    },
+    "noUnusedLocals": false
+  }
 }

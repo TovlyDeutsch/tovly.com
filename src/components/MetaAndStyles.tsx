@@ -1,8 +1,8 @@
+import Meta from 'components/Meta'
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
-import Meta from './Meta.tsx'
-import { MetaData } from '../types/data-types'
 import tw from 'tailwind.macro'
+import { MetaData } from 'types/data-types'
 
 const stripedStyles = `
   body {

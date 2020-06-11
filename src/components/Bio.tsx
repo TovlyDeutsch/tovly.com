@@ -5,12 +5,12 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
+import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
-import { BioQueryQuery } from '../types/graphqlTypes'
+import { BioQueryQuery } from 'types/graphqlTypes'
 
 type BioProps = {
   justify?: string

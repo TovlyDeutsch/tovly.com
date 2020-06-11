@@ -1,10 +1,10 @@
-import tw from 'tailwind.macro'
-import React from 'react'
-import styled from 'styled-components'
 import { Link } from 'gatsby'
+import Img, { FixedObject } from 'gatsby-image'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import PropTypes from 'prop-types'
-import Img, { FixedObject } from 'gatsby-image'
+import React from 'react'
+import styled from 'styled-components'
+import tw from 'tailwind.macro'
 
 const Intro = styled.section`
   ${tw`sm:px-8 px-4 md:px-24 pb-8 md:py-8 text-center xl:text-left`};

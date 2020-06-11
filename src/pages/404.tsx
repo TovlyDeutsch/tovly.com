@@ -1,8 +1,9 @@
-import React from 'react'
 import { graphql, Link, PageProps } from 'gatsby'
-import MetaAndStyles from '../components/MetaAndStyles'
+import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
+
+import MetaAndStyles from '../components/MetaAndStyles'
 import { MissingPageQueryQuery } from '../types/graphqlTypes'
 
 const MissingHeader = styled.h1`
