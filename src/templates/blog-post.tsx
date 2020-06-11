@@ -62,7 +62,7 @@ const PostBody = styled.section`
 
 const BlogPostTemplate: React.FC<Data> = ({ data, pageContext, location }: PageProps<Data, pageContext>) => {
   const post = data.markdownRemark
-  const { blogTitle, blogSiteName, blogUrl } = data.site.siteMetadata
+  const { blogSiteName, blogUrl } = data.site.siteMetadata
   const { previous, next } = pageContext
 
   return (
