@@ -28,10 +28,6 @@ module.exports = {
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'prettier/@typescript-eslint',
       ],
-      // TODO consider disabling some of these rules once I have graphql type generation going
-      rules: {
-        '@typescript-eslint/no-unsafe-assignment': 'off',
-      },
     },
   ],
   rules: {

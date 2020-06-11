@@ -9,14 +9,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import { MetaQuery } from '../types/graphqlTypes'
-
-export type MetaData = {
-  siteTitle: string
-  description: string
-  siteName: string
-  siteUrl: string
-  img?: string
-}
+import { MetaData } from '../types/data-types'
 
 // TODO validate these tags with some real-world usage e.g. Facebook and Twitter
 const Meta: React.FC<MetaData> = ({ siteTitle, description, siteName, siteUrl, img = null }: MetaData) => {
