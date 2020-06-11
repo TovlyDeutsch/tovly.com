@@ -41,8 +41,6 @@ const Bio: React.FC<BioProps> = ({ justify = 'center' }: BioProps) => {
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author.name}
-        // TODO see if I can fix this by migrating
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         style={{
           ...tw`mr-2`,
           marginBottom: 0,
