@@ -19,7 +19,7 @@ const MissingPage: React.FC<missingPageQuery> = ({ data }: PageProps<MissingPage
     <MetaAndStyles
       background="striped"
       meta={{
-        siteTitle: siteMetadata.siteTitle,
+        pageTitle: 'Page not found',
         description: siteMetadata.description,
         siteName: siteMetadata.siteName,
         siteUrl: siteMetadata.siteUrl,

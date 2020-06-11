@@ -1,5 +1,5 @@
 export type MetaData = {
-  siteTitle: string
+  pageTitle: string
   description: string
   siteName: string
   siteUrl: string

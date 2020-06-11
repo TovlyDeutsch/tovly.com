@@ -132,7 +132,7 @@ const Index = props => {
     <MetaAndStyles
       background="striped"
       meta={{
-        siteTitle: siteMetadata.siteTitle,
+        pageTitle: siteMetadata.siteTitle,
         description: siteMetadata.description,
         siteName: siteMetadata.siteName,
         siteUrl: siteMetadata.siteUrl,

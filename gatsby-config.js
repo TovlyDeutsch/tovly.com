@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    siteName: 'tovly.com',
-    blogSiteName: 'tovly.com/blog',
+    siteName: 'Tovly Deutsch',
+    blogSiteName: "Tovly's Blog",
     siteTitle: 'Tovly Deutsch – Researcher, Software Engineer, & Filmmaker', // Header, bolded, < 88 characters for FB
-    blogTitle: "Tovly's Blog",
+    blogTitle: "Tovly's Blog – Musings on CS, Linguistics, & More",
     siteUrl: 'https://tovly.com',
     blogUrl: 'https://tovly.com/blog',
     // description appears below title, < 100 characters for FB

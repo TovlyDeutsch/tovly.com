@@ -68,7 +68,7 @@ const BlogPostTemplate: React.FC<Data> = ({ data, pageContext, location }: PageP
   return (
     <MetaAndStyles
       meta={{
-        siteTitle: post.frontmatter.title,
+        pageTitle: post.frontmatter.title,
         description: post.frontmatter.description || post.excerpt,
         siteName: blogSiteName,
         siteUrl: blogUrl,
