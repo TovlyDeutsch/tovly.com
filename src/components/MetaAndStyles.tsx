@@ -1,6 +1,6 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 
 import Meta from 'components/Meta'
 import { MetaData } from 'types/data-types'

@@ -1,13 +1,13 @@
 import { PageProps, Link, graphql } from 'gatsby'
 import React from 'react'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 
 import Bio from 'components/Bio'
 import BlogLayout from 'components/BlogLayout'
 import MetaAndStyles from 'components/MetaAndStyles'
-import { BlogPageQueryQuery } from 'types/graphqlTypes'
+import { BlogPageQuery } from 'types/graphqlTypes'
 
-const BlogIndex: React.FC<BlogPageQueryQuery> = ({ data, location }: PageProps<BlogPageQueryQuery>) => {
+const BlogIndex: React.FC<PageProps<BlogPageQuery>> = ({ data, location }: PageProps<BlogPageQuery>) => {
   const { blogTitle, blogSiteName, blogUrl, metaFaceImg } = data.site.siteMetadata
   let posts = data.allMarkdownRemark.edges
   if (process?.env?.NODE_ENV != 'development') {
@@ -55,7 +55,7 @@ const BlogIndex: React.FC<BlogPageQueryQuery> = ({ data, location }: PageProps<B
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query blogPageQuery {
+  query blogPage {
     site {
       siteMetadata {
         blogTitle

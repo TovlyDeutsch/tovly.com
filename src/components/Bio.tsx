@@ -2,9 +2,9 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
 import React from 'react'
 import styled from 'styled-components'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 
-import { BioQueryQuery } from 'types/graphqlTypes'
+import { BioQuery } from 'types/graphqlTypes'
 
 type BioProps = {
   justify?: string
@@ -16,8 +16,8 @@ const BioWrapper = styled.div<BioProps>`
 `
 
 const Bio: React.FC<BioProps> = ({ justify = 'center' }: BioProps) => {
-  const data: BioQueryQuery = useStaticQuery(graphql`
-    query BioQuery {
+  const data: BioQuery = useStaticQuery(graphql`
+    query Bio {
       avatar: file(absolutePath: { regex: "/face.jpg/" }) {
         childImageSharp {
           fixed(width: 50, height: 50) {

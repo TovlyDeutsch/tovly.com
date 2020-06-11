@@ -3,7 +3,7 @@ import Img from 'gatsby-image'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import React from 'react'
 import styled from 'styled-components'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 import 'css/rgbSpinner.css'
 
 import Header from 'components/Header'
@@ -78,7 +78,7 @@ const Desc = styled.div`
 `
 
 const BGImage = styled.div`
-  ${tw`absolute pin rounded-lg`};
+  ${tw`absolute inset-0 rounded-lg`};
   .gatsby-image-outer-wrapper {
     position: static !important;
   }
@@ -100,7 +100,7 @@ const ItemTitle = styled.h2`
 `
 
 const Gradient = styled.div`
-  ${tw`absolute pin rounded-lg z-20`};
+  ${tw`absolute inset-0 rounded-lg z-20`};
   background: linear-gradient(to top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.75) 100%);
 `
 
@@ -119,7 +119,7 @@ const PubList = styled.ul`
   padding-inline-start: 1.3em;
 `
 
-const Index: React.FC<OverviewQuery> = ({ data }: PageProps<OverviewQuery>) => {
+const Index: React.FC<PageProps<OverviewQuery>> = ({ data }: PageProps<OverviewQuery>) => {
   const {
     allProjectsYaml: { edges },
     site: { siteMetadata },

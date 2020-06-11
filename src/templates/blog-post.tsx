@@ -2,7 +2,7 @@ import { graphql, PageProps, Link } from 'gatsby'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import React from 'react'
 import styled from 'styled-components'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 
 import Bio from 'components/Bio'
 import BlogLayout from 'components/BlogLayout'
@@ -60,7 +60,11 @@ const PostBody = styled.section`
   }
 `
 
-const BlogPostTemplate: React.FC<Data> = ({ data, pageContext, location }: PageProps<Data, pageContext>) => {
+const BlogPostTemplate: React.FC<PageProps<Data, pageContext>> = ({
+  data,
+  pageContext,
+  location,
+}: PageProps<Data, pageContext>) => {
   const post = data.markdownRemark
   const { blogSiteName, blogUrl } = data.site.siteMetadata
   const { previous, next } = pageContext
@@ -80,9 +84,7 @@ const BlogPostTemplate: React.FC<Data> = ({ data, pageContext, location }: PageP
           <header>
             <h1 style={tw`text-4xl leading-none`}>{post.frontmatter.title}</h1>
             {post.frontmatter.description && (
-              <h2 style={tw`text-xl leading-none my-2 text-grey-darkest text-normal`}>
-                {post.frontmatter.description}
-              </h2>
+              <h2 style={tw`text-xl leading-none my-2 text-grey-darkest`}>{post.frontmatter.description}</h2>
             )}
             <p style={tw`mb-4`}>{post.frontmatter.date}</p>
           </header>

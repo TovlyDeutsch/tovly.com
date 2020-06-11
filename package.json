@@ -40,8 +40,8 @@
     "react-helmet": "^5.2.1",
     "react-id-swiper": "^1.6.9",
     "styled-components": "^4.4.1",
-    "tailwind.macro": "^0.5.10",
     "tailwindcss": "^1.4.6",
+    "twin.macro": "^1.4.0",
     "typeface-montserrat": "git+https://github.com/TovlyDeutsch/personal-typefaces-montserrat.git"
   },
   "devDependencies": {
@@ -57,5 +57,11 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.19.0",
     "prettier": "^1.15.3"
+  },
+  "babelMacros": {
+    "twin": {
+      "config": "./tailwind.js",
+      "preset": "styled-components"
+    }
   }
 }

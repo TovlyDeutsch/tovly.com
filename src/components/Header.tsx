@@ -3,7 +3,7 @@ import Img, { FixedObject } from 'gatsby-image'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import React from 'react'
 import styled from 'styled-components'
-import tw from 'tailwind.macro'
+import tw from 'twin.macro'
 
 const Intro = styled.section`
   ${tw`sm:px-8 px-4 md:px-24 pb-8 md:py-8 text-center xl:text-left`};
@@ -13,7 +13,11 @@ const Title = styled.h1`
   ${tw`text-3xl md:text-5xl my-8`};
 `
 
-const Description = styled.div`
+interface LengthProps {
+  readonly long?: boolean
+}
+
+const Description = styled.div<LengthProps>`
   ${tw`text-sm sm:text-base md:text-lg max-w-md text-grey-lighter`};
   ${props => props.long && 'max-width: 60rem'};
 `
@@ -35,7 +39,7 @@ const Button = genButton(Link)
 
 type HeaderProps = {
   faceFile: {
-    fixed: FixedObject
+    fixed?: FixedObject
   }
 }
 

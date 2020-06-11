@@ -2995,7 +2995,6 @@ export enum SitePageFieldsEnum {
   ContextPreviousFrontmatterTitle = 'context___previous___frontmatter___title',
   ContextNextFieldsSlug = 'context___next___fields___slug',
   ContextNextFrontmatterTitle = 'context___next___frontmatter___title',
-  PluginCreatorId = 'pluginCreator___id',
   PluginCreatorParentId = 'pluginCreator___parent___id',
   PluginCreatorParentParentId = 'pluginCreator___parent___parent___id',
   PluginCreatorParentParentChildren = 'pluginCreator___parent___parent___children',
@@ -3050,7 +3049,6 @@ export enum SitePageFieldsEnum {
   PluginCreatorPluginOptionsPathPrefix = 'pluginCreator___pluginOptions___pathPrefix',
   PluginCreatorPluginOptionsMaxWidth = 'pluginCreator___pluginOptions___maxWidth',
   PluginCreatorPluginOptionsWrapperStyle = 'pluginCreator___pluginOptions___wrapperStyle',
-  PluginCreatorPluginOptionsBackgroundColor = 'pluginCreator___pluginOptions___backgroundColor',
   PluginCreatorPluginOptionsLinkImagesToOriginal = 'pluginCreator___pluginOptions___linkImagesToOriginal',
   PluginCreatorPluginOptionsWithWebp = 'pluginCreator___pluginOptions___withWebp',
   PluginCreatorPluginOptionsTracedSvg = 'pluginCreator___pluginOptions___tracedSVG',
@@ -3293,7 +3291,6 @@ export enum SitePluginFieldsEnum {
   PluginOptionsPathPrefix = 'pluginOptions___pathPrefix',
   PluginOptionsMaxWidth = 'pluginOptions___maxWidth',
   PluginOptionsWrapperStyle = 'pluginOptions___wrapperStyle',
-  PluginOptionsBackgroundColor = 'pluginOptions___backgroundColor',
   PluginOptionsLinkImagesToOriginal = 'pluginOptions___linkImagesToOriginal',
   PluginOptionsWithWebp = 'pluginOptions___withWebp',
   PluginOptionsTracedSvg = 'pluginOptions___tracedSVG',
@@ -3803,9 +3800,9 @@ export type PagesQueryQuery = { __typename?: 'Query' } & {
   }
 }
 
-export type BioQueryQueryVariables = {}
+export type BioQueryVariables = {}
 
-export type BioQueryQuery = { __typename?: 'Query' } & {
+export type BioQuery = { __typename?: 'Query' } & {
   avatar?: Maybe<
     { __typename?: 'File' } & {
       childImageSharp?: Maybe<
@@ -3846,9 +3843,9 @@ export type MetaQuery = { __typename?: 'Query' } & {
   >
 }
 
-export type MissingPageQueryQueryVariables = {}
+export type MissingPageQueryVariables = {}
 
-export type MissingPageQueryQuery = { __typename?: 'Query' } & {
+export type MissingPageQuery = { __typename?: 'Query' } & {
   site?: Maybe<
     { __typename?: 'Site' } & {
       siteMetadata?: Maybe<
@@ -3861,9 +3858,9 @@ export type MissingPageQueryQuery = { __typename?: 'Query' } & {
   >
 }
 
-export type BlogPageQueryQueryVariables = {}
+export type BlogPageQueryVariables = {}
 
-export type BlogPageQueryQuery = { __typename?: 'Query' } & {
+export type BlogPageQuery = { __typename?: 'Query' } & {
   site?: Maybe<
     { __typename?: 'Site' } & {
       siteMetadata?: Maybe<

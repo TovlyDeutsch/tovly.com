@@ -6,6 +6,8 @@
     "paths": {
       "*": ["*"]
     },
-    "noUnusedLocals": false
+    "noUnusedLocals": false,
+    "esModuleInterop": true,
+    "jsx": "react"
   }
 }
