@@ -915,6 +915,8 @@ export enum ImageFit {
   Cover = 'COVER',
   Contain = 'CONTAIN',
   Fill = 'FILL',
+  Inside = 'INSIDE',
+  Outside = 'OUTSIDE',
 }
 
 export enum ImageFormat {
@@ -1275,8 +1277,8 @@ export type ImageSharpFluid = {
   sizes: Scalars['String']
   originalImg?: Maybe<Scalars['String']>
   originalName?: Maybe<Scalars['String']>
-  presentationWidth?: Maybe<Scalars['Int']>
-  presentationHeight?: Maybe<Scalars['Int']>
+  presentationWidth: Scalars['Int']
+  presentationHeight: Scalars['Int']
 }
 
 export type ImageSharpFluidFilterInput = {
@@ -1375,8 +1377,8 @@ export type ImageSharpSizes = {
   sizes: Scalars['String']
   originalImg?: Maybe<Scalars['String']>
   originalName?: Maybe<Scalars['String']>
-  presentationWidth?: Maybe<Scalars['Int']>
-  presentationHeight?: Maybe<Scalars['Int']>
+  presentationWidth: Scalars['Int']
+  presentationHeight: Scalars['Int']
 }
 
 export type ImageSharpSizesFilterInput = {
@@ -3045,6 +3047,16 @@ export enum SitePageFieldsEnum {
   PluginCreatorPluginOptionsName = 'pluginCreator___pluginOptions___name',
   PluginCreatorPluginOptionsShowCaptions = 'pluginCreator___pluginOptions___showCaptions',
   PluginCreatorPluginOptionsMarkdownCaptions = 'pluginCreator___pluginOptions___markdownCaptions',
+  PluginCreatorPluginOptionsPathPrefix = 'pluginCreator___pluginOptions___pathPrefix',
+  PluginCreatorPluginOptionsMaxWidth = 'pluginCreator___pluginOptions___maxWidth',
+  PluginCreatorPluginOptionsWrapperStyle = 'pluginCreator___pluginOptions___wrapperStyle',
+  PluginCreatorPluginOptionsBackgroundColor = 'pluginCreator___pluginOptions___backgroundColor',
+  PluginCreatorPluginOptionsLinkImagesToOriginal = 'pluginCreator___pluginOptions___linkImagesToOriginal',
+  PluginCreatorPluginOptionsWithWebp = 'pluginCreator___pluginOptions___withWebp',
+  PluginCreatorPluginOptionsTracedSvg = 'pluginCreator___pluginOptions___tracedSVG',
+  PluginCreatorPluginOptionsLoading = 'pluginCreator___pluginOptions___loading',
+  PluginCreatorPluginOptionsDisableBgImageOnAlpha = 'pluginCreator___pluginOptions___disableBgImageOnAlpha',
+  PluginCreatorPluginOptionsDisableBgImage = 'pluginCreator___pluginOptions___disableBgImage',
   PluginCreatorPluginOptionsTrackingId = 'pluginCreator___pluginOptions___trackingId',
   PluginCreatorPluginOptionsAnonymize = 'pluginCreator___pluginOptions___anonymize',
   PluginCreatorPluginOptionsShortName = 'pluginCreator___pluginOptions___short_name',
@@ -3054,6 +3066,11 @@ export enum SitePageFieldsEnum {
   PluginCreatorPluginOptionsThemeColor = 'pluginCreator___pluginOptions___theme_color',
   PluginCreatorPluginOptionsDisplay = 'pluginCreator___pluginOptions___display',
   PluginCreatorPluginOptionsIcon = 'pluginCreator___pluginOptions___icon',
+  PluginCreatorPluginOptionsCacheBustingMode = 'pluginCreator___pluginOptions___cache_busting_mode',
+  PluginCreatorPluginOptionsIncludeFavicon = 'pluginCreator___pluginOptions___include_favicon',
+  PluginCreatorPluginOptionsLegacy = 'pluginCreator___pluginOptions___legacy',
+  PluginCreatorPluginOptionsThemeColorInHead = 'pluginCreator___pluginOptions___theme_color_in_head',
+  PluginCreatorPluginOptionsCacheDigest = 'pluginCreator___pluginOptions___cacheDigest',
   PluginCreatorPluginOptionsQuery = 'pluginCreator___pluginOptions___query',
   PluginCreatorPluginOptionsFeeds = 'pluginCreator___pluginOptions___feeds',
   PluginCreatorPluginOptionsFeedsQuery = 'pluginCreator___pluginOptions___feeds___query',
@@ -3257,12 +3274,32 @@ export enum SitePluginFieldsEnum {
   PluginOptionsPluginsVersion = 'pluginOptions___plugins___version',
   PluginOptionsPluginsPluginOptionsShowCaptions = 'pluginOptions___plugins___pluginOptions___showCaptions',
   PluginOptionsPluginsPluginOptionsMarkdownCaptions = 'pluginOptions___plugins___pluginOptions___markdownCaptions',
+  PluginOptionsPluginsPluginOptionsPathPrefix = 'pluginOptions___plugins___pluginOptions___pathPrefix',
+  PluginOptionsPluginsPluginOptionsMaxWidth = 'pluginOptions___plugins___pluginOptions___maxWidth',
+  PluginOptionsPluginsPluginOptionsWrapperStyle = 'pluginOptions___plugins___pluginOptions___wrapperStyle',
+  PluginOptionsPluginsPluginOptionsBackgroundColor = 'pluginOptions___plugins___pluginOptions___backgroundColor',
+  PluginOptionsPluginsPluginOptionsLinkImagesToOriginal = 'pluginOptions___plugins___pluginOptions___linkImagesToOriginal',
+  PluginOptionsPluginsPluginOptionsWithWebp = 'pluginOptions___plugins___pluginOptions___withWebp',
+  PluginOptionsPluginsPluginOptionsTracedSvg = 'pluginOptions___plugins___pluginOptions___tracedSVG',
+  PluginOptionsPluginsPluginOptionsLoading = 'pluginOptions___plugins___pluginOptions___loading',
+  PluginOptionsPluginsPluginOptionsDisableBgImageOnAlpha = 'pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha',
+  PluginOptionsPluginsPluginOptionsDisableBgImage = 'pluginOptions___plugins___pluginOptions___disableBgImage',
   PluginOptionsPluginsBrowserApIs = 'pluginOptions___plugins___browserAPIs',
   PluginOptionsPluginsPluginFilepath = 'pluginOptions___plugins___pluginFilepath',
   PluginOptionsPath = 'pluginOptions___path',
   PluginOptionsName = 'pluginOptions___name',
   PluginOptionsShowCaptions = 'pluginOptions___showCaptions',
   PluginOptionsMarkdownCaptions = 'pluginOptions___markdownCaptions',
+  PluginOptionsPathPrefix = 'pluginOptions___pathPrefix',
+  PluginOptionsMaxWidth = 'pluginOptions___maxWidth',
+  PluginOptionsWrapperStyle = 'pluginOptions___wrapperStyle',
+  PluginOptionsBackgroundColor = 'pluginOptions___backgroundColor',
+  PluginOptionsLinkImagesToOriginal = 'pluginOptions___linkImagesToOriginal',
+  PluginOptionsWithWebp = 'pluginOptions___withWebp',
+  PluginOptionsTracedSvg = 'pluginOptions___tracedSVG',
+  PluginOptionsLoading = 'pluginOptions___loading',
+  PluginOptionsDisableBgImageOnAlpha = 'pluginOptions___disableBgImageOnAlpha',
+  PluginOptionsDisableBgImage = 'pluginOptions___disableBgImage',
   PluginOptionsTrackingId = 'pluginOptions___trackingId',
   PluginOptionsAnonymize = 'pluginOptions___anonymize',
   PluginOptionsShortName = 'pluginOptions___short_name',
@@ -3272,6 +3309,11 @@ export enum SitePluginFieldsEnum {
   PluginOptionsThemeColor = 'pluginOptions___theme_color',
   PluginOptionsDisplay = 'pluginOptions___display',
   PluginOptionsIcon = 'pluginOptions___icon',
+  PluginOptionsCacheBustingMode = 'pluginOptions___cache_busting_mode',
+  PluginOptionsIncludeFavicon = 'pluginOptions___include_favicon',
+  PluginOptionsLegacy = 'pluginOptions___legacy',
+  PluginOptionsThemeColorInHead = 'pluginOptions___theme_color_in_head',
+  PluginOptionsCacheDigest = 'pluginOptions___cacheDigest',
   PluginOptionsQuery = 'pluginOptions___query',
   PluginOptionsFeeds = 'pluginOptions___feeds',
   PluginOptionsFeedsQuery = 'pluginOptions___feeds___query',
@@ -3403,6 +3445,16 @@ export type SitePluginPluginOptions = {
   name?: Maybe<Scalars['String']>
   showCaptions?: Maybe<Scalars['Boolean']>
   markdownCaptions?: Maybe<Scalars['Boolean']>
+  pathPrefix?: Maybe<Scalars['String']>
+  maxWidth?: Maybe<Scalars['Int']>
+  wrapperStyle?: Maybe<Scalars['String']>
+  backgroundColor?: Maybe<Scalars['String']>
+  linkImagesToOriginal?: Maybe<Scalars['Boolean']>
+  withWebp?: Maybe<Scalars['Boolean']>
+  tracedSVG?: Maybe<Scalars['Boolean']>
+  loading?: Maybe<Scalars['String']>
+  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>
+  disableBgImage?: Maybe<Scalars['Boolean']>
   trackingId?: Maybe<Scalars['String']>
   anonymize?: Maybe<Scalars['Boolean']>
   short_name?: Maybe<Scalars['String']>
@@ -3412,6 +3464,11 @@ export type SitePluginPluginOptions = {
   theme_color?: Maybe<Scalars['String']>
   display?: Maybe<Scalars['String']>
   icon?: Maybe<Scalars['String']>
+  cache_busting_mode?: Maybe<Scalars['String']>
+  include_favicon?: Maybe<Scalars['Boolean']>
+  legacy?: Maybe<Scalars['Boolean']>
+  theme_color_in_head?: Maybe<Scalars['Boolean']>
+  cacheDigest?: Maybe<Scalars['String']>
   query?: Maybe<Scalars['String']>
   feeds?: Maybe<Array<Maybe<SitePluginPluginOptionsFeeds>>>
   pathCheck?: Maybe<Scalars['Boolean']>
@@ -3442,6 +3499,16 @@ export type SitePluginPluginOptionsFilterInput = {
   name?: Maybe<StringQueryOperatorInput>
   showCaptions?: Maybe<BooleanQueryOperatorInput>
   markdownCaptions?: Maybe<BooleanQueryOperatorInput>
+  pathPrefix?: Maybe<StringQueryOperatorInput>
+  maxWidth?: Maybe<IntQueryOperatorInput>
+  wrapperStyle?: Maybe<StringQueryOperatorInput>
+  backgroundColor?: Maybe<StringQueryOperatorInput>
+  linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>
+  withWebp?: Maybe<BooleanQueryOperatorInput>
+  tracedSVG?: Maybe<BooleanQueryOperatorInput>
+  loading?: Maybe<StringQueryOperatorInput>
+  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>
+  disableBgImage?: Maybe<BooleanQueryOperatorInput>
   trackingId?: Maybe<StringQueryOperatorInput>
   anonymize?: Maybe<BooleanQueryOperatorInput>
   short_name?: Maybe<StringQueryOperatorInput>
@@ -3451,6 +3518,11 @@ export type SitePluginPluginOptionsFilterInput = {
   theme_color?: Maybe<StringQueryOperatorInput>
   display?: Maybe<StringQueryOperatorInput>
   icon?: Maybe<StringQueryOperatorInput>
+  cache_busting_mode?: Maybe<StringQueryOperatorInput>
+  include_favicon?: Maybe<BooleanQueryOperatorInput>
+  legacy?: Maybe<BooleanQueryOperatorInput>
+  theme_color_in_head?: Maybe<BooleanQueryOperatorInput>
+  cacheDigest?: Maybe<StringQueryOperatorInput>
   query?: Maybe<StringQueryOperatorInput>
   feeds?: Maybe<SitePluginPluginOptionsFeedsFilterListInput>
   pathCheck?: Maybe<BooleanQueryOperatorInput>
@@ -3485,11 +3557,31 @@ export type SitePluginPluginOptionsPluginsPluginOptions = {
   __typename?: 'SitePluginPluginOptionsPluginsPluginOptions'
   showCaptions?: Maybe<Scalars['Boolean']>
   markdownCaptions?: Maybe<Scalars['Boolean']>
+  pathPrefix?: Maybe<Scalars['String']>
+  maxWidth?: Maybe<Scalars['Int']>
+  wrapperStyle?: Maybe<Scalars['String']>
+  backgroundColor?: Maybe<Scalars['String']>
+  linkImagesToOriginal?: Maybe<Scalars['Boolean']>
+  withWebp?: Maybe<Scalars['Boolean']>
+  tracedSVG?: Maybe<Scalars['Boolean']>
+  loading?: Maybe<Scalars['String']>
+  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>
+  disableBgImage?: Maybe<Scalars['Boolean']>
 }
 
 export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   showCaptions?: Maybe<BooleanQueryOperatorInput>
   markdownCaptions?: Maybe<BooleanQueryOperatorInput>
+  pathPrefix?: Maybe<StringQueryOperatorInput>
+  maxWidth?: Maybe<IntQueryOperatorInput>
+  wrapperStyle?: Maybe<StringQueryOperatorInput>
+  backgroundColor?: Maybe<StringQueryOperatorInput>
+  linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>
+  withWebp?: Maybe<BooleanQueryOperatorInput>
+  tracedSVG?: Maybe<BooleanQueryOperatorInput>
+  loading?: Maybe<StringQueryOperatorInput>
+  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>
+  disableBgImage?: Maybe<BooleanQueryOperatorInput>
 }
 
 export type SitePluginSortInput = {
@@ -3612,6 +3704,11 @@ export type GatsbyImageSharpFluidFragment = { __typename?: 'ImageSharpFluid' } &
   ImageSharpFluid,
   'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'
 >
+
+export type GatsbyImageSharpFluidLimitPresentationSizeFragment = { __typename?: 'ImageSharpFluid' } & {
+  maxHeight: ImageSharpFluid['presentationHeight']
+  maxWidth: ImageSharpFluid['presentationWidth']
+}
 
 export type GatsbyImageSharpFluid_TracedSvgFragment = { __typename?: 'ImageSharpFluid' } & Pick<
   ImageSharpFluid,
@@ -3792,6 +3889,50 @@ export type BlogPageQueryQuery = { __typename?: 'Query' } & {
       }
     >
   }
+}
+
+export type OverviewQueryVariables = {}
+
+export type OverviewQuery = { __typename?: 'Query' } & {
+  file?: Maybe<
+    { __typename?: 'File' } & {
+      childImageSharp?: Maybe<
+        { __typename?: 'ImageSharp' } & {
+          fixed?: Maybe<{ __typename?: 'ImageSharpFixed' } & GatsbyImageSharpFixedFragment>
+        }
+      >
+    }
+  >
+  allProjectsYaml: { __typename?: 'ProjectsYamlConnection' } & {
+    edges: Array<
+      { __typename?: 'ProjectsYamlEdge' } & {
+        node: { __typename?: 'ProjectsYaml' } & Pick<
+          ProjectsYaml,
+          'id' | 'title' | 'url' | 'description' | 'siteName'
+        > & {
+            cover?: Maybe<
+              { __typename?: 'File' } & {
+                childImageSharp?: Maybe<
+                  { __typename?: 'ImageSharp' } & {
+                    fluid?: Maybe<{ __typename?: 'ImageSharpFluid' } & GatsbyImageSharpFluidFragment>
+                  }
+                >
+              }
+            >
+          }
+      }
+    >
+  }
+  site?: Maybe<
+    { __typename?: 'Site' } & {
+      siteMetadata?: Maybe<
+        { __typename?: 'SiteSiteMetadata' } & Pick<
+          SiteSiteMetadata,
+          'siteTitle' | 'metaFaceImg' | 'description' | 'siteUrl' | 'siteName'
+        >
+      >
+    }
+  >
 }
 
 export type BlogPostBySlugQueryVariables = Exact<{
