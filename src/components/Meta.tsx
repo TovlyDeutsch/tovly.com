@@ -27,7 +27,7 @@ const Meta: React.FC<MetaData> = ({ pageTitle, description, siteName, siteUrl, i
       htmlAttributes={{
         lang: 'en',
       }}
-      siteTitle={pageTitle}
+      title={pageTitle}
     >
       <meta name="description" content={description} />
       <meta property="og:locale" content="en_US" />

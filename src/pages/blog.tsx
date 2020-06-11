@@ -17,7 +17,7 @@ const BlogIndex: React.FC<BlogPageQueryQuery> = ({ data, location }: PageProps<B
     <MetaAndStyles
       meta={{
         pageTitle: blogTitle,
-        description: `All posts on ${blogTitle}`,
+        description: `All posts on ${blogSiteName}`,
         siteName: blogSiteName,
         siteUrl: blogUrl,
         img: metaFaceImg,
