@@ -73,6 +73,7 @@ const Header = ({ faceFile }) => (
   </Intro>
 )
 
+// TODO convert this file to tsx and change these for ts types
 Header.propTypes = {
   faceFile: PropTypes.shape({
     fixed: FixedObject,
