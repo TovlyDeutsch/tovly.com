@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet'
 import { MetaData } from 'types/data-types'
 import { MetaQuery } from 'types/graphqlTypes'
 
-// TODO validate these tags with some real-world usage e.g. Facebook and Twitter
 const Meta: React.FC<MetaData> = ({ pageTitle, description, siteName, siteUrl, img = null }: MetaData) => {
   const { site }: MetaQuery = useStaticQuery(
     graphql`
