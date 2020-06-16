@@ -63,18 +63,21 @@ const Header: React.FC<HeaderProps> = ({ faceFile }: HeaderProps) => (
           <OutboundButton role="button" href="/#publications">
             Publications
           </OutboundButton>
-          <OutboundButton role="button" href="/#projects">
-            Projects
+          <OutboundButton role="button" href="/TovlyDeutschResume.pdf">
+            Resume
           </OutboundButton>
           <OutboundButton role="button" href="https://github.com/TovlyDeutsch">
             Github
           </OutboundButton>
-          <OutboundButton role="button" href="/TovlyDeutschResume.pdf">
-            Resume
+          <OutboundButton role="button" href="/#projects">
+            Projects
           </OutboundButton>
           <Button role="button" to="/blog">
             Blog
           </Button>
+          <OutboundButton role="button" href="https://www.youtube.com/channel/UCoYCQPyiv_y4QAHinPOFGHA">
+            Youtube
+          </OutboundButton>
         </Social>
       </div>
       <Img fixed={faceFile.fixed} style={{ margin: 'auto', marginTop: 24 }} />
