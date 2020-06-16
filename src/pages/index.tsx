@@ -142,25 +142,13 @@ const Index: React.FC<PageProps<OverviewQuery>> = ({ data }: PageProps<OverviewQ
         <Heading id="publications">Publications</Heading>
         <PubList>
           <li>
-            <b>T. Deutsch</b>
-            <br />
-            <b>Linguistic Features for Readability Assessment</b>
-            <br /> <i>Senior Thesis</i>
-            <br />
-            <a href="/thesis_bibtex.txt">[BibTeX]</a>
-            <a href="/Senior_Thesis_Final_Tovly_Deutsch.pdf"> [PDF] </a>
-            <OutboundLink href="https://github.com/TovlyDeutsch/Linguistic-Features-for-Readability">
-              [Code]
-            </OutboundLink>
-          </li>
-          <li>
             <b>T. Deutsch</b>, M. Jasbi, S. Shieber
             <br />
             <b>Linguistic Features for Readability Assessment</b>
             <br />{' '}
             <i>
-              [To appear in] Proceedings of the Fifteenth Workshop on Innovative Use of NLP for Building Educational
-              Applications
+              Oral Presentation. [To appear in] Proceedings of the Fifteenth Workshop on Innovative Use of NLP for
+              Building Educational Applications at ACL 2020
             </i>
             <br />
             <a href="/ling_bea_bibtex.txt">[BibTeX]</a>
@@ -172,12 +160,22 @@ const Index: React.FC<PageProps<OverviewQuery>> = ({ data }: PageProps<OverviewQ
             <sup>*</sup>, S. Casper<sup>*</sup>, Y. Belinkov, S. Shieber
             <br />
             <b>Probing Neural Dialog Models for Conversational Understanding</b>
-            <br /> <i>[To appear in] Proceedings of the Second Workshop on NLP for Conversational AI</i>
-            <br /> <i>Links coming soon (once published)!</i>
-            {/* TODO add links once published */}
-            {/* <br /> <a href="https://abdulsaleh.github.io/_pages/bibtex/saleh2019team.html">[BibTeX]</a>{' '} */}
-            {/* <a href="https://arxiv.org/pdf/1904.03513.pdf">[PDF]</a>{' '}
-              <a href="https://github.com/AbdulSaleh/QCRI-MIT-SemEval2019-Task4">[Code]</a> */}
+            <br /> <i>[To appear in] Second Workshop on NLP for Conversational AI at ACL 2020</i>
+            <br /> <a href="/probing_bibtex.txt">[BibTeX] </a>
+            <a href="https://arxiv.org/abs/2006.08331">[Paper]</a>{' '}
+            <a href="https://github.com/AbdulSaleh/dialog-probing">[Code]</a>
+          </li>
+          <li>
+            <b>T. Deutsch</b>
+            <br />
+            <b>Linguistic Features for Readability Assessment</b>
+            <br /> <i>Senior Thesis</i>
+            <br />
+            <a href="/thesis_bibtex.txt">[BibTeX]</a>
+            <a href="/Senior_Thesis_Final_Tovly_Deutsch.pdf"> [PDF] </a>
+            <OutboundLink href="https://github.com/TovlyDeutsch/Linguistic-Features-for-Readability">
+              [Code]
+            </OutboundLink>
           </li>
         </PubList>
         <Heading id="projects">Projects</Heading>

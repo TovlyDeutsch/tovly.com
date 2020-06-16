@@ -1,0 +1,8 @@
+@misc{saleh2020probing,
+    title={Probing Neural Dialog Models for Conversational Understanding},
+    author={Abdelrhman Saleh and Tovly Deutsch and Stephen Casper and Yonatan Belinkov and Stuart Shieber},
+    year={2020},
+    eprint={2006.08331},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
+}
