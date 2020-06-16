@@ -140,7 +140,7 @@ const Index: React.FC<PageProps<OverviewQuery>> = ({ data }: PageProps<OverviewQ
       <Header faceFile={childImageSharp} />
       <SliderWrapper>
         <Heading id="publications">Publications</Heading>
-        <PubList>
+        <PubList style={tw`max-w-xl`}>
           <li>
             <b>T. Deutsch</b>, M. Jasbi, S. Shieber
             <br />
