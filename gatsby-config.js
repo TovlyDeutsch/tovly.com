@@ -28,8 +28,22 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/`,
-        name: 'content',
+        path: `${__dirname}/content/blog`,
+        name: 'blog',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/projects`,
+        name: 'projects',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/profile-photos`,
+        name: 'profile-photos',
       },
     },
     {
@@ -88,15 +102,20 @@ module.exports = {
               const filteredPosts = allMarkdownRemark.edges.filter(
                 edge => edge.node.frontmatter && edge.node.frontmatter.status !== 'draft'
               )
-              const mappedEdges = filteredPosts.map(edge =>
-                Object.assign({}, edge.node.frontmatter, {
+              const mappedEdges = filteredPosts.map(edge => {
+                const thumbnail = edge.node.frontmatter.thumbnail
+                const enclosureUrl = thumbnail && site.siteMetadata.siteUrl + thumbnail.childImageSharp.fixed.src
+                return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  enclosure: enclosureUrl && {
+                    url: enclosureUrl,
+                  },
                   custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
-              )
+              })
               return mappedEdges
             },
             query: `
@@ -113,6 +132,13 @@ module.exports = {
                         title
                         date
                         status
+                        thumbnail {
+                          childImageSharp {
+                            fixed(width: 1200) {
+                              src
+                            }
+                          }
+                        }
                       }
                     }
                   }

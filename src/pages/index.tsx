@@ -232,7 +232,7 @@ export default Index
 
 export const overviewQuery = graphql`
   query Overview {
-    file(relativePath: { eq: "profile-photos/face.jpg" }) {
+    file(relativePath: { eq: "face.jpg" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
