@@ -3,6 +3,7 @@ title: Clover and Pretentiousness
 description: When is a falafel just a “chickpea fritter”?
 date: '2019-10-24T15:16:37.020Z'
 mediumLink: https://medium.com/@tovly/clover-and-pretentiousness%C2%B9-c1c9aa975e99?source=friends_link&sk=7b3a77476e60e47d42ec8b34d137b88f
+thumbnail: './clover.jpg'
 ---
 
 ![Ad for “Tunisian Breakfast Bowl” at Clover in the Harvard Science Center](clover.jpg)

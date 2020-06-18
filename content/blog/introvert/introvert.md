@@ -3,6 +3,7 @@ title: The Myth of the Introvert
 description: Labels are an appealing method of rationalization.
 date: '2020-02-09T00:26:39.385Z'
 mediumLink: https://medium.com/@tovly/the-myth-of-the-introvert-c5b0869353e0?source=friends_link&sk=cae3c390ab3c320c547f56a1f2c20c19
+thumbnail: './turtle.jpg'
 ---
 
 ![Photo by [Joshua Eckstein](https://unsplash.com/@dcemr_e?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](turtle.jpg)
