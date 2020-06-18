@@ -58,7 +58,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostBySlugQuery, pageContext>> = 
     <MetaAndStyles
       meta={{
         pageTitle: post.frontmatter.title,
-        description: post.frontmatter.description || post.excerpt,
+        description: post.excerpt,
         siteName: blogSiteName,
         siteUrl: blogUrl,
         img: fullImgPath,
