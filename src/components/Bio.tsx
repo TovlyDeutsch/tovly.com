@@ -54,7 +54,10 @@ const Bio: React.FC<BioProps> = ({ justify = 'center' }: BioProps) => {
       />
       <p>
         Written by <strong>{author.name}</strong>, researcher, software engineer, and filmmaker |{` `}
-        Check out my<Link to="/"> other work</Link> | Follow my blog <Link to="/rss.xml"> RSS feed</Link>
+        Follow me on <a href="https://www.youtube.com/channel/UCoYCQPyiv_y4QAHinPOFGHA">Youtube</a>,{' '}
+        <a href="https://twitter.com/tovly_videos?ref_src=twsrc%5Etfw">Twitter</a>,{' '}
+        <a href="https://www.facebook.com/Tovly-113314017090957">FB</a>, or <Link to="/rss.xml"> RSS</Link> | Check out
+        my<Link to="/"> other work</Link>
       </p>
     </BioWrapper>
   )
