@@ -89,6 +89,7 @@ module.exports = {
             site {
               siteMetadata {
                 description: blogDescription
+                blogUrl
                 siteUrl
                 site_url: blogUrl
                 image_url: rssIcon
@@ -104,17 +105,19 @@ module.exports = {
               )
               const mappedEdges = filteredPosts.map(edge => {
                 const thumbnail = edge.node.frontmatter.thumbnail
-                const enclosureUrl = thumbnail && site.siteMetadata.siteUrl + thumbnail.childImageSharp.fixed.src
-                return Object.assign({}, edge.node.frontmatter, {
+                const enclosureUrl = thumbnail && `${site.siteMetadata.siteUrl}${thumbnail.childImageSharp.fixed.src}`
+                const postLink = `${site.siteMetadata.blogUrl}/${edge.node.fields.slug}`
+                return {
+                  ...edge.node.frontmatter,
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  url: postLink,
+                  guid: postLink,
                   enclosure: enclosureUrl && {
                     url: enclosureUrl,
                   },
                   custom_elements: [{ 'content:encoded': edge.node.html }],
-                })
+                }
               })
               return mappedEdges
             },
