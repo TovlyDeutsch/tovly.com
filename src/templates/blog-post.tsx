@@ -7,27 +7,7 @@ import tw from 'twin.macro'
 import Bio from 'components/Bio'
 import BlogLayout from 'components/BlogLayout'
 import MetaAndStyles from 'components/MetaAndStyles'
-
-type Data = {
-  markdownRemark: {
-    id: string
-    excerpt: string
-    html: string
-    frontmatter: {
-      title: string
-      date: string
-      description: string
-      mediumLink: string | null
-    }
-  }
-  site: {
-    siteMetadata: {
-      blogTitle: string
-      blogSiteName: string
-      blogUrl: string
-    }
-  }
-}
+import { BlogPostBySlugQuery } from 'types/graphqlTypes'
 
 type adjacentPage = {
   fields: {
@@ -60,14 +40,19 @@ const PostBody = styled.section`
   }
 `
 
-const BlogPostTemplate: React.FC<PageProps<Data, pageContext>> = ({
+const BlogPostTemplate: React.FC<PageProps<BlogPostBySlugQuery, pageContext>> = ({
   data,
   pageContext,
   location,
-}: PageProps<Data, pageContext>) => {
+}: PageProps<BlogPostBySlugQuery, pageContext>) => {
   const post = data.markdownRemark
   const { blogSiteName, blogUrl } = data.site.siteMetadata
   const { previous, next } = pageContext
+  // TODO look into these errors
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
+  const thumbnailSrc = post.frontmatter.thumbnail?.childImageSharp.fixed.src
+  // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+  const fullImgPath = thumbnailSrc && `${location.origin}${thumbnailSrc}`
 
   return (
     <MetaAndStyles
@@ -76,7 +61,7 @@ const BlogPostTemplate: React.FC<PageProps<Data, pageContext>> = ({
         description: post.frontmatter.description || post.excerpt,
         siteName: blogSiteName,
         siteUrl: blogUrl,
-        // TODO add cover image to each blogpost for page image here
+        img: fullImgPath,
       }}
     >
       <BlogLayout location={location} title={blogSiteName}>
@@ -153,6 +138,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         mediumLink
+        thumbnail {
+          childImageSharp {
+            fixed(width: 1200) {
+              src
+            }
+          }
+        }
       }
     }
   }
