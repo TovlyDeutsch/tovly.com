@@ -53,7 +53,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostBySlugQuery, pageContext>> = 
   const thumbnailSrc = post.frontmatter.thumbnail?.childImageSharp.fixed.src
   // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
   const fullImgPath = thumbnailSrc && `${location.origin}${thumbnailSrc}`
-
+  console.log(location)
   return (
     <MetaAndStyles
       meta={{
@@ -126,6 +126,7 @@ export const pageQuery = graphql`
       siteMetadata {
         blogTitle
         blogSiteName
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
