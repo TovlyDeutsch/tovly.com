@@ -1,8 +1,9 @@
 ---
 title: Books are Overrated
-date: '2020-06-03'
-status: draft
+date: '2020-06-20'
+description: Why are books considered the superior medium?
 thumbnail: './books.jpg'
+mediumLink: https://medium.com/@tovly/books-are-overrated-320cbc1dc0c2?sk=b4de87694aee3bf62592ac4922baaf3d
 ---
 
 I’m in the middle of reading [“Guns, Germs, and Steel” by Jared Diamond](https://www.goodreads.com/book/show/1842.Guns_Germs_and_Steel). It’s an interesting enough read, but my progress through it has been painfully slow. It’s been a month of reading, even though I’m sure I could devour it within a day if I really wanted to. In fact, I’m a voracious binge media consumer, regularly absorbing years worth of a series in short periods of time. I watched all of Game of Thrones in two weeks (during finals no less). I read all of the [Avatar Comics](<https://en.wikipedia.org/wiki/Avatar:_The_Last_Airbender_(comics)>) (~1000 pages) in a couple days. I churned through roughly 40 episodes (~17 hours) of the [Revolutions podcast](https://www.revolutionspodcast.com/) over a few weeks. In short, when I enjoy a series, regardless of the medium, I consume it quickly. Thus, my slow progress through “Guns, Germs, and Steel” puzzled me. It wasn’t that I didn’t enjoy the content. When I was reading the book, I was deeply engaged and fascinated. Then, I remembered the CGP Grey had produced two small [video](https://www.youtube.com/watch?v=JEYh5WACqEk) [adaptations](https://www.youtube.com/watch?v=wOmjnioNulo&t=1s) of portions of the book. These had been some of my favorite videos; yet, when covered similarly in the book, I was clearly less engaged. Thus, I began to think that the disparity lay not in the content but rather in the medium: a book.[^1]

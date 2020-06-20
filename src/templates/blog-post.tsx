@@ -46,7 +46,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostBySlugQuery, pageContext>> = 
   location,
 }: PageProps<BlogPostBySlugQuery, pageContext>) => {
   const post = data.markdownRemark
-  const { blogSiteName, blogUrl } = data.site.siteMetadata
+  const { blogSiteName } = data.site.siteMetadata
   const { previous, next } = pageContext
   // TODO look into these errors
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
@@ -60,7 +60,7 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostBySlugQuery, pageContext>> = 
         pageTitle: post.frontmatter.title,
         description: post.excerpt,
         siteName: blogSiteName,
-        siteUrl: blogUrl,
+        siteUrl: location.href,
         img: fullImgPath,
       }}
     >
@@ -126,7 +126,6 @@ export const pageQuery = graphql`
       siteMetadata {
         blogTitle
         blogSiteName
-        blogUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
