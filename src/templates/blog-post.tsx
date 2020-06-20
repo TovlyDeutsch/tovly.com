@@ -46,19 +46,19 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostBySlugQuery, pageContext>> = 
   location,
 }: PageProps<BlogPostBySlugQuery, pageContext>) => {
   const post = data.markdownRemark
-  const { blogSiteName } = data.site.siteMetadata
+  const { blogSiteName, siteUrl } = data.site.siteMetadata
   const { previous, next } = pageContext
   // TODO look into these errors
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
   const thumbnailSrc = post.frontmatter.thumbnail?.childImageSharp.fixed.src
   // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-  const fullImgPath = thumbnailSrc && `${location.hostname}${thumbnailSrc}`
+  const fullImgPath = thumbnailSrc && `${siteUrl}${thumbnailSrc}`
   return (
     <MetaAndStyles
       meta={{
         pageTitle: post.frontmatter.title,
         description: post.excerpt,
-        siteName: location.pathname, //blogSiteName
+        siteName: blogSiteName,
         siteUrl: location.href,
         img: fullImgPath,
       }}
