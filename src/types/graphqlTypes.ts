@@ -661,9 +661,8 @@ export enum FileFieldsEnum {
   InternalType = 'internal___type',
   ChildMarkdownRemarkId = 'childMarkdownRemark___id',
   ChildMarkdownRemarkFrontmatterTitle = 'childMarkdownRemark___frontmatter___title',
-  ChildMarkdownRemarkFrontmatterDate = 'childMarkdownRemark___frontmatter___date',
-  ChildMarkdownRemarkFrontmatterStatus = 'childMarkdownRemark___frontmatter___status',
   ChildMarkdownRemarkFrontmatterDescription = 'childMarkdownRemark___frontmatter___description',
+  ChildMarkdownRemarkFrontmatterDate = 'childMarkdownRemark___frontmatter___date',
   ChildMarkdownRemarkFrontmatterThumbnailSourceInstanceName = 'childMarkdownRemark___frontmatter___thumbnail___sourceInstanceName',
   ChildMarkdownRemarkFrontmatterThumbnailAbsolutePath = 'childMarkdownRemark___frontmatter___thumbnail___absolutePath',
   ChildMarkdownRemarkFrontmatterThumbnailRelativePath = 'childMarkdownRemark___frontmatter___thumbnail___relativePath',
@@ -700,6 +699,7 @@ export enum FileFieldsEnum {
   ChildMarkdownRemarkFrontmatterThumbnailChildren = 'childMarkdownRemark___frontmatter___thumbnail___children',
   ChildMarkdownRemarkFrontmatterThumbnailChildrenProjectsYaml = 'childMarkdownRemark___frontmatter___thumbnail___childrenProjectsYaml',
   ChildMarkdownRemarkFrontmatterMediumLink = 'childMarkdownRemark___frontmatter___mediumLink',
+  ChildMarkdownRemarkFrontmatterStatus = 'childMarkdownRemark___frontmatter___status',
   ChildMarkdownRemarkExcerpt = 'childMarkdownRemark___excerpt',
   ChildMarkdownRemarkRawMarkdownBody = 'childMarkdownRemark___rawMarkdownBody',
   ChildMarkdownRemarkFileAbsolutePath = 'childMarkdownRemark___fileAbsolutePath',
@@ -1588,9 +1588,8 @@ export type MarkdownRemarkFields = {
 export enum MarkdownRemarkFieldsEnum {
   Id = 'id',
   FrontmatterTitle = 'frontmatter___title',
-  FrontmatterDate = 'frontmatter___date',
-  FrontmatterStatus = 'frontmatter___status',
   FrontmatterDescription = 'frontmatter___description',
+  FrontmatterDate = 'frontmatter___date',
   FrontmatterThumbnailSourceInstanceName = 'frontmatter___thumbnail___sourceInstanceName',
   FrontmatterThumbnailAbsolutePath = 'frontmatter___thumbnail___absolutePath',
   FrontmatterThumbnailRelativePath = 'frontmatter___thumbnail___relativePath',
@@ -1658,6 +1657,7 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterThumbnailChildrenProjectsYamlDescription = 'frontmatter___thumbnail___childrenProjectsYaml___description',
   FrontmatterThumbnailChildrenProjectsYamlSiteName = 'frontmatter___thumbnail___childrenProjectsYaml___siteName',
   FrontmatterMediumLink = 'frontmatter___mediumLink',
+  FrontmatterStatus = 'frontmatter___status',
   Excerpt = 'excerpt',
   RawMarkdownBody = 'rawMarkdownBody',
   FileAbsolutePath = 'fileAbsolutePath',
@@ -1787,11 +1787,11 @@ export type MarkdownRemarkFilterInput = {
 export type MarkdownRemarkFrontmatter = {
   __typename?: 'MarkdownRemarkFrontmatter'
   title?: Maybe<Scalars['String']>
-  date?: Maybe<Scalars['Date']>
-  status?: Maybe<Scalars['String']>
   description?: Maybe<Scalars['String']>
+  date?: Maybe<Scalars['Date']>
   thumbnail?: Maybe<File>
   mediumLink?: Maybe<Scalars['String']>
+  status?: Maybe<Scalars['String']>
 }
 
 export type MarkdownRemarkFrontmatterDateArgs = {
@@ -1803,11 +1803,11 @@ export type MarkdownRemarkFrontmatterDateArgs = {
 
 export type MarkdownRemarkFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>
-  date?: Maybe<DateQueryOperatorInput>
-  status?: Maybe<StringQueryOperatorInput>
   description?: Maybe<StringQueryOperatorInput>
+  date?: Maybe<DateQueryOperatorInput>
   thumbnail?: Maybe<FileFilterInput>
   mediumLink?: Maybe<StringQueryOperatorInput>
+  status?: Maybe<StringQueryOperatorInput>
 }
 
 export type MarkdownRemarkGroupConnection = {
@@ -2158,10 +2158,10 @@ export enum ProjectsYamlFieldsEnum {
   CoverInternalType = 'cover___internal___type',
   CoverChildMarkdownRemarkId = 'cover___childMarkdownRemark___id',
   CoverChildMarkdownRemarkFrontmatterTitle = 'cover___childMarkdownRemark___frontmatter___title',
-  CoverChildMarkdownRemarkFrontmatterDate = 'cover___childMarkdownRemark___frontmatter___date',
-  CoverChildMarkdownRemarkFrontmatterStatus = 'cover___childMarkdownRemark___frontmatter___status',
   CoverChildMarkdownRemarkFrontmatterDescription = 'cover___childMarkdownRemark___frontmatter___description',
+  CoverChildMarkdownRemarkFrontmatterDate = 'cover___childMarkdownRemark___frontmatter___date',
   CoverChildMarkdownRemarkFrontmatterMediumLink = 'cover___childMarkdownRemark___frontmatter___mediumLink',
+  CoverChildMarkdownRemarkFrontmatterStatus = 'cover___childMarkdownRemark___frontmatter___status',
   CoverChildMarkdownRemarkExcerpt = 'cover___childMarkdownRemark___excerpt',
   CoverChildMarkdownRemarkRawMarkdownBody = 'cover___childMarkdownRemark___rawMarkdownBody',
   CoverChildMarkdownRemarkFileAbsolutePath = 'cover___childMarkdownRemark___fileAbsolutePath',
@@ -3098,6 +3098,7 @@ export enum SitePageFieldsEnum {
   ContextPreviousFrontmatterTitle = 'context___previous___frontmatter___title',
   ContextNextFieldsSlug = 'context___next___fields___slug',
   ContextNextFrontmatterTitle = 'context___next___frontmatter___title',
+  PluginCreatorId = 'pluginCreator___id',
   PluginCreatorParentId = 'pluginCreator___parent___id',
   PluginCreatorParentParentId = 'pluginCreator___parent___parent___id',
   PluginCreatorParentParentChildren = 'pluginCreator___parent___parent___children',
@@ -3149,6 +3150,16 @@ export enum SitePageFieldsEnum {
   PluginCreatorPluginOptionsName = 'pluginCreator___pluginOptions___name',
   PluginCreatorPluginOptionsShowCaptions = 'pluginCreator___pluginOptions___showCaptions',
   PluginCreatorPluginOptionsMarkdownCaptions = 'pluginCreator___pluginOptions___markdownCaptions',
+  PluginCreatorPluginOptionsPathPrefix = 'pluginCreator___pluginOptions___pathPrefix',
+  PluginCreatorPluginOptionsMaxWidth = 'pluginCreator___pluginOptions___maxWidth',
+  PluginCreatorPluginOptionsWrapperStyle = 'pluginCreator___pluginOptions___wrapperStyle',
+  PluginCreatorPluginOptionsBackgroundColor = 'pluginCreator___pluginOptions___backgroundColor',
+  PluginCreatorPluginOptionsLinkImagesToOriginal = 'pluginCreator___pluginOptions___linkImagesToOriginal',
+  PluginCreatorPluginOptionsWithWebp = 'pluginCreator___pluginOptions___withWebp',
+  PluginCreatorPluginOptionsTracedSvg = 'pluginCreator___pluginOptions___tracedSVG',
+  PluginCreatorPluginOptionsLoading = 'pluginCreator___pluginOptions___loading',
+  PluginCreatorPluginOptionsDisableBgImageOnAlpha = 'pluginCreator___pluginOptions___disableBgImageOnAlpha',
+  PluginCreatorPluginOptionsDisableBgImage = 'pluginCreator___pluginOptions___disableBgImage',
   PluginCreatorPluginOptionsTrackingId = 'pluginCreator___pluginOptions___trackingId',
   PluginCreatorPluginOptionsAnonymize = 'pluginCreator___pluginOptions___anonymize',
   PluginCreatorPluginOptionsShortName = 'pluginCreator___pluginOptions___short_name',
@@ -3366,12 +3377,32 @@ export enum SitePluginFieldsEnum {
   PluginOptionsPluginsVersion = 'pluginOptions___plugins___version',
   PluginOptionsPluginsPluginOptionsShowCaptions = 'pluginOptions___plugins___pluginOptions___showCaptions',
   PluginOptionsPluginsPluginOptionsMarkdownCaptions = 'pluginOptions___plugins___pluginOptions___markdownCaptions',
+  PluginOptionsPluginsPluginOptionsPathPrefix = 'pluginOptions___plugins___pluginOptions___pathPrefix',
+  PluginOptionsPluginsPluginOptionsMaxWidth = 'pluginOptions___plugins___pluginOptions___maxWidth',
+  PluginOptionsPluginsPluginOptionsWrapperStyle = 'pluginOptions___plugins___pluginOptions___wrapperStyle',
+  PluginOptionsPluginsPluginOptionsBackgroundColor = 'pluginOptions___plugins___pluginOptions___backgroundColor',
+  PluginOptionsPluginsPluginOptionsLinkImagesToOriginal = 'pluginOptions___plugins___pluginOptions___linkImagesToOriginal',
+  PluginOptionsPluginsPluginOptionsWithWebp = 'pluginOptions___plugins___pluginOptions___withWebp',
+  PluginOptionsPluginsPluginOptionsTracedSvg = 'pluginOptions___plugins___pluginOptions___tracedSVG',
+  PluginOptionsPluginsPluginOptionsLoading = 'pluginOptions___plugins___pluginOptions___loading',
+  PluginOptionsPluginsPluginOptionsDisableBgImageOnAlpha = 'pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha',
+  PluginOptionsPluginsPluginOptionsDisableBgImage = 'pluginOptions___plugins___pluginOptions___disableBgImage',
   PluginOptionsPluginsBrowserApIs = 'pluginOptions___plugins___browserAPIs',
   PluginOptionsPluginsPluginFilepath = 'pluginOptions___plugins___pluginFilepath',
   PluginOptionsPath = 'pluginOptions___path',
   PluginOptionsName = 'pluginOptions___name',
   PluginOptionsShowCaptions = 'pluginOptions___showCaptions',
   PluginOptionsMarkdownCaptions = 'pluginOptions___markdownCaptions',
+  PluginOptionsPathPrefix = 'pluginOptions___pathPrefix',
+  PluginOptionsMaxWidth = 'pluginOptions___maxWidth',
+  PluginOptionsWrapperStyle = 'pluginOptions___wrapperStyle',
+  PluginOptionsBackgroundColor = 'pluginOptions___backgroundColor',
+  PluginOptionsLinkImagesToOriginal = 'pluginOptions___linkImagesToOriginal',
+  PluginOptionsWithWebp = 'pluginOptions___withWebp',
+  PluginOptionsTracedSvg = 'pluginOptions___tracedSVG',
+  PluginOptionsLoading = 'pluginOptions___loading',
+  PluginOptionsDisableBgImageOnAlpha = 'pluginOptions___disableBgImageOnAlpha',
+  PluginOptionsDisableBgImage = 'pluginOptions___disableBgImage',
   PluginOptionsTrackingId = 'pluginOptions___trackingId',
   PluginOptionsAnonymize = 'pluginOptions___anonymize',
   PluginOptionsShortName = 'pluginOptions___short_name',
@@ -3517,6 +3548,16 @@ export type SitePluginPluginOptions = {
   name?: Maybe<Scalars['String']>
   showCaptions?: Maybe<Scalars['Boolean']>
   markdownCaptions?: Maybe<Scalars['Boolean']>
+  pathPrefix?: Maybe<Scalars['String']>
+  maxWidth?: Maybe<Scalars['Int']>
+  wrapperStyle?: Maybe<Scalars['String']>
+  backgroundColor?: Maybe<Scalars['String']>
+  linkImagesToOriginal?: Maybe<Scalars['Boolean']>
+  withWebp?: Maybe<Scalars['Boolean']>
+  tracedSVG?: Maybe<Scalars['Boolean']>
+  loading?: Maybe<Scalars['String']>
+  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>
+  disableBgImage?: Maybe<Scalars['Boolean']>
   trackingId?: Maybe<Scalars['String']>
   anonymize?: Maybe<Scalars['Boolean']>
   short_name?: Maybe<Scalars['String']>
@@ -3561,6 +3602,16 @@ export type SitePluginPluginOptionsFilterInput = {
   name?: Maybe<StringQueryOperatorInput>
   showCaptions?: Maybe<BooleanQueryOperatorInput>
   markdownCaptions?: Maybe<BooleanQueryOperatorInput>
+  pathPrefix?: Maybe<StringQueryOperatorInput>
+  maxWidth?: Maybe<IntQueryOperatorInput>
+  wrapperStyle?: Maybe<StringQueryOperatorInput>
+  backgroundColor?: Maybe<StringQueryOperatorInput>
+  linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>
+  withWebp?: Maybe<BooleanQueryOperatorInput>
+  tracedSVG?: Maybe<BooleanQueryOperatorInput>
+  loading?: Maybe<StringQueryOperatorInput>
+  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>
+  disableBgImage?: Maybe<BooleanQueryOperatorInput>
   trackingId?: Maybe<StringQueryOperatorInput>
   anonymize?: Maybe<BooleanQueryOperatorInput>
   short_name?: Maybe<StringQueryOperatorInput>
@@ -3609,11 +3660,31 @@ export type SitePluginPluginOptionsPluginsPluginOptions = {
   __typename?: 'SitePluginPluginOptionsPluginsPluginOptions'
   showCaptions?: Maybe<Scalars['Boolean']>
   markdownCaptions?: Maybe<Scalars['Boolean']>
+  pathPrefix?: Maybe<Scalars['String']>
+  maxWidth?: Maybe<Scalars['Int']>
+  wrapperStyle?: Maybe<Scalars['String']>
+  backgroundColor?: Maybe<Scalars['String']>
+  linkImagesToOriginal?: Maybe<Scalars['Boolean']>
+  withWebp?: Maybe<Scalars['Boolean']>
+  tracedSVG?: Maybe<Scalars['Boolean']>
+  loading?: Maybe<Scalars['String']>
+  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>
+  disableBgImage?: Maybe<Scalars['Boolean']>
 }
 
 export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   showCaptions?: Maybe<BooleanQueryOperatorInput>
   markdownCaptions?: Maybe<BooleanQueryOperatorInput>
+  pathPrefix?: Maybe<StringQueryOperatorInput>
+  maxWidth?: Maybe<IntQueryOperatorInput>
+  wrapperStyle?: Maybe<StringQueryOperatorInput>
+  backgroundColor?: Maybe<StringQueryOperatorInput>
+  linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>
+  withWebp?: Maybe<BooleanQueryOperatorInput>
+  tracedSVG?: Maybe<BooleanQueryOperatorInput>
+  loading?: Maybe<StringQueryOperatorInput>
+  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>
+  disableBgImage?: Maybe<BooleanQueryOperatorInput>
 }
 
 export type SitePluginSortInput = {
@@ -3975,7 +4046,7 @@ export type BlogPostBySlugQuery = { __typename?: 'Query' } & {
   site?: Maybe<
     { __typename?: 'Site' } & {
       siteMetadata?: Maybe<
-        { __typename?: 'SiteSiteMetadata' } & Pick<SiteSiteMetadata, 'blogTitle' | 'blogSiteName' | 'blogUrl'>
+        { __typename?: 'SiteSiteMetadata' } & Pick<SiteSiteMetadata, 'blogTitle' | 'blogSiteName' | 'siteUrl'>
       >
     }
   >
