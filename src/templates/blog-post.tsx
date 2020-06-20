@@ -52,14 +52,13 @@ const BlogPostTemplate: React.FC<PageProps<BlogPostBySlugQuery, pageContext>> = 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
   const thumbnailSrc = post.frontmatter.thumbnail?.childImageSharp.fixed.src
   // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-  const fullImgPath = thumbnailSrc && `${location.origin}${thumbnailSrc}`
-  console.log(location)
+  const fullImgPath = thumbnailSrc && `${location.hostname}${thumbnailSrc}`
   return (
     <MetaAndStyles
       meta={{
         pageTitle: post.frontmatter.title,
         description: post.excerpt,
-        siteName: blogSiteName,
+        siteName: location.pathname, //blogSiteName
         siteUrl: location.href,
         img: fullImgPath,
       }}
