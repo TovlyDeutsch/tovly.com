@@ -2,6 +2,7 @@
 title: Data is Singular
 date: '2020-07-03'
 status: published
+thumbnail: './data-singular.jpg'
 ---
 
 Throughout the history of English[^1], people who think too highly of themselves have prescribed how people should speak and write. These include prescriptions like "don't end sentences with a preposition" and "avoid singular _they_". For the most part, these prescriptions seem to have failed in infiltrating spoken English. Similarly, in much written English, these prescriptions were either never adopted or are starting to be abandoned. For instance, the [NYT style guide](https://books.google.com/books?id=o2E5BgAAQBAJ) states that "we must also guard against a reflexive traditionalism that would make The Times seem fusty or out of touch. Language changes, and we should carefully and judiciously reckon with those changes".[^2] 
