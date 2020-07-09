@@ -154,6 +154,7 @@ const Index: React.FC<PageProps<OverviewQuery>> = ({ data }: PageProps<OverviewQ
             <a href="/ling_bea_bibtex.txt">[BibTeX]</a>
             <a href="https://arxiv.org/abs/2006.00377"> [Paper] </a>
             <a href="https://github.com/TovlyDeutsch/Linguistic-Features-for-Readability">[Code]</a>
+            <a href="https://slideslive.com/38929846/linguistic-features-for-readability-assessment"> [Talk]</a>
           </li>
           <li>
             A. Saleh, <b>T. Deutsch</b>
