@@ -161,10 +161,11 @@ const Index: React.FC<PageProps<OverviewQuery>> = ({ data }: PageProps<OverviewQ
             <sup>*</sup>, S. Casper<sup>*</sup>, Y. Belinkov, S. Shieber
             <br />
             <b>Probing Neural Dialog Models for Conversational Understanding</b>
-            <br /> <i>[To appear in] Second Workshop on NLP for Conversational AI at ACL 2020</i>
+            <br /> <i>Second Workshop on NLP for Conversational AI at ACL 2020</i>
+            <br />
             <a href="https://www.aclweb.org/anthology/2020.nlp4convai-1.15/">[Paper] </a>
             <a href="https://github.com/AbdulSaleh/dialog-probing">[Code] </a>
-            <br /> <a href="https://www.aclweb.org/anthology/2020.nlp4convai-1.15.bib">[BibTeX]</a>
+            <a href="https://www.aclweb.org/anthology/2020.nlp4convai-1.15.bib">[BibTeX]</a>
           </li>
           <li>
             <b>T. Deutsch</b>
@@ -173,7 +174,7 @@ const Index: React.FC<PageProps<OverviewQuery>> = ({ data }: PageProps<OverviewQ
             <br /> <i>Senior Thesis</i>
             <br />
             <a href="/Senior_Thesis_Final_Tovly_Deutsch.pdf">[PDF] </a>
-            <a href="/thesis_bibtex.txt">[BibTeX]</a>
+            <a href="/thesis_bibtex.txt">[BibTeX] </a>
             <OutboundLink href="https://github.com/TovlyDeutsch/Linguistic-Features-for-Readability">
               [Code]
             </OutboundLink>
