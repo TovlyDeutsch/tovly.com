@@ -147,14 +147,14 @@ const Index: React.FC<PageProps<OverviewQuery>> = ({ data }: PageProps<OverviewQ
             <b>Linguistic Features for Readability Assessment</b>
             <br />{' '}
             <i>
-              Oral Presentation. [To appear in] Proceedings of the Fifteenth Workshop on Innovative Use of NLP for
-              Building Educational Applications at ACL 2020
+              Oral Presentation. Proceedings of the Fifteenth Workshop on Innovative Use of NLP for Building Educational
+              Applications at ACL 2020
             </i>
             <br />
-            <a href="/ling_bea_bibtex.txt">[BibTeX]</a>
-            <a href="https://arxiv.org/abs/2006.00377"> [Paper] </a>
-            <a href="https://github.com/TovlyDeutsch/Linguistic-Features-for-Readability">[Code]</a>
-            <a href="https://slideslive.com/38929846/linguistic-features-for-readability-assessment"> [Talk]</a>
+            <a href="https://www.aclweb.org/anthology/2020.bea-1.1/">[Paper] </a>
+            <a href="https://github.com/TovlyDeutsch/Linguistic-Features-for-Readability">[Code] </a>
+            <a href="https://slideslive.com/38929846/linguistic-features-for-readability-assessment">[Talk] </a>
+            <a href="https://www.aclweb.org/anthology/2020.bea-1.1.bib">[BibTeX]</a>
           </li>
           <li>
             A. Saleh, <b>T. Deutsch</b>
@@ -162,9 +162,9 @@ const Index: React.FC<PageProps<OverviewQuery>> = ({ data }: PageProps<OverviewQ
             <br />
             <b>Probing Neural Dialog Models for Conversational Understanding</b>
             <br /> <i>[To appear in] Second Workshop on NLP for Conversational AI at ACL 2020</i>
-            <br /> <a href="/probing_bibtex.txt">[BibTeX] </a>
-            <a href="https://arxiv.org/abs/2006.08331">[Paper]</a>{' '}
-            <a href="https://github.com/AbdulSaleh/dialog-probing">[Code]</a>
+            <a href="https://www.aclweb.org/anthology/2020.nlp4convai-1.15/">[Paper] </a>
+            <a href="https://github.com/AbdulSaleh/dialog-probing">[Code] </a>
+            <br /> <a href="https://www.aclweb.org/anthology/2020.nlp4convai-1.15.bib">[BibTeX]</a>
           </li>
           <li>
             <b>T. Deutsch</b>
@@ -172,8 +172,8 @@ const Index: React.FC<PageProps<OverviewQuery>> = ({ data }: PageProps<OverviewQ
             <b>Linguistic Features for Readability Assessment</b>
             <br /> <i>Senior Thesis</i>
             <br />
+            <a href="/Senior_Thesis_Final_Tovly_Deutsch.pdf">[PDF] </a>
             <a href="/thesis_bibtex.txt">[BibTeX]</a>
-            <a href="/Senior_Thesis_Final_Tovly_Deutsch.pdf"> [PDF] </a>
             <OutboundLink href="https://github.com/TovlyDeutsch/Linguistic-Features-for-Readability">
               [Code]
             </OutboundLink>
