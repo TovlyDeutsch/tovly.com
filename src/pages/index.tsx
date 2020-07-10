@@ -147,8 +147,8 @@ const Index: React.FC<PageProps<OverviewQuery>> = ({ data }: PageProps<OverviewQ
             <b>Linguistic Features for Readability Assessment</b>
             <br />{' '}
             <i>
-              Oral Presentation. Proceedings of the Fifteenth Workshop on Innovative Use of NLP for Building Educational
-              Applications at ACL 2020
+              Oral Presentation. Fifteenth Workshop on Innovative Use of NLP for Building Educational Applications (ACL
+              2020)
             </i>
             <br />
             <a href="https://www.aclweb.org/anthology/2020.bea-1.1/">[Paper] </a>
@@ -161,7 +161,7 @@ const Index: React.FC<PageProps<OverviewQuery>> = ({ data }: PageProps<OverviewQ
             <sup>*</sup>, S. Casper<sup>*</sup>, Y. Belinkov, S. Shieber
             <br />
             <b>Probing Neural Dialog Models for Conversational Understanding</b>
-            <br /> <i>Second Workshop on NLP for Conversational AI at ACL 2020</i>
+            <br /> <i>Second Workshop on NLP for Conversational AI (ACL 2020)</i>
             <br />
             <a href="https://www.aclweb.org/anthology/2020.nlp4convai-1.15/">[Paper] </a>
             <a href="https://github.com/AbdulSaleh/dialog-probing">[Code] </a>
