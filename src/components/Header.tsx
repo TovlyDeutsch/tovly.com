@@ -56,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({ faceFile }: HeaderProps) => (
             <OutboundLink href="http://www.eecs.harvard.edu/shieber/"> Stuart Shieber</OutboundLink> and
             <OutboundLink href="https://jasbi.github.io/"> Masoud Jasbi</OutboundLink>. In my spare time, I enjoy
             <OutboundLink href="https://www.youtube.com/channel/UCoYCQPyiv_y4QAHinPOFGHA"> filmmaking</OutboundLink> and
-            <Link to="/blog"> blogging</Link>.
+            <Link to="/blog"> blogging</Link>.<br></br> Email: tovly at this domain
           </p>
         </Description>
         <Social>
