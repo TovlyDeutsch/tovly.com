@@ -20,6 +20,7 @@ module.exports = {
     rssIcon: 'https://tovly.com/favicon.png',
   },
   plugins: [
+    'gatsby-plugin-webpack-bundle-analyser-v2',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     'gatsby-transformer-yaml',

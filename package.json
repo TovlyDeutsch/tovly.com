@@ -49,6 +49,7 @@
     "@graphql-codegen/typescript": "^1.15.2",
     "@graphql-codegen/typescript-operations": "^1.15.2",
     "babel-eslint": "^10.1.0",
+    "caniuse-api": "^3.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^6.11.0",
@@ -56,6 +57,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.19.0",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.10",
     "prettier": "^1.15.3"
   },
   "babelMacros": {
@@ -63,5 +65,8 @@
       "config": "./tailwind.config.js",
       "preset": "styled-components"
     }
-  }
+  },
+  "browserslist": [
+    ">.25% and not dead and not IE 11 and not op_mini all and last 3 versions"
+  ]
 }
