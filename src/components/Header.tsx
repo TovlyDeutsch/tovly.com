@@ -50,8 +50,9 @@ const Header: React.FC<HeaderProps> = ({ faceFile }: HeaderProps) => (
       <div style={{ marginTop: 24 }}>
         <Description>
           <p>
-            I'm a SWE at Facebook interested in NLP and ML. In 2020, I graduated from Harvard with a concentration in CS
-            and linguistics. I completed a<a href="/Senior_Thesis_Final_Tovly_Deutsch.pdf"> senior thesis </a>
+            I'm a SWE at Meta working on VR in Reality Labs. I previously worked on Portal (a video calling device). In
+            2020, I graduated from Harvard with a concentration in CS and linguistics. I researched ML and NLP in
+            college and completed a<a href="/Senior_Thesis_Final_Tovly_Deutsch.pdf"> senior thesis </a>
             focused on improving readability assessment systems, advised by
             <OutboundLink href="http://www.eecs.harvard.edu/shieber/"> Stuart Shieber</OutboundLink> and
             <OutboundLink href="https://jasbi.github.io/"> Masoud Jasbi</OutboundLink>. In my spare time, I enjoy
